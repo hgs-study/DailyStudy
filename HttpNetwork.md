@@ -30,3 +30,35 @@
 + Date :
   - 메시지가 발생한 날짜와 시간
   - 응답에서 
+  
+  
+> 특별한 정보 헤더
+```
+- Host : 요청한 호스트 정보(도메인)
+- Location : 페이지 리다이렉션
+- Allow : 허용 가능한 HTTP 메서드
+- Retry-After : 유저 에이전트가 다음 요청을 하기까지 기다려야 하는 시간
+```
+
++ Host (필수값)
+  - 정말 중요!!!!(필수 값)
+  - 요청한 호스트 정보(도메인)
+  - 하나의 서버가 여러 도메인을 처리해야 할 때(가상 호스트)
+  - 200.200.200.2에 여러 도메인이 묶여 있을 경우(aaa.com,bbb.com,ccc.com) 사용자가 GET /hello를 보냈을 때 어떤 도메인에 api를 보낼지 구분해줌
+  
++ Location
+  - 페이지 리다이렉션
+  - 웹 브라우저 3xx 응답 결과일 때 Location 헤더가 있으면, Location 위치로 자동 이동
+  - 201 (Created): Location 값은 요청에 의해 생선된 리소스 URI
+  - 3xx (Redirection) : Location 값은 요청을 자동으로 리디렉션하기 위한 대상 리소스를 가리킴
+  
++ Allow
+  - 허용 가능한 HTTP 메서드
+  - 405 (Method Not Aolled)에서 응답에 포함해야함
+  - Allow: GET, HEAD, PUT (POST로 보낼시 GET으로 보내야함)
+  - 사실 서버에 잘 구현되어있지 않음
+  
++ Retry-Ater
+  - 유저 에이전트가 다음 요청을 하기까지 기다려야 하는 시간
+  - 503 (Service Unavailable) : 서비스가 언제까지 불능인지 알려줄 수 있음
+  - 날짜 표기 / 초단위 표기 가능
