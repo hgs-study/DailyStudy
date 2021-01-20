@@ -84,3 +84,21 @@
   - 유저 에이전트가 다음 요청을 하기까지 기다려야 하는 시간
   - 503 (Service Unavailable) : 서비스가 언제까지 불능인지 알려줄 수 있음
   - 날짜 표기 / 초 단위 표기 가능
+
+
+## 인증 헤더
+```
+- Authorization : 클라이언트 인증 정보를 서버에 전달
+- WWW-Authenticate : 리소스 접근 시 필요한 인증 방법 정의
+```
+
++ Authorization
+  - 클라이언트 인증 정보를 서버에 전달
+  - Basic xxxxxxxxxxx
+  - 인증 메커니즘 여러가지가 있음 (Oauth2 등등)
+  - 코인 거래소 api를 사용할 때 본인 확인을 위한 인증 등
+  - 사용자 토큰 인증요청 -> header.add("Authorization", "Basic " + base64Creds);
+  
++ WWW-Authenticate
+  - 리소스 접근 시 필요한 인증 방법 정의
+  - 401 Unauthorized 응답과 함께 사용
