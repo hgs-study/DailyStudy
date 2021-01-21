@@ -3,5 +3,5 @@
 
 > + [JPA](https://github.com/hgs-study/DailyStudy/blob/main/JPA.md)
 
-> + [MYSQL](https://github.com/hgs-study/DailyStudy/blob/main/MYSQL.md)
+> + [Mysql](https://github.com/hgs-study/DailyStudy/blob/main/Mysql.md)
 
