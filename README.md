@@ -2,3 +2,6 @@
 > + [HTTPNetwork](https://github.com/hgs-study/HTTPNetwork/blob/main/HttpNetwork.md)
 
 > + [JPA](https://github.com/hgs-study/DailyStudy/blob/main/JPA.md)
+
+> + [MYSQL](https://github.com/hgs-study/DailyStudy/blob/main/MYSQL.md)
+
