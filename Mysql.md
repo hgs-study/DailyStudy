@@ -1,6 +1,7 @@
 ## JSON 컬럼
 ```
  - json_set : 하나 이상의 key값을 변경하고자 할때, json_set 함수를 사용
+ - json_array : 여러 개의 value를 배열로 만든다. ["value1","value2","value3"] 이런 식으로 들어간다.
 
 ```
 
@@ -85,4 +86,15 @@ MariaDB [test]> select * from json_test ;
 
 
 출처: https://bstar36.tistory.com/359 [멋지게 놀아라]
+```
+
+
++ json_array : 여러 개의 value를 배열로 만든다. ["value1","value2","value3"] 이런 식으로 들어간다.
+```
+Mysql에서 3,4,5,6,7,8을 json의 배열로 넣고 싶을경우
+
+sql : json_array("3","4","5","6","7","8")  
+
+결과 : ["3","4","5","6","7","8"]
+
 ```
