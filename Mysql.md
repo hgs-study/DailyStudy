@@ -4,6 +4,8 @@
 
 ```
 
+
+
 + json_set : 하나 이상의 key값을 변경하고자 할때, json_set 함수를 사용
 ```
 MariaDB [test]> update json_test set data = json_set(data,'$.Phone','333-4444', '$.Name','DongHyeok KIM') where id = 1 ;
