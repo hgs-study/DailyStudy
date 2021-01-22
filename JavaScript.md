@@ -2,7 +2,7 @@
 
 + fetch 사용시 주의점
 ```
- - 로 json을 받을 경우 
+ - 응답으로 json을 받을 경우 
  
    fetch(api, ~)
    .then((res) =>{
