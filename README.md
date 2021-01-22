@@ -5,3 +5,4 @@
 
 > + [Mysql](https://github.com/hgs-study/DailyStudy/blob/main/Mysql.md)
 
+> + [JavaScript](https://github.com/hgs-study/DailyStudy/blob/main/JavaScript.md)
