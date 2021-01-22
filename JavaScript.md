@@ -22,4 +22,4 @@
 ```
  - 문제 : $(document).height() =>문서 높이와 $(window).height()=> 브라우저 스크롤 높이가 똑같이 1223으로 나오는 현상 발생, 위의 코드로 작성하면 맨 하단이 아닌 맨 위 상단에서 작동함.
  - 원인 : $(window).height()가 제대로 작동하지 않음 $(document).height() 똑같이 나옴
- - 해결 : <html> 태그에 height:100%을 삽입 -> $(window).height() 제대로 동작
+ - 해결 : html 태그에 height:100%을 삽입 -> $(window).height() 제대로 동작
