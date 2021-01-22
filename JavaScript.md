@@ -2,7 +2,8 @@
 
 + fetch 사용시 주의점
 ```
- - response로 json을 받을 경우 
+ - 로 json을 받을 경우 
+ 
    fetch(api, ~)
    .then((res) =>{
       return res.json();   =>res를 다시 json 형식으로 바꿔주고
