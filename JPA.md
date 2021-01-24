@@ -47,5 +47,9 @@
         - 실무에서는 가급적 지연로딩만 사용한다.
         - 즉시로딩을 사용하면 예상치 못한 SQL이 발생할수 있기 때문.
           EX)다른 개발자가 Member를 조회할 때는 Team이 조회될 거라고 생각하지 못하기 때문에
-          
+      ㅇ 연관관계별로 fetch 옵션의 기본값이 다르다.
+        - @ManyToOne : EAGER
+        - @OneToOne : EAGER
+        - @ManyToMany : LAZY
+        - @OneToMANY :LAZY
 ```
