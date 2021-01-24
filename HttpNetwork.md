@@ -247,3 +247,13 @@
  - 지금은 더 유연한 Cache-Control : max-age 사용 권장(초단위)
  - Cache-Control:max-age와 함께 사용하면 Expires는 무시
  
+## 확실한 캐시 무효화 응답
+```
+ㅇ 절대로 캐시되면 안 될 때 다 넣어줘야함 / ex) 고객의 통장 잔고 등
+- Cache-Control : no-cache, no-store, must-revalidate 
+  => 웹 브라우저 -> 프록시 캐시서버 -> 원 서버 요청시 (프록시 캐시서버 -> 원서버로 갈때 순간 네트워크가 단절이 되면)
+   - no-cache : 200 ok (옛 캐시된 데이터라도 보여주자)
+   - must-revalidate : 504 Gateway Timeout (매우 중요한 돈과 관련된 결과로 생각해보자, 항상 오류 발생, 프록시 과거 데이터 보이면 안됨)
+- Pragma : no-cache
+ -> HTTP 1.0 하위 호환
+```
