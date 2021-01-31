@@ -1,6 +1,6 @@
 ## Fetch
 
-+ fetch 사용시 주의점
++ fetch 사용시 주의점(res)
 ```
  - 응답으로 json을 받을 경우 
  
@@ -12,6 +12,30 @@
       data.name       =>한번더 .then을 사용하여 하나씩 꺼내서 사용해야한다.
       date.age
    })
+```
+
++ fetch 사용시 주의점(err reject)
+```
+ - 응답으로 400등 에러를 받을 경우 fetch는 reject하지 않는다.
+
+        .then(data => {
+            if(data.ok == false)
+                alert(data.message);
+            else
+                alert("정상적으로 처리됐습니다.")
+        })
+        
+    async function exceptionTest() {
+        const res = await fetch("/exceptionTest",{method:'get'});
+        console.log(res.ok);
+        const data = await res.json();
+        if(res.ok == true)
+            console.log(data.message);
+        if(res.ok ==false)
+            alert(data.message)
+    }
+    
+   => res.status와 ok가 false or true인지 구분해서 사용하면 된다
 ```
 
 
