@@ -22,3 +22,5 @@
  
 6. 로컬 PC & GCP에 Docker 설치 완료
 ```
+![GCP 위 도커](https://user-images.githubusercontent.com/76584547/107143326-d45fb980-6977-11eb-88e6-4ddbd30ab0fe.png)
+
