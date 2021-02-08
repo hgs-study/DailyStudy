@@ -1,8 +1,7 @@
 ## Jenkins
 + Jenkins란?
 ``` 
- 클라우드 환경 서버에서 VM을 여러개 두지 않아도 Docker는 각각의 Docker 애플리케이션을 '프로세스'처럼 간주한다. 
- => VM에 비해 오버헤드가 적어서, 원래의 장비 성능을 발휘할 수 있게 된다.
+CI & CD , Batch
  ```
  
  + Jenkins 설치 (GCP 이용)
@@ -18,4 +17,33 @@
   sudo systemctl start jenkins (젠킨스 데몬 실행 명령어)
   sudo systemctl status jenkins (젠킨스 데몬 상태 확인)
   
+  
+ㅇ jenkins
+- 계정명 : 
+- 암호 : 
+- 이름 : 
+- 이메일 주소: 
+키 생성 : ssh-keygen -t rsa -f ~/.ssh/id_rsa
+개인키 : /home/hgstudyy/.ssh/id_rsa.
+공개키 : /home/hgstudyy/.ssh/id_rsa.pub.
+
+ㅇ worker 인스턴스
+- 사용자 : hgstudyy
+worker ssh키 설정
+=> vi ~/.ssh/authorized_keys 여기에 젠킨스 공개키 넣음
+
+=> chmod 700 ~/.ssh
+=> chmod 600 ~/.ssh/authorized_keys
+
+ㅇ 젠킨스 설정
+=> 젠킨스 Publish over SSH에 젠킨스 개인키 설정 
+
+ㅇ worker 인스턴스
+ => sudo yum install 도커 설치
+ => sudo systemctl start docker
+ => sudo chmod 666 /var/run/docker.sock
+
+nohup docker run -p 8080:80 hgstudy/spring-boot-cpu-bound > /dev/null 2>&1 &
+nohup~ &
+- 백그라운드 실행시킨다
  ```
