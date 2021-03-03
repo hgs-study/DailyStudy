@@ -57,3 +57,42 @@
         - @ManyToMany : LAZY
         - @OneToMANY :LAZY
 ```
++ JPA 영속성 관리
+```
+  ㅇ 영속성 컨텍스트의 이점
+    - 1차 캐시와 쓰기 지연 SQL 저장소를 가짐
+    - 동일성(identity) 보장
+    - 트랜잭션을 지원하는 쓰기 지연
+    - 변경 감지
+    - 지연로딩
+
+  ㅇ 플러시
+    - 변경 감지(더티체킹) - update
+    - 수정된 엔티티 쓰기 지연 SQL 저장소에 등록
+    - 쓰기 지연 SQL 저자소의 쿼리를 데이터 베이스랑 동기화(전송) ->등록,수정,삭제 쿼리
+    - 영속성 컨텍스트를 비우지 않음
+    - 트랜잭션이라는 작업 단위가 중요 -> 커밋 직전에만 동기화하면 됨
+
+  ㅇ 준영속 상태
+    - 영속 상태의 엔티티가 영속성 컨텍스트에서 분리(detached)
+    - 영속성 컨텍스트가 제공하는 기능을 사용못함
+    - ex) em.detached(entity), em.clear(), em.close
+```
+
++ JPA 엔티티 매핑
+```
+  ㅇ 데이터베이스 스키마 자동 생성
+    - <property name="hibernate.hbm2ddl.auto" value="create / create-drop / update / validate / none" /> 설정
+    - create : 기존 테이블 삭제 후 다시 생성 (drop + create)
+    - create-drop : create와 같으나 종료 시점에 테이블 drop
+    - update : 변경분만 반영 (운영 DB에는 사용하면 안됨)
+    - validate : 엔티티와 테이블이 정상 매핑되어있는지만 확인
+    - none : 사용하지 않음
+   
+  ㅇ 주의사항
+    - 개발 초기 단계 : create , update
+    - 테스트 서버 : validate
+    - 운영 서버 : validate, none
+    => 데이터가 적재되어 있는데 create를 하면 drop 하기 때문에 테이블을 날린다.
+    => update시 테이블 alter로 변경하지만 몇분간 데이터베이스 테이블 락이 걸린다.
+```
