@@ -7,11 +7,14 @@
     - Name 태그 추가 (인스턴스 이름 변경)
     - 보안 그룹 생성 (SSH : 22 내IP , HTTP: 80 0.0.0.0/0(기본) ,HTTPS 443 0.0.0.0/0(기본)
     - pem 키 저장
+    
   2. EIP 할당 (Elastic IP, 탄력적 IP)
     - 사용할 인스턴스가 없을 때도 비용이 청구되기 때문에 잊지 말고 꼭 삭제해야한다.
+    
   3. EC2 접속
     - Window : puttygen에서 pem키를 ppk파일로 변환
     - ec2-user@탄력적ip (port:22) 접속
+    
   4. EC2 환경설정
     ㅇ java 설치
       - sudo yum install -y java-1.8.0-openjdk-devel.x86_64
@@ -22,6 +25,7 @@
       - sudo hostnamectl set-hostname (본인이 원하는 서비스명 or EC2 이름)
       - HOSTNAME=(본인이 원하는 서비스명 or EC2 이름) 추가
       - 재부팅(sudo reboot)
+      
   5. Git 설치
     - sudo yum install git
     - git --version
@@ -31,6 +35,7 @@
     - cd 프로젝트명
     - ll(클론 확인)
     - ./gradlew test (Permission denied 에러시 "chmod +x ./gradlew" 명령어를 먼저 삽입)
+  
   6. 배포 스크립트 생성
     - vim ~/app/step1/deploy.sh
     - chmod +x ./deploy.sh
