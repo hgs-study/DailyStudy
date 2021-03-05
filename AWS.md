@@ -1,5 +1,5 @@
 ## AWS
-+ AWS 설치 순서
++ AWS 설치 순서#1
 ``` 
   1. EC2 인스턴스 시작 (Amazon Linux 2)
     - t2.micro
@@ -39,6 +39,7 @@
   6. 배포 스크립트 생성
     - vim ~/app/step1/deploy.sh
     - chmod +x ./deploy.sh
+
 ```
 
 + deploy.sh
@@ -93,4 +94,42 @@ chmod +x $JAR_NAME
 echo "> $JAR_NAME 실행"
 
 nohup java -jar $JAR_NAME 2>&1 &
+```
+
++ AWS 설치 순서#2
+``` 
+ㅇ 도메인 연결
+- https://velog.io/@nari120/Route53-DNS-%EA%B5%AC%EC%B6%95.-AWS-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0
+- https://wingsnote.com/57
+
+ㅇ SSL 연결 
+   - AWS Certificate Manager 이용( 요금 무료)
+   - https://jojoldu.tistory.com/434
+   - https://jootc.com/p/202004053362
+
+ㅇ nginx 설치
+   - https://longtermsad.tistory.com/11
+
+ㅇ nginx (8080->80)
+   - https://stackoverflow.com/questions/24861311/forwarding-port-80-to-8080-using-nginx
+   - sudo vim /etc/nginx/nginx.conf
+   - 아래 내용 
+location / {
+	proxy_pass http://localhost:8080; 
+	proxy_set_header X-Real-IP $remote_addr;
+	proxy_set_header X-Forwarded-For $remote_addr;
+	proxy_set_header Host $http_host;
+}
+
+ㅇ리눅스 명령어
+ - 서비스 목록 확인 : systemctl list-units --type=service
+ - nginx 재부팅시 자동 실행 : sudo systemctl enable nginx
+ - ec2 인스턴스 -> 사용자 데이터 편집 -> /home/ec2-user/app/step1/deploy.sh
+
+ - ssh 로그인시 자동실행 : ~ .bash_profile
+ - 재부팅시 쉘 스크립트 자동 실행(배포)
+ - https://realforce111.tistory.com/18
+ - sudo vim /etc/rc.d/rc.local
+ - sudo chmod 755 /etc/rc.d/rc.local
+ - /home/ec2-user/app/step1/deploy.sh
 ```
