@@ -1,4 +1,6 @@
 ## 공부 내용 정리
+> + [AWS](https://github.com/hgs-study/HTTPNetwork/blob/main/AWS.md)
+> 
 > + [HTTPNetwork](https://github.com/hgs-study/HTTPNetwork/blob/main/HttpNetwork.md)
 
 > + [JPA](https://github.com/hgs-study/DailyStudy/blob/main/JPA.md)
