@@ -37,3 +37,21 @@
 https://tech.osci.kr/2020/03/03/91690167
 https://www.notion.so/05486768ef7e41f698b6760519eb8a34
 ```
+
++ Docker 이미지 생성 & 실행
+``` 
+ 1. 이미지 생성(프로젝트)
+    => gradle : docker build --build-arg JAR_FILE=build/libs/*.jar -t hgstudy/docker_test_enum_project .
+ 2. 이미지 확인
+    => docker images
+ 3. docker tag [push할 image ID or name] [docker hub ID]/[image name]:[version]
+ 4. docker push [docker hub ID]/[image name]
+
+- 도커 자동 실행 : sudo systemctl enable docker
+
+- docker run -p 8080:8080 jenkins:2.60.3 으로 포트 바꿔서 여러 컨테이너를 띄울수 잇음
+- Dockerfile 명령어
+ - https://www.daleseo.com/dockerfile/
+- 도커 컨테이너 명령어
+ - https://m.blog.naver.com/PostView.nhn?blogId=complusblog&logNo=220974632766&proxyReferer=https:%2F%2Fwww.google.com%2F
+```
