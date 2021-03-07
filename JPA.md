@@ -96,3 +96,20 @@
     => 데이터가 적재되어 있는데 create를 하면 drop 하기 때문에 테이블을 날린다.
     => update시 테이블 alter로 변경하지만 몇분간 데이터베이스 테이블 락이 걸린다.
 ```
+
++ 기본키 매핑
+```
+ㅇ@GeneratedValue(strategy = GenerationType)
+- IDENTITY
+=> em.persist시 insert 쿼리 날리고 id 반환(유일하게 persist 때 insert 쿼리 날림)
+    이유: insert후 id(pk값을 얻어야 영속성 컨텍스트에 저장할 수 있기 때문) 
+- SEQUENCE
+=> em.persist시 SEQ next value 가져오고 em.commit 시 insert 쿼리 날림
+=> allocationSize : 기본 50 -> db에 미리 50개를 올려놓고 우리가 persist할때마다 메모리에 1,2씩 쌓임 ->50개에 다다르면 그 때 다시 next value를 50개씩 가져옴(51번~100번 세팅) 
+=> 1번쨰 next value 호출 : 1     |  1
+=> 2번째 next value 호출 : 51    |  2
+=> 3번째        "        : 51    |   3
+             ... 51 만나면: 101  |  . ..
+※ 여러 웹서버가 있어도 동시성 이슈 없이 다양한 문제가 해결됨
+
+```
