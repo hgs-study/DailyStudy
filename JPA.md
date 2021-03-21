@@ -168,4 +168,23 @@
   - 양방향 매핑은 반대 방향으로 조회(객체 그래프 탐색) 기능이 추가가 된 것 뿐이다!!!
   - JPQL에서 역방향으로 탐색할 일이 많음
   - 단방향 매핑을 잘하고 양방향 매핑은 필요할 때만 추가해도 됨 (테이블에 영향을 주지 않음)
+ 
+ㅇ 양방향 VS 단방향
+  - 방법 1 (양방향 연관관계)
+    Order order = new Order();
+    order.addOrderItem(new OrderItem());
+
+
+  - 방법 2 (단방향 연관관계)
+    Order order = new Order();
+    em.persist(order);
+
+    OrderItem orderItem = new OrderItem();
+    orderItem.setOrder(order);
+    em.persist(orderItem);
+    //단방향 연관관계로도 애플리케이션을 만드는데에 지장이 없다.
+    //양방향 연관관계로 하는 이유는 조회를 더 편하게 하기 위해서
+    //나중에 JPQL로 조인을 더 복잡하게 해야하는데 이 작업을 더 간단히 하기위해 양방향으로 많이 짠다.
+    //핵심은 단방향으로 할 수 있으면 최대한 단방향으로 해라!
+    
 ```
