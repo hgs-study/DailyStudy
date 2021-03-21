@@ -147,10 +147,14 @@
   - 양쪽 (주인과 역방향)에 둘 다 값을 넣어주는 것이 맞음 (순수 객체 상태를 고려해서 항상 양쪽에 값을 설정하자)
   - em.flush , clear를 하지 않고 다시 해당 객체를 조회했을 경우 1차 캐시된(메모리에만 올라가있는) 객체를 가져오기 때문에 해당 객체는 빈 객체로 문제가 된다.
   - 주인 객체에서 setTeam(역방향) 편의 메서드를 만든다. 하나만 호출해도 양쪽 다 세팅이 된다.
-    => chageTeam(Team team){
+    => chageTeam(Team team){   (주인)
         this.team = team;
         team.getMembers.add(this)
        }
+    => addOrderItem(OrderItem orderItem){
+        orderItems.add(orderItem);
+        orderItem.setOrder(this);
+      }
   - 애플리케이션 만들 때마다 상황이 다르기 때문에 상황마다 주인에 설정할 것 것인지 역방향에 설정할 것인지 정해야한다.
   - 무한루프를 조심하자
     => 1. toString() 양쪽 다 설정하면 양쪽에서 무한으로 toString 호출   -> stackOverFlow
