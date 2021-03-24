@@ -259,7 +259,6 @@
 ```
 ㅇ 상속관계 매핑
 ㅇ @MappedSuperclass
-
 ```
   + 상속관계 매핑
     + 관계형 데이터 베이스는 상속 관계 x <-> 객체는 o
@@ -271,9 +270,54 @@
                자식 - Album, movie , book
     + 슈퍼타입 브타입 논리 모델을 실제 물리 모델로 구현하는 3가지 방법
       + 조인 전략 - 테이블을 각각 조인 item_id로 insert를 각각 테이블에 2번 함 / JPA랑 가장 유사한 모델
-        + 상속 관계일 경우 자식 엔티티 조회시 JPA가 부모를 자동으로 조인해줌
+        => 상속 관계일 경우 자식 엔티티 조회시 JPA가 부모를 자동으로 조인해줌
       + 단일 테이블 전략 :  논리 모델을 한 테이블로 합치는 것 (Item에 album, movie, book 컬럼을 다 넣음) (JPA 기본 전략)
       + 구현 클래스마다 테이블 전략 : album,movie,book에 item_id를 다 가지고 있음
       
     + DB의 논리 모델링 3가지를 어떤 것으로 구현을 하든 JPA는 다 지원을 해줌 
       + 기본 전략은 싱글 테이블 전략(한 테이블에 다 떄려박음)
+
+    + 조인 전략 (JOINED) 정석★
+      + @Inheritance(strategy = InheritanceType.JOINED)
+      + @DiscriminatorColumn (DTYPE) - 엔티티타입 (부모엔티티에 넣어주면 조회하기 좋음)
+      + @DiscriminatorValue(name="")를 활용해 자식 엔티티의 이름을 지정할 수 있다.
+      + 장점 : 
+        1.정규화가 되어있음
+        2.외래키 참조 무결설 제약 조건 가능 (아예 다른 테이블에서 조회할때 부모(item)클래스만 보면 됨)
+        3.저장 공간 효율
+      + 단점 :
+        1.조회 시 조인을 많이 사용 / 성능 저하
+        2.조회 쿼리가 복잡
+        3.데이터 저장시 SQL 2번 호출
+        (하지만 이 모든 것이 그렇게 크게 영향을 미치지 않는다.)
+
+    + 단일 테이블 (SINGLE_TABLE)
+      + @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+      + 한 테이블에 다 때려 넣고 실행
+      + @DiscriminatorColumn 꼭 넣어줘야함(필수) DTYPE으로 구분하기 때문 -> @DiscriminatorColumn이 없어도 자동으로 DTYPE이 들어감
+      + 부모 테이블에 전체 데이터가 들어감 (자식테이블은 하나도 안 들어감)
+      + 성능은 제일 잘 나옴
+      + 장점 : 
+        1.조인이 필요 없어서 성능이 빠름
+        2.조회 쿼리가 단순함
+      + 단점 :
+        1.자식 엔티티가 매핑한 컬럼은 모두 NULL 허용
+        2.단일 테이블에 모든 것을 저장하므로 테이블이 커지고 조회 성능이 오히려 느려질 수 있다.
+
+    + 구현 클래스마다 테이블 전략
+      + @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) 
+      + item 테이블을 없애고 album,movie,book 테이블에 각각 다 name,price 필드를 추가
+      + 부모(item)클래스는 abstract(추상클래스)로 설정
+      + @DiscriminatorColumn 쓸모 없음
+      + 부모 객체로 찾을 때 Union All로 테이블을 다 뒤짐(상당히 복잡한 쿼리)
+      + 절대 사용하면 안되는 전략!!! (개발자,DBA 둘 다 싫어함 겹치는 게 없음)
+      + 장점 :
+        1.서브 타입을 명확하게 구분해서 처리할 때 효과적
+        2.NOT NULL 제약조건 사용 가능
+      + 단점 :
+        1.여러 자식 테이블 조회할때 UNION 성능 느림
+        2.자식 테이블 통합해서 쿼리하기 어려움
+
+    + ※결론
+      + 단순하면 단일테이블
+      + 비즈니스 로직, 복잡하면 조인전략
