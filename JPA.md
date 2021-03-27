@@ -337,6 +337,7 @@
 ㅇ 프록시 특징
 ㅇ 프록시 객체의 초기화
 ㅇ 프록시 중요 특징 ★
+ㅇ 프록시 확인
 ```
   + 프록시 기초
     + em.find() vs em.getReference()
@@ -367,5 +368,22 @@
         
     + 프록시 중요 특징 ★
       + 프록시 객체는 처음 사용할 때 한 번만 초기화
-      + 프록시 객체를 초기화 할 때, 프록시 
-
+      + 프록시 객체를 초기화 할 때, 프록시 객체가 실제 엔티티로 바뀌는 것은 아님!!!! 초기화 되면 프록시 객체를 통해 실제 엔티티에 접근 가능
+      + 프록시 객체는 원본 엔티티를 상속 받음, 따라서 타입 체크시 주의해야함( 타입 비교 시 == 비교 실패, 대신 instanceof 사용) ★
+      + 영속성 컨텍스트에 찾는 엔티티가 이미 있으면 em.getReference()를 호출해도 실제 엔티티를 반환
+        => find(실제 엔티티)로 가져오든 reference(가짜 엔티티)로 가져오든 ==비교하면 무조건 true 가 나와야 하기 때문 ★
+        => proxy를 먼저 올리고 find하면 둘 다 proxy 객체
+        => find 먼저 올리고 proxy 가져오면 둘 다 실제 Member 객체
+        => JPA 한 트랜잭션에 객체 타입이 같음을 보장해준다!! ★★
+      + 영속성 컨텍스트의 도움을 받을 수 없는 준영속 상태일 때, 프록시를 초기화할 때 문제 발생 (em.detach) ★★
+        => (하이버네이트는 org.hibernate.LazyInitializationException
+    
+    + 프록시 확인
+      + 프록시 인스턴스 초기화 여부 확인
+        + PersistenceUnitUtil.isLoaded(Object entity)
+      + 프록시 클래스 확인 방법
+        + entity.getClass().getName() 출력(..javasist.. or HibernateProxy..)  => proxy.getClass()
+      + 프록시 강제 초기화
+        + org.hibernate.Hibernate.initialize(entity);
+      + 참고 : JPA 표준은 강제 초기화 없음
+        + 강제 호출 : member.getName()   
