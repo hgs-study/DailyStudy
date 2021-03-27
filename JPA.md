@@ -339,61 +339,51 @@
 ㅇ 프록시 중요 특징 ★
 ㅇ 프록시 확인
 ```
-
-
   + 프록시 기초
     + em.find() vs em.getReference()
       + em.find() : 데이터베이스를 통해서 실제 엔티티 객체 조회
       + em.getReference() : 데이터베이스 조회를 미루는 가짜(프록세) 엔티티 객체 조회 
         -> em.getReference를 호출하는 시점에서는 쿼리를 안날림, 해당 객체를 사용하는 시점엔 쿼리 나감
-        
-        
-        
-    + 프록시 특징
-      + 하이버네이트가 어떤 내부 라이브러리를 사용해서 프록시 객체 설정 
-      + 실제 클래스를 상속 받아서 만들어진다.
-      + 실제 클래스와 겉모양이 같다.
-      + 사용하는 입장에서는 진짜 객체인지 프록시 객체인지 구분하지 않고 사용하면 됨(이론상)
-      + 프록시 객체는 실제 객체의 참조(target)를 보관
-      + 프록시 객체를 호출하면 프록시 객체는 실제 객체의 메소드 호출
+       
+  + 프록시 특징
+    + 하이버네이트가 어떤 내부 라이브러리를 사용해서 프록시 객체 설정 
+    + 실제 클래스를 상속 받아서 만들어진다.
+    + 실제 클래스와 겉모양이 같다.
+    + 사용하는 입장에서는 진짜 객체인지 프록시 객체인지 구분하지 않고 사용하면 됨(이론상)
+    + 프록시 객체는 실제 객체의 참조(target)를 보관
+    + 프록시 객체를 호출하면 프록시 객체는 실제 객체의 메소드 호출
     
-    
-    
-    + 프록시 객체의 초기화
-      ```
-       Member member = em.getReference(Member.class,"id1");
-        member.getName();  
-      ```
-        1. em.getReference()로 프록시 객체를 가져온 다음에, getName() 메서드를 호출
-        2. MemberProxy 객체에 처음에 target 값이 존재하지 않는다. JPA가 영속성 컨텍스트에 초기화 요청을 한다.
-        3. 영속성 컨텍스트가 DB에서 조회
-        4. 실제 Entity를 생성
-        5. 프록시 객체가 가지고 있는 target(실제 Member)의 getName()을 호출해서 결국 member.getName()을 호출한 결과를 받을 수 있다.
-        6. 프록시 객체에 target이 할당 되고 나면, 더이상 프록시 객체의 초기화 동작은 없어도 된다.
-        실제로는 위와 같이 프록시 객체가 동작 한 것이다.
+  + 프록시 객체의 초기화
+    ```
+     Member member = em.getReference(Member.class,"id1");
+      member.getName();  
+    ```
+      1. em.getReference()로 프록시 객체를 가져온 다음에, getName() 메서드를 호출
+      2. MemberProxy 객체에 처음에 target 값이 존재하지 않는다. JPA가 영속성 컨텍스트에 초기화 요청을 한다.
+      3. 영속성 컨텍스트가 DB에서 조회
+      4. 실제 Entity를 생성
+      5. 프록시 객체가 가지고 있는 target(실제 Member)의 getName()을 호출해서 결국 member.getName()을 호출한 결과를 받을 수 있다.
+      6. 프록시 객체에 target이 할당 되고 나면, 더이상 프록시 객체의 초기화 동작은 없어도 된다.
+      실제로는 위와 같이 프록시 객체가 동작 한 것이다.
         
-        
-        
-    + 프록시 중요 특징 ★
-      + 프록시 객체는 처음 사용할 때 한 번만 초기화
-      + 프록시 객체를 초기화 할 때, 프록시 객체가 실제 엔티티로 바뀌는 것은 아님!!!! 초기화 되면 프록시 객체를 통해 실제 엔티티에 접근 가능
-      + 프록시 객체는 원본 엔티티를 상속 받음, 따라서 타입 체크시 주의해야함( 타입 비교 시 == 비교 실패, 대신 instanceof 사용) ★
-      + 영속성 컨텍스트에 찾는 엔티티가 이미 있으면 em.getReference()를 호출해도 실제 엔티티를 반환
-        => find(실제 엔티티)로 가져오든 reference(가짜 엔티티)로 가져오든 ==비교하면 무조건 true 가 나와야 하기 때문 ★
-        => proxy를 먼저 올리고 find하면 둘 다 proxy 객체
-        => find 먼저 올리고 proxy 가져오면 둘 다 실제 Member 객체
-        => JPA 한 트랜잭션에 객체 타입이 같음을 보장해준다!! ★★
-      + 영속성 컨텍스트의 도움을 받을 수 없는 준영속 상태일 때, 프록시를 초기화할 때 문제 발생 (em.detach) ★★
-        => (하이버네이트는 org.hibernate.LazyInitializationException
+  + 프록시 중요 특징 ★
+    + 프록시 객체는 처음 사용할 때 한 번만 초기화
+    + 프록시 객체를 초기화 할 때, 프록시 객체가 실제 엔티티로 바뀌는 것은 아님!!!! 초기화 되면 프록시 객체를 통해 실제 엔티티에 접근 가능
+    + 프록시 객체는 원본 엔티티를 상속 받음, 따라서 타입 체크시 주의해야함( 타입 비교 시 == 비교 실패, 대신 instanceof 사용) ★
+    + 영속성 컨텍스트에 찾는 엔티티가 이미 있으면 em.getReference()를 호출해도 실제 엔티티를 반환
+      => find(실제 엔티티)로 가져오든 reference(가짜 엔티티)로 가져오든 ==비교하면 무조건 true 가 나와야 하기 때문 ★
+      => proxy를 먼저 올리고 find하면 둘 다 proxy 객체
+      => find 먼저 올리고 proxy 가져오면 둘 다 실제 Member 객체
+      => JPA 한 트랜잭션에 객체 타입이 같음을 보장해준다!! ★★
+    + 영속성 컨텍스트의 도움을 받을 수 없는 준영속 상태일 때, 프록시를 초기화할 때 문제 발생 (em.detach) ★★
+      => (하이버네이트는 org.hibernate.LazyInitializationException
     
-    
-    
-    + 프록시 확인
-      + 프록시 인스턴스 초기화 여부 확인
-        + PersistenceUnitUtil.isLoaded(Object entity)
-      + 프록시 클래스 확인 방법
-        + entity.getClass().getName() 출력(..javasist.. or HibernateProxy..)  => proxy.getClass()
-      + 프록시 강제 초기화
-        + org.hibernate.Hibernate.initialize(entity);
-      + 참고 : JPA 표준은 강제 초기화 없음
-        + 강제 호출 : member.getName()   
+  + 프록시 확인
+    + 프록시 인스턴스 초기화 여부 확인
+      + PersistenceUnitUtil.isLoaded(Object entity)
+    + 프록시 클래스 확인 방법
+      + entity.getClass().getName() 출력(..javasist.. or HibernateProxy..)  => proxy.getClass()
+    + 프록시 강제 초기화
+      + org.hibernate.Hibernate.initialize(entity);
+    + 참고 : JPA 표준은 강제 초기화 없음
+      + 강제 호출 : member.getName()   
