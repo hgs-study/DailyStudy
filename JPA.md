@@ -457,3 +457,26 @@
     + 단일 엔티티에 종속적일 때 사용해야함!!
     + 두 엔티티의 라이프 사이클이 동일할 때, 단일 소유자일 경우 사용
 
++ 고아 객체
+```
+ㅇ 고아 객체란?
+ㅇ 주의사항
+```
+  + 고아 객체란?
+    + 고아 객체 제거: 부모 엔티티와 연관관계가 끊어진 자식 엔티티를 자동으로 삭제
+    + orthpanRemoval = true
+    + orthpanRemoval = true일 때, findParent.getChildList().remove(0); 하면 delete쿼리 나감, false일 때는 delete 쿼리 안 나감 (컬렉션에서 빠지면 삭제 됨)
+  
+  + 주의사항
+    + 참조가 제거된 엔티티는 다른 곳에서 참조하지 않는 고아 객체로 보고 삭제하는 기능
+    + 참조하는 곳이 하나일 때 사용해야함 ★
+    + 특정 엔티티가 개인 소유할 때 사용
+    + @OneTtoOne, @OneToMany만 사용
+    + 참고 : 개념적으로 부모를 제거하면 자식은 고아가 된다. 따라서 고아 객체 제거 기능을 활성화 하면, 부모를 제거할 때 자식도 함께 제거된다. 이것은 CascadeType.REMOVE처럼 동작한다.
+
+
+  + 영속성 전이 + 고아 객체 생명주기
+    + CascadeType.ALL + orphanRemoval = true
+    + 스스로 생명주기를 관리하는 엔티티는 em.persist()로 영속화, em.remove()로 제거
+    + 두 옵션을 모두 활성화 하면 부모 엔티티를 통해서 자식의 생명 주기도 관리할 수 있음 (Parent는 영속성 컨텍스트가 관리하지만, Child는 Parent가 관리함 ,Parent는 Dao나 Repository가 없어도 됨)
+    + 도메인 주도 설계(DDD)의 Aggregate Root개념을 구현할 때 유용 (레파지토리는 Aggregate Root(Parent)만 접근함, child는 Aggregate Root의 접근으로만 생명주기를 관리함)
