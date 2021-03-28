@@ -15,6 +15,8 @@
 
 > + [JPA](https://github.com/hgs-study/DailyStudy/blob/main/JPA.md)
 
+> + [JPA-02](https://github.com/hgs-study/DailyStudy/blob/main/JPA-02.md)
+
 > + [Jenkins](https://github.com/hgs-study/DailyStudy/blob/main/Jenkins.md)
 
 > + [Kubernetes](https://github.com/hgs-study/DailyStudy/blob/main/Kubernetes.md)
