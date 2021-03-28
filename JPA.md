@@ -480,3 +480,18 @@
     + 스스로 생명주기를 관리하는 엔티티는 em.persist()로 영속화, em.remove()로 제거
     + 두 옵션을 모두 활성화 하면 부모 엔티티를 통해서 자식의 생명 주기도 관리할 수 있음 (Parent는 영속성 컨텍스트가 관리하지만, Child는 Parent가 관리함 ,Parent는 Dao나 Repository가 없어도 됨)
     + 도메인 주도 설계(DDD)의 Aggregate Root개념을 구현할 때 유용 (레파지토리는 Aggregate Root(Parent)만 접근함, child는 Aggregate Root의 접근으로만 생명주기를 관리함)
+
+
+
++ 연관관계 정리
+```
+ㅇ 글로벌 페치 전략 설정
+ㅇ 영속성 전이 설정
+```
+  + 글로벌 페치 전략 설정 ★
+    + 모든 연관관계를 지연 로딩으로!!!
+    + @ManyToOne, @OneToOne은 기본이 즉시로딩이므로 지연 로딩으로 변경 
+
+  + 영속성 전이 설정
+    + Order -> Delivery 영속성 전이 ALL  -> 주문을 하는 동시에 배달 엔티티의 라이프 사이클을 맞추겠다
+    + Order -> OrderItem 영속성 전이 ALL 
