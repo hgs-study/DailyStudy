@@ -2,35 +2,66 @@
 
 ### 인프라
 ------
- + [Anotation-DTO](https://github.com/hgs-study/DailyStudy/blob/main/Anotation-DTO.md)
+ + [AWS](https://github.com/hgs-study/HTTPNetwork/blob/main/Infra/AWS.md)
 
-> + [AWS](https://github.com/hgs-study/HTTPNetwork/blob/main/AWS.md)
-
-> + [Docker](https://github.com/hgs-study/DailyStudy/blob/main/Docker.md)
-
-> + [HTTPNetwork](https://github.com/hgs-study/HTTPNetwork/blob/main/HttpNetwork.md)
-
-> + [Java](https://github.com/hgs-study/DailyStudy/blob/main/Java.md)
-
-> + [JavaScript](https://github.com/hgs-study/DailyStudy/blob/main/JavaScript.md)
-
-> + [Jsp](https://github.com/hgs-study/DailyStudy/blob/main/Jsp.md)
-
-> + [JPA](https://github.com/hgs-study/DailyStudy/blob/main/JPA.md)
-
-> + [JPA-02](https://github.com/hgs-study/DailyStudy/blob/main/JPA-02.md)
-
-> + [Jenkins](https://github.com/hgs-study/DailyStudy/blob/main/Jenkins.md)
-
-> + [Kubernetes](https://github.com/hgs-study/DailyStudy/blob/main/Kubernetes.md)
-
-> + [MapStruct](https://github.com/hgs-study/DailyStudy/blob/main/MapStruct.md)
-
-> + [Mysql](https://github.com/hgs-study/DailyStudy/blob/main/Mysql.md)
-
-> + [RestAPI](https://github.com/hgs-study/DailyStudy/blob/main/RestAPI.md)
+ + [Docker](https://github.com/hgs-study/DailyStudy/blob/main/Infra/Docker.md)
  
-> + [SpringFramework](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework.md)
+ + [Jenkins](https://github.com/hgs-study/DailyStudy/blob/main/Infra/Jenkins.md)
+
+ + [Kubernetes](https://github.com/hgs-study/DailyStudy/blob/main/Infra/Kubernetes.md)
+
+
+
+
+### 스프링 프레임워크
+------
+
+ + [Anotation-DTO](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/Anotation-DTO.md)
+ 
+ + [SpringFramework](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/SpringFramework.md)
+
+ + [MapStruct](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/MapStruct.md)
+
+
+### 자바
+------
+
+ + [Java](https://github.com/hgs-study/DailyStudy/blob/main/Java/Java.md)
+
+ + [JPA](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA.md)
+
+ + [JPA-02](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-02.md)
+
+ + [JPA-JPQL](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-02.md)
+
+### DB
+---------
+ + [Mysql](https://github.com/hgs-study/DailyStudy/blob/main/DB/Mysql/Mysql.md)
+
+
+### 자바스크립트
+----------
+ + [JavaScript](https://github.com/hgs-study/DailyStudy/blob/main/Front/JavaScript/JavaScript.md)
+
+
+### Jsp
+----------
+
+ + [Jsp](https://github.com/hgs-study/DailyStudy/blob/main/Front/Jsp/Jsp.md)
+
+### HTTP
+---------
+
+ + [HTTPNetwork](https://github.com/hgs-study/HTTPNetwork/blob/main/Http/HttpNetwork.md)
+
+ + [RestAPI](https://github.com/hgs-study/DailyStudy/blob/main/Http/RestAPI.md)
+
+
+
+
+
+ 
+
 
 
 
