@@ -49,5 +49,25 @@
   + 예) JPA를 우회해서 SQL을 실행하기 직전에 영속성 컨텍스트 수동 플러시!!!!! ★
   + 영한님은 95% JPQL/QueryDSL로 사용하고 나머지 정말 복잡한 5%는 SpringJdbcTemplate 사용
 
+-------------
++ JPQL
+  + 개념, getResultList, getSingleResult 부분 날림......... (jpql-shop -> commit 참고)
+
+  + 프로젝션
+    + SELECT 절에 조회할 대상을 지정하는 것  
+    + 대상 : 엔티티, 임베디드 타입, 스칼라 타입(숫자, 문자 등 기본 데이터 타입)
+    
+    + SELECT m FROM Member m -> 엔티티 프로젝션 (m)  (엔티티 프로젝션는 다 영속성 컨텍스트에서 관리함)
+    + SELECT m.team FROM Member m -> 엔티티 프로젝션 (조인)
+    + SELECT m.address FROM Member m -> 임베디드 타입 프로젝션
+    + SELECT m.username, m.age FROM Member -> 스칼라 타입 프로젝션 (sql짜듯이 내가 가지고 싶어오고 싶은 것 가져옴)
+    + DISTINCT로 중복 제거
   
-  
+  + 프로젝션 - 여러 값 조회 (반환값이 String,int 등등 타입이 다름 ex)username,age 등
+    + Query 타입으로 조회
+    + Object[] 타입으로 조회
+    + new 명령어로 조회 (표준)
+      + 단순 값을 DTO로 바로 조회  
+      + 순서와 타입 일치해야함
+      + DTO로 뽑아낼 때는 new jpql.MemberDTO(m.username,m.age)로 작성
+      + 나중에 쿼리DSL 사용하면 이 부분도 극복이 됨
