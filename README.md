@@ -51,9 +51,9 @@
 ### HTTP
 ---------
 
- + [HTTPNetwork](https://github.com/hgs-study/HTTPNetwork/blob/main/Http/HttpNetwork.md)
+ + [HTTPNetwork](https://github.com/hgs-study/HTTPNetwork/blob/main/HTTP/HttpNetwork.md)
 
- + [RestAPI](https://github.com/hgs-study/DailyStudy/blob/main/Http/RestAPI.md)
+ + [RestAPI](https://github.com/hgs-study/DailyStudy/blob/main/HTTP/RestAPI.md)
 
 
 
