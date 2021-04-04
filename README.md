@@ -31,7 +31,7 @@
 
  + [JPA-02](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-02.md)
 
- + [JPA-JPQL](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-02.md)
+ + [JPA-JPQL](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-JPQL.md)
 
 ### DB
 ---------
