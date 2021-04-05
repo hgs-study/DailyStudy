@@ -111,3 +111,8 @@
     + AND, OR, NOT
     + = , > , >= , < , <= <>
     + BETWEEN, LIKE, IS NULL
+
+  + 조건식 CASE식 (분기)
+    + case when ~ then ~ else end
+    + COALESCE : 하나씩 조회해서 NULL이 아니면 반환 -> coalesce(m.username,'이름 없는 회원') // 이름이 null이면 '이름 없는 회원' 반환
+    + NULLIF : 두 값이 같으면 NULL 반환, 다르면 첫번째 값 반환 -> nullif(m.username,'관리자') // 이름이 '관리자'일 경우 null 반환
