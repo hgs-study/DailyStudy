@@ -98,3 +98,16 @@
       + FROM 절의 서브 쿼리는 현재 JPQL에서 불가능 !!!(조인으로 풀 수 있으면 풀어서 해결)
         + 네이티브 SQL
         + 결과를 가져와서 APP에서 조립하는식으로 사용(김영한님은 주로 이런 방식, 네이티브는 잘 안 씀)
+
+  + JPQL 타입 표현
+    + 문자 : 'Hello', 'She"s' 
+    + 숫자 : 10L(Long), 10D(Double), 10F(Float)
+    + Boolean : TRUE, FALSE
+    + ENUM : jpabook.MemberType.Admin (패키지명 포함) 조심!!
+    + 엔티티 타입 : Type(m) = Member (상속관계에서 사용)
+
+  + JSQL 기타 표현
+    + EXISTS, IN
+    + AND, OR, NOT
+    + = , > , >= , < , <= <>
+    + BETWEEN, LIKE, IS NULL
