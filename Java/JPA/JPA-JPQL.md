@@ -71,3 +71,10 @@
       + 순서와 타입 일치해야함
       + DTO로 뽑아낼 때는 new jpql.MemberDTO(m.username,m.age)로 작성
       + 나중에 쿼리DSL 사용하면 이 부분도 극복이 됨
+
+  + 페이징 API
+    + 페이징을 다음 두 API로 추상화
+    + setFirstResult(int startPosition) : 조회 시작 위치(0부터 시작)
+    + setMaxResults(int maxResult) : 조회할 데이터 수
+    + hibernate.dialect 을 변경하더라도 변경한 DB의 페이징 폼으로 나감
+  
