@@ -116,3 +116,23 @@
     + case when ~ then ~ else end
     + COALESCE : 하나씩 조회해서 NULL이 아니면 반환 -> coalesce(m.username,'이름 없는 회원') // 이름이 null이면 '이름 없는 회원' 반환
     + NULLIF : 두 값이 같으면 NULL 반환, 다르면 첫번째 값 반환 -> nullif(m.username,'관리자') // 이름이 '관리자'일 경우 null 반환
+
+  + 기본 함수
+    + CONCAT
+    + SUBSTRING
+    + TRIM
+    + LOWER, UPPER
+    + LENGTH
+    + LOCATE
+    + ABS, SQRT, MOD
+    + SIZE, INDEX(JPA 용도) 
+    + 기본적으로 DB다이어렉에 다 등록이 되어 있다
+    + 하지만 DB를 바꿀 경우 안 될 가능성이 높다. 파라미터가 다른 등등
+
+  + 사용자 정의 함수
+    + 하이버네이트는 사용 전 방언에 추가해야한다.
+      + 사용하는 DB방언을 상속받고, 사용자 정의 함수를 등록한다.
+      + select function('group_concat', i.name) from Item i  
+      
+    + H2Dialect를 상속받아서 MyH2Dialect(커스텀 다이어렉)을 만들고 function 정의 후 사용
+      +  registerFunction("group_concat", new StandardSQLFunction("group_concat", StandardBasicTypes.STRING));
