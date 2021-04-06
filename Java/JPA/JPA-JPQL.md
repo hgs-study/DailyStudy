@@ -162,4 +162,17 @@
     + 조인은 SQL 튜닝에 중요 포인트
     + 묵시적 조인은 조인이 일어나는 상황을 한 눈에 파악하기 어려움 
 -----------
-  
++ 패치 조인 (중요 ★★★★★ - 실무에서 굉장히 중요함)
+  + 패치조인이란?
+    + SQL 조인 종류 X
+    + JPQL에서 성능 최적화를 위해 제공하는 기능
+    + 연관된 엔티티나 컬렉션을 SQL 한번에 함께 조횐하는 기능
+    + JOIN FETCH 명령어 사용
+
+  + 엔티티 패치조인
+    + 회원을 조회하면서 연관된 팀도 함께 조회(SQL 한번에) 
+    + SQL을 보면 회원뿐만아니라 팀(T.*)도 함께 SELECT
+    + [JPQL] =  select m from Member m join fetch m.team
+    + [SQL]  =  SELECT M.*, T.* FROM MEMBER M INNER JOIN TEAM T ON M.TEAM_ID = T.ID\
+    
+
