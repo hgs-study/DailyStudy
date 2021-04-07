@@ -230,3 +230,19 @@
       + 모든 것을 페치 조인으로 해결할 수는 없음
       + 페치조인은 객체 그래프를 유지할 때 사용하면 효과적
       + 여러 테이블을 조인해서 엔티티가 가진 모양이 아닌 전혀 다른 결과를 내야 하면, 페치조인보다는 일반 조인을 사용하고 필요한 데이터들만 조회해서 DTO로 반환하는 것이 효과적 
+
+-----------
+  + 다형성 쿼리
+    + Item 하위에 Book, Movie, Album 클래스
+    + 조회 대상을 특정 자식으로 한정 
+    + Item 중에 Book, Movie를 조회해라!
+      + JPQL : select i from Item i where type(i) IN (Book,Movie)
+          -> JPQL 쿼리가 SQL로 바뀜
+      + SQL : select i from Item i where i.DTYPE in ('Book','Movie')
+
+    + TREAT (다운 캐스팅)
+      + 자바의 타입 캐스팅과 유사
+      + 상속 구조에서 부모 타입을 특정 자식 타입으로 다룰 때 사용 
+      + JPQL : select i from Item i where treat(i as Book).auther = "Kim"
+      + SQL : select i.* from Item i where i.DTYPE = 'B' and i.auther = "Kim"
+ -----------
