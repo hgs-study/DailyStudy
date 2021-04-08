@@ -246,3 +246,11 @@
       + JPQL : select i from Item i where treat(i as Book).auther = "Kim"
       + SQL : select i.* from Item i where i.DTYPE = 'B' and i.auther = "Kim"
  -----------
+  + 엔티티 직접 사용 
+    + 기본 키 값
+      + JPQL에서 엔티티를 직접 사용하면 SQL에서 해당 엔티티의 기본 키 값을 사용  
+      + JPQL : select count(m.id) from Member m // 보통 엔티티의 아이디를 사용 
+      + 직접 : select count(m) from Member m // m.id 대신 m 사용
+      + SQL : select count(m.id) as cnt from Member m // 엔티티를 받으면 해당 기본키값을 사용
+      + 외래키도 마찬가지로 DB입장에서는 PK를 활용해서 찾음
+ ------------
