@@ -37,6 +37,8 @@
 ---------
  + [Mysql](https://github.com/hgs-study/DailyStudy/blob/main/DB/Mysql/Mysql.md)
 
+ + [Redis](https://github.com/hgs-study/DailyStudy/blob/main/DB/Redis/Redis.md)
+
 
 ### 자바스크립트
 ----------
