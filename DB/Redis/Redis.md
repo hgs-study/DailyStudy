@@ -8,3 +8,4 @@
   + 따라서 GC 대상이 되지 않고 그로 인한 오버헤드가 줄어드는 장점이 있다.
   + 참고 :  https://engkimbs.tistory.com/796
   + 예제 : https://sundries-in-myidea.tistory.com/110 해보기~!
+  + 예제2: https://deveric.tistory.com/98 (에릭님)
