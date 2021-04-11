@@ -21,12 +21,12 @@
 
 + Redis cli cache 명령어
   + keys *
-    >> 1) "getBoards::2"
-    >> 2) "getBoards::6"
-    >> 3) "getBoards::5"
+     > 1) "getBoards::2"
+     > 2) "getBoards::6"
+     > 3) "getBoards::5"
    
   + get "getBoards::2"
-    >> "[\"java.util.ArrayList\",[{\"@class\":\"com.example.rediscachebasic.business.board.domain.Board\",\"id\":0,\"title\":\"0\xeb\xb2\x88\xec\xa8\xb0 \xea\xb2\x8c\xec\x8b\x9c\xeb\xac\xbc\",\"contents\":\"0\xeb\xb2\x88\xec\xa7\xb8 \xeb\x8
+    > "[\"java.util.ArrayList\",[{\"@class\":\"com.example.rediscachebasic.business.board.domain.Board\",\"id\":0,\"title\":\"0\xeb\xb2\x88\xec\xa8\xb0 \xea\xb2\x8c\xec\x8b\x9c\xeb\xac\xbc\",\"contents\":\"0\xeb\xb2\x88\xec\xa7\xb8 \xeb\x8
 "[\"java.util.ArrayList\",[{\"@class\":\"com.example.rediscashbasic.business.board.domain.Board\",\"id\":0,\"title\":\"0\xeb\xb2\x88\xec\xa8\xb0 \xea\xb2\x8c\xec\x8b\x9c\xeb\xac\xbc\",\"contents\":\"0\xeb\xb2\x88\xec\xa7\xb8 \xeb\x8
 2\xb4\xec\x9a\xa9\"},{\"@class\":\"com.example.rediscashbasic.business.board.domain.Board\",\"id\":1,\"title\":\"1\xeb\xb2\x88\xec\xa8\xb0 \xea\xb2\x8c\xec\x8b\x9c\xeb\xac\xbc\",\"contents\":\"1\xeb\xb2\x88\xec\xa7\xb8 \xeb\x82\xb4\
 xec\x9a\xa9\"}]]"
