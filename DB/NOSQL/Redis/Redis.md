@@ -12,6 +12,7 @@
   + 참고 :  https://engkimbs.tistory.com/796
   + 예제 : https://sundries-in-myidea.tistory.com/110 해보기~!
   + 예제2: https://deveric.tistory.com/98 (에릭님)
+  + 우아한 Redis 세미나 후기 : https://ict-nroo.tistory.com/133
 
 + Redis 실행(Docker)
   + docker run -p 6379:6379 --name boot-redis -d redis
