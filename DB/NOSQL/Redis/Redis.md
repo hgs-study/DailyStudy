@@ -21,9 +21,9 @@
 
 + Redis cli cache 명령어
   + keys *
-     + 1) "getBoards::2"
-     + 2) "getBoards::6"
-     + 3) "getBoards::5"
+     + "getBoards::2"
+     + "getBoards::6"
+     + "getBoards::5"
    
   + get "getBoards::2"
     > "[\"java.util.ArrayList\",[{\"@class\":\"com.example.rediscachebasic.business.board.domain.Board\",\"id\":0,\"title\":\"0\xeb\xb2\x88\xec\xa8\xb0 \xea\xb2\x8c\xec\x8b\x9c\xeb\xac\xbc\",\"contents\":\"0\xeb\xb2\x88\xec\xa7\xb8 \xeb\x8
