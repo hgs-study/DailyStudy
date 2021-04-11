@@ -33,11 +33,13 @@
 
  + [JPA-JPQL](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-JPQL.md)
 
-### DB
+### RDBMS
 ---------
- + [Mysql](https://github.com/hgs-study/DailyStudy/blob/main/DB/Mysql/Mysql.md)
+ + [Mysql](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/Mysql/Mysql.md)
 
- + [Redis](https://github.com/hgs-study/DailyStudy/blob/main/DB/Redis/Redis.md)
+### NOSQL
+---------
+ + [Redis](https://github.com/hgs-study/DailyStudy/blob/main/DB/NOSQL/Redis/Redis.md)
 
 
 ### 자바스크립트
