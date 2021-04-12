@@ -1,4 +1,9 @@
 
+### 일정관리
+------
+ + [일정](https://github.com/hgs-study/DailyStudy/blob/main/Schedule/Schedule.md)
+ 
+ 
 ### 인프라
 ------
  + [AWS](https://github.com/hgs-study/HTTPNetwork/blob/main/Infra/AWS.md)
@@ -8,8 +13,6 @@
  + [Jenkins](https://github.com/hgs-study/DailyStudy/blob/main/Infra/Jenkins.md)
 
  + [Kubernetes](https://github.com/hgs-study/DailyStudy/blob/main/Infra/Kubernetes.md)
-
-
 
 
 ### 스프링 프레임워크
