@@ -5,4 +5,5 @@
 ```
 ㅇ 일정
   > 2021.04
-    + 2021-04-12 : KAS API 살펴보고 테스트 / 토이프로젝트 설계 
+    + 2021-04-12 : KAS(Klaytn API Service) API 실습 (Token / Wallet)
+    + 2021-04-13 : KAS(Klaytn API Service) API 실습 (Transaction)
