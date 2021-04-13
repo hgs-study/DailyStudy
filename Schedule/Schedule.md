@@ -6,5 +6,5 @@
 ## 일정
   #### 2021.04
   ----
-    + 2021-04-12 : KAS(Klaytn API Service) API 실습 (Token / Wallet)
-    + 2021-04-13 : KAS(Klaytn API Service) API 실습 (Transaction)
+    + 2021-04-12 : [KAS](https://github.com/hgs-study/Klaytn-API) (Klaytn API Service) API 실습 (Token / Wallet)
+    + 2021-04-13 : [KAS](https://github.com/hgs-study/Klaytn-API) (Klaytn API Service) API 실습 (Transaction)
