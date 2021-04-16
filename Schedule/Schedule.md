@@ -9,4 +9,5 @@
   + 2021-04-12 : [KAS](https://github.com/hgs-study/Klaytn-API) (Klaytn API Service) API 실습 (Token / Wallet)
   + 2021-04-13 : [KAS](https://github.com/hgs-study/Klaytn-API) (Klaytn API Service) API 실습 (Transaction)
   + 2021-04-14 : [KAS](https://github.com/hgs-study/Klaytn-API) (Klaytn API Service) API 실습 (Node API) / 사내 스터디( 코딩&공부 중 이슈 토론 / Rest API 공유 / 토이 프로젝트 기획)
-  + 2021-04-15 : [KAS](https://github.com/hgs-study/Klaytn-API) (Klaytn API Service) API 용어 & 개념 학습 / Reflection Debug 즉흥 스터디
+  + 2021-04-15 : [KAS](https://github.com/hgs-study/Klaytn-API) (Klaytn API Service) API 용어 & 개념 학습 / Java Reflection Debug 즉흥 스터디
+  + 2021-04-16 : 토이 프로젝트(ERD 설계)
