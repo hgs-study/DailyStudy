@@ -1,15 +1,14 @@
-### 일정관리
+## 일정관리
 ```
 ㅇ 과거 일정들을 보면서 내가 언제 무슨 공부를 했고 시간을 효율적으로 분배해서 자기개발을 하고 있는지 확인할 수 있을 것 같다.
 ㅇ 진행한 이슈들을 체크/관리하고 명확하게 나 자신을 피드백 할 수 있는 일정관리 모델을 지향한다.
+
+※ 약어 사용
+  - KAS : Klaytn-API (POC 프로젝트)  (https://github.com/hgs-study/Klaytn-API)
+  - KSS : Klay-Staking-Service (메인 프로젝트) (https://github.com/hgs-study/Klay-Staking-Service)
 ```
-## 일정
+### 일정
   #### 2021.04
-  ```
-    ※ 약어 사용
-      - KAS : Klaytn-API (POC 프로젝트)  (https://github.com/hgs-study/Klaytn-API)
-      - KSS : Klay-Staking-Service (메인 프로젝트) (https://github.com/hgs-study/Klay-Staking-Service)
-  ```
   ----
   + 2021-04-12 : [KAS](https://github.com/hgs-study/Klaytn-API) - POC 프로젝트 API 실습 (Token / Wallet)
   + 2021-04-13 : [KAS](https://github.com/hgs-study/Klaytn-API) - POC 프로젝트 API 실습 (Transaction)
