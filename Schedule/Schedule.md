@@ -21,3 +21,5 @@
   + 2021-04-20 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 로그인 예외처리 / BaseEntity 추가, Test 코드 작성
   + 2021-04-21 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 도메인별 엔티티 / 연관관계 설정
   + 2021-04-22 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 지갑 생성 API / Test 코드 작성
+  + 2021-04-23 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - Wallet <-> Token 양방향 연관관계 / Test 코드 작성
+
