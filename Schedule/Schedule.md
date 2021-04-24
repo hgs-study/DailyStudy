@@ -22,4 +22,4 @@
   + 2021-04-21 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 도메인별 엔티티 / 연관관계 설정
   + 2021-04-22 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 지갑 생성 API / Test 코드 작성
   + 2021-04-23 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - Wallet <-> Token 양방향 연관관계 / Test 코드 작성
-
+  + 2021-04-24 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 이슈 : Wallet <-> Token 다대다 연관관계로 변경 / 해결 : TokenAmount(토큰수량) 중간 연결 엔티티 생성
