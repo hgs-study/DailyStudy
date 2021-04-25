@@ -23,3 +23,4 @@
   + 2021-04-22 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 지갑 생성 API / Test 코드 작성
   + 2021-04-23 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - Wallet <-> Token 양방향 연관관계 / Test 코드 작성
   + 2021-04-24 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 이슈 : Wallet <-> Token 다대다 연관관계로 변경 / 해결 : TokenAmount(토큰수량) 중간 연결 엔티티 생성
+  + 2021-04-25 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 회원가입시 0.1 Klay 지급 구현 / API,Transaction 발생시 History 내역에 저장 (Transaction일 경우, TX 정보 Transaction History에 추가 저장) 
