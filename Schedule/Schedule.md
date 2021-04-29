@@ -26,3 +26,5 @@
   + 2021-04-25 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 회원가입시 0.1 Klay 지급 구현 (Test 코드 작성) / API,Transaction 발생시 History 내역에 저장 (Transaction일 경우, TX 정보 Transaction History에 추가 저장) 
   + 2021-04-26 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 회원가입 예외 처리 추가 / 내 Klay 수량 조회 기능 구현
   + 2021-04-27 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 회원 지갑 주소 조회 / TODO List 
+  + 2021-04-28 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - Account 등록, 삭제, 조회, 수정 완료
+  + 2021-04-29 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - Staking 상품 등록 완료 / ERD 수정
