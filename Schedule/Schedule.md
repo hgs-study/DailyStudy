@@ -8,7 +8,7 @@
   - KSS(Klay-Staking-Service) : 메인 프로젝트 (https://github.com/hgs-study/Klay-Staking-Service)
 ```
 ### 일정
-  #### 2021.04
+  #### 2021.04 (04.12 ~ )
   ----
   + 2021-04-12 : [KA](https://github.com/hgs-study/Klaytn-API) - POC 프로젝트 API 실습 (Token / Wallet)
   + 2021-04-13 : [KA](https://github.com/hgs-study/Klaytn-API) - POC 프로젝트 API 실습 (Transaction)
