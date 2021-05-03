@@ -28,3 +28,8 @@
   + 2021-04-27 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 회원 지갑 주소 조회 / TODO List 
   + 2021-04-28 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - Account 등록, 삭제, 조회, 수정 완료
   + 2021-04-29 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - Staking 상품 등록 완료 / ERD 수정
+
+  #### 2021.05
+  ----
+  + 2021-05-02 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - Staking 수정, 삭제, 조회 완료 / 컨트롤러 <-> 서비스 ResponseEntity 책임 변경 / Order 등록, 조회 / OrderedProduct 등록 조회 완료
+  + 2021-05-03 : [Batch & Scheduler](https://github.com/hgs-study/Batch-Scheduler-Basic) - Scheduler 구현 / Batch Job 실행 (h2 -> mysql)
