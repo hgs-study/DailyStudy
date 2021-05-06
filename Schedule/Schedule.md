@@ -35,3 +35,4 @@
   + 2021-05-03 : [Batch & Scheduler](https://github.com/hgs-study/Batch-Scheduler-Basic) - [KSS Pilot프로젝트] Scheduler 구현 / Batch Job 실행 (h2 -> mysql)
   + 2021-05-04 : [Batch & Scheduler](https://github.com/hgs-study/Batch-Scheduler-Basic) - [KSS Pilot프로젝트] job Parameter 설정 / Batch 메타 데이터 테이블 이해
   + 2021-05-05 : [Batch & Scheduler](https://github.com/hgs-study/Batch-Scheduler-Basic) - [KSS Pilot프로젝트] 배치 성공, 실패 시나리오 / Decide / JpaItemReader
+  + 2021-05-06 : [Batch & Scheduler](https://github.com/hgs-study/Batch-Scheduler-Basic) - [KSS Pilot프로젝트] ItemProcessor , ItemWriter
