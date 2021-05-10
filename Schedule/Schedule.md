@@ -37,3 +37,5 @@
   + 2021-05-05 : [Batch & Scheduler](https://github.com/hgs-study/Batch-Scheduler-Basic) - [KSS Pilot프로젝트] 배치 성공, 실패 시나리오 / Decide / JpaItemReader
   + 2021-05-06 : [Batch & Scheduler](https://github.com/hgs-study/Batch-Scheduler-Basic) - [KSS Pilot프로젝트] ItemProcessor , ItemWriter
   + 2021-05-08 : [Batch & Scheduler](https://github.com/hgs-study/Batch-Scheduler-Basic) - [KSS Pilot프로젝트] 스케줄러 & 배치를 활용한 1분마다 사용자 Klay Balance 확인 후 업데이트
+  + 2021-05-09 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - Batch & Scheduler 초기 세팅
+  + 2021-05-10 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 00:00시마다 0.01 Klay 스테이킹 보상 지급 완료
