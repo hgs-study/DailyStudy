@@ -55,3 +55,11 @@ https://www.notion.so/05486768ef7e41f698b6760519eb8a34
 - 도커 컨테이너 명령어
  - https://m.blog.naver.com/PostView.nhn?blogId=complusblog&logNo=220974632766&proxyReferer=https:%2F%2Fwww.google.com%2F
 ```
+
+## Ubuntu 도커 설치
+-----
+ + 참고 : https://blog.cosmosfarm.com/archives/248/%EC%9A%B0%EB%B6%84%ED%88%AC-18-04-%EB%8F%84%EC%BB%A4-docker-%EC%84%A4%EC%B9%98-%EB%B0%A9%EB%B2%95/
+ + 1. sudo docker run -d -p 80:80 docker/getting-started (도커 다운로드)
+  + 도커 튜토리얼 페이지
+  + 80포트에 도커 getting started 페이지 띄움 (해당 서버 ip 접속해서 바로 확인 가능)
+ + 2. sudo apt-get install openjdk-8-jdk (자바 다운로드) 
