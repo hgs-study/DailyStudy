@@ -58,8 +58,16 @@ https://www.notion.so/05486768ef7e41f698b6760519eb8a34
 
 ## Ubuntu 도커 설치
 -----
+![image](https://user-images.githubusercontent.com/76584547/117834960-90e85480-b2b2-11eb-9784-22141e02f4ec.png)
+
+<br/>
+
+※ 출처 : https://tinyurl.com/y9phv5gd (이 강의 정말 좋아요우.. - 감자튀김-)
+
  + 참고 : https://blog.cosmosfarm.com/archives/248/%EC%9A%B0%EB%B6%84%ED%88%AC-18-04-%EB%8F%84%EC%BB%A4-docker-%EC%84%A4%EC%B9%98-%EB%B0%A9%EB%B2%95/
- + 1. sudo docker run -d -p 80:80 docker/getting-started (도커 다운로드)
+ 1. sudo docker run -d -p 80:80 docker/getting-started (도커 다운로드)
   + 도커 튜토리얼 페이지
   + 80포트에 도커 getting started 페이지 띄움 (해당 서버 ip 접속해서 바로 확인 가능)
- + 2. sudo apt-get install openjdk-8-jdk (자바 다운로드) 
+ 2. sudo apt-get install openjdk-8-jdk (자바 다운로드) 
+ 3. sudo docker pull hgstudy/spring-boot-cpu-bound (도커 허브에 있는 spring-boot-cpu-bound 이미지 가져옴)
+ 4. sudo docker run -p 80:80 hgstudy/spring-boot-cpu-bound (외부 80번 포트를 내부 80번 포트로 실행)
