@@ -73,4 +73,5 @@ scenarios:
     + arrivalRate 15일경우 (매초 15명) - latency가 불안정하며 계속 진행되거나 visual user가 조금만 늘었어도 에러가 날 것이다.
   ![image](https://user-images.githubusercontent.com/76584547/117821372-790ad380-b2a6-11eb-9b6d-969085a8a86d.png)
 
+  ※ PM(물리서버)과 달리 VM(가상서버)은 인접하고 있는 인스턴스들과 자원을 공유하기 때문에 항상 똑같은 수준의 퀄리티를 보장할 수 없다 => 레이턴시가 중간 중간 튄다.
 
