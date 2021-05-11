@@ -3,8 +3,8 @@
 
 ## 설치
 ---
-  + 1. npm install -g artillery (visual code)
-  + 2. test.yaml 생성 후 
+  1. npm install -g artillery (visual code)
+  2. test.yaml 생성 후 
   ```
   config:
   target: "https://example.com/api"
@@ -42,7 +42,7 @@ scenarios:
           json:
             productId: "{{ productId }}"
 ```
-  + 3. 원하는 측정 api 설정
+  3. 원하는 측정 api 설정
   ```
   config:
   target: "http://측정 아이피"
@@ -59,3 +59,19 @@ scenarios:
   #60초 동안 성능을 측정하고 매초 5명의 새로운 visual user를 만든다.
   
   ```
+  4. 아틸러리 실행 
+    + artillery.cmd run --output report.json .\test.yaml
+  5. 테스트 완료 되면 report.json이 생성됨 
+  6. 만들어진 report.json -> html로 만드려면
+    +  artillery.cmd report .\report.json 
+    +  실행하면 성능 측정 html이 뜸
+  7. 아틸러리 테스트 중 가장 중요한 목록 "Latency At Intervals"
+    + 가로축 시간
+    + 세로축 지연시간
+    + arrivalRate 1일 경우 (매초 1명)
+    + ![image](https://user-images.githubusercontent.com/76584547/117819977-106f2700-b2a5-11eb-8561-c140520db425.png)
+    + arrivalRate 8일 경우 (매초 8명) - latency가 살짝 튀긴 하나 그래도 안정적인 모습을 보인다
+    + ![image](https://user-images.githubusercontent.com/76584547/117820531-97bc9a80-b2a5-11eb-917f-74ef90ebac3c.png)
+    + arrivalRate 15일경우 (매초 15명) - latency가 불안정하며 계속 진행되거나 visual user가 조금만 늘었어도 에러가 날 것이다.
+    + ![image](https://user-images.githubusercontent.com/76584547/117821372-790ad380-b2a6-11eb-9b6d-969085a8a86d.png)
+
