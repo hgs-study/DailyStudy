@@ -79,8 +79,7 @@ https://www.notion.so/05486768ef7e41f698b6760519eb8a34
 ### 젠킨스
 -----
  1. sudo docker pull hgstudy/jenkins:2.60.3 (젠킨스 이미지 다운)
- 2. sudo docker run -d -p 8080:8080 hgstudy/jenkins:2.60.3 (sudo docker run -v /etc/localtime:/etc/localtime:ro -d -p 8080:8080 jenkins/jenkins:lts
-시간대 설정)
+ 2. sudo docker run --restart=always -v /etc/localtime:/etc/localtime:ro -d -p 8080:8080 jenkins/jenkins:lts (도커 시작 시 실행, 시간대 설정)
  3. sudo docker exec -it 5a236a157b69 /bin/bash (해당 젠킨스 컨테이너 접속)
  4. cat /var/jenkins_home/secrets/initialAdminPassword (젠킨스 비밀번호)
  5. jenkins 접속
