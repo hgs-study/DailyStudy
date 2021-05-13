@@ -60,6 +60,14 @@ nohup~ &
  8. Github Integeration Plugin 설치
  9. Jenkins 설정 (빌드 유발 탭 이동 >> GitHub hook trigger for GITScm polling 체크)
 
+※젠킨스 세팅 : https://velog.io/@ifthenelse/jenkins-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-ubuntu-20.04
 
 ※ 참고 (도커&젠킨스&깃허브) : https://velog.io/@jangky000/Docker-Jenkins-%EC%9E%90%EB%8F%99%EB%B0%B0%ED%8F%AC-%EC%A0%95%EB%A6%AC
 ※ github & 젠킨스 연동 : https://goddaehee.tistory.com/258
+
+### 한 인스턴스 안에 도커 + 젠킨스
+-----
+ 1. java 설치
+ 2. 젠킨스 설치
+ 3. 도커 설치 
+
