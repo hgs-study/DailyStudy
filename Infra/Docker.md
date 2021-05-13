@@ -56,7 +56,7 @@ https://www.notion.so/05486768ef7e41f698b6760519eb8a34
  - https://m.blog.naver.com/PostView.nhn?blogId=complusblog&logNo=220974632766&proxyReferer=https:%2F%2Fwww.google.com%2F
 ```
 
-## Ubuntu 도커 & 젠킨스 설치
+## Ubuntu 도커 
 -----
 ### 도커
 -----
@@ -75,19 +75,3 @@ https://www.notion.so/05486768ef7e41f698b6760519eb8a34
  2. sudo apt-get install openjdk-8-jdk (자바 다운로드) 
  3. sudo docker pull hgstudy/spring-boot-cpu-bound (도커 허브에 있는 spring-boot-cpu-bound 이미지 가져옴)
  4. sudo docker run -p 80:80 hgstudy/spring-boot-cpu-bound (외부 80번 포트를 내부 80번 포트로 실행)
-
-### 젠킨스
------
- 1. sudo docker pull hgstudy/jenkins:2.60.3 (젠킨스 이미지 다운)
- 2. sudo docker run --restart=always -v /etc/localtime:/etc/localtime:ro -d -p 8080:8080 jenkins/jenkins:lts (도커 시작 시 실행, 시간대 설정)
- 3. sudo docker exec -it 5a236a157b69 /bin/bash (해당 젠킨스 컨테이너 접속)
- 4. cat /var/jenkins_home/secrets/initialAdminPassword (젠킨스 비밀번호)
- 5. jenkins 접속
- 6. 플러그인 (Publish Over SSH 설치)
- 7. 새로운 item (프리스타일 프로젝트 생성)
- 8. Github Integeration Plugin 설치
- 9. Jenkins 설정 (빌드 유발 탭 이동 >> GitHub hook trigger for GITScm polling 체크)
-
-
-
-※ 참고 (도커&젠킨스&깃허브) : https://velog.io/@jangky000/Docker-Jenkins-%EC%9E%90%EB%8F%99%EB%B0%B0%ED%8F%AC-%EC%A0%95%EB%A6%AC
