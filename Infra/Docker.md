@@ -85,5 +85,9 @@ https://www.notion.so/05486768ef7e41f698b6760519eb8a34
  5. jenkins 접속
  6. 플러그인 (Publish Over SSH 설치)
  7. 새로운 item (프리스타일 프로젝트 생성)
+ 8. Github Integeration Plugin 설치
+ 9. Jenkins 설정 (빌드 유발 탭 이동 >> GitHub hook trigger for GITScm polling 체크)
+
+
 
 ※ 참고 (도커&젠킨스&깃허브) : https://velog.io/@jangky000/Docker-Jenkins-%EC%9E%90%EB%8F%99%EB%B0%B0%ED%8F%AC-%EC%A0%95%EB%A6%AC
