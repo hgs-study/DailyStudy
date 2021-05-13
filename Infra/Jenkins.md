@@ -47,3 +47,19 @@ nohup docker run -p 8080:80 hgstudy/spring-boot-cpu-bound > /dev/null 2>&1 &
 nohup~ &
 - 백그라운드 실행시킨다
  ```
+
+### 젠킨스 세팅
+-----
+ 1. sudo docker pull hgstudy/jenkins:2.60.3 (젠킨스 이미지 다운)
+ 2. sudo docker run --restart=always -v /etc/localtime:/etc/localtime:ro -d -p 8080:8080 jenkins/jenkins:lts (도커 시작 시 실행, 시간대 설정)
+ 3. sudo docker exec -it 5a236a157b69 /bin/bash (해당 젠킨스 컨테이너 접속)
+ 4. cat /var/jenkins_home/secrets/initialAdminPassword (젠킨스 비밀번호)
+ 5. jenkins 접속
+ 6. 플러그인 (Publish Over SSH 설치)
+ 7. 새로운 item (프리스타일 프로젝트 생성)
+ 8. Github Integeration Plugin 설치
+ 9. Jenkins 설정 (빌드 유발 탭 이동 >> GitHub hook trigger for GITScm polling 체크)
+
+
+※ 참고 (도커&젠킨스&깃허브) : https://velog.io/@jangky000/Docker-Jenkins-%EC%9E%90%EB%8F%99%EB%B0%B0%ED%8F%AC-%EC%A0%95%EB%A6%AC
+※ github & 젠킨스 연동 : https://goddaehee.tistory.com/258
