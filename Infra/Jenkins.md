@@ -64,6 +64,7 @@ nohup~ &
 
 ※ 참고 (도커&젠킨스&깃허브) : https://velog.io/@jangky000/Docker-Jenkins-%EC%9E%90%EB%8F%99%EB%B0%B0%ED%8F%AC-%EC%A0%95%EB%A6%AC
 ※ github & 젠킨스 연동 : https://goddaehee.tistory.com/258
+※ github(private) & 젠킨스 연동 : https://www.skyer9.pe.kr/wordpress/?p=522
 
 ### 한 인스턴스 안에 도커 + 젠킨스
 -----
