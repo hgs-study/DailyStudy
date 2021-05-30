@@ -42,13 +42,13 @@
 ### 메시지 큐
 ---------
 
- + [RabbitMQ](https://github.com/hgs-study/DailyStudy/blob/main/%EB%A9%94%EC%8B%9C%EC%A7%80%20%ED%81%90/RabbitMQ.md)
+ + [RabbitMQ](https://github.com/hgs-study/DailyStudy/blob/main/MessageQueue/RabbitMQ.md)
 
 
 ### 검색 엔진
 ---------
 
- + [ElasticSearch](https://github.com/hgs-study/DailyStudy/blob/main/SearchEngine/ElasticSearch.md)
+ + [ElasticSearch](https://github.com/hgs-study/DailyStudy/blob/main/SearchEngine/ElasticSearch/ElasticSearch.md)
 
 
 ### RDBMS
