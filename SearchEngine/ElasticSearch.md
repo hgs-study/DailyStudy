@@ -42,6 +42,75 @@
 ### 실습
 ---
 ```
+ ※ 공통
  - 구글 클라우드 es-instance 1~4 (4개 생성)
- - sudo yum install -y docker
+ - 1. 도커 설치 : sudo yum install -y docker
+ - 2. 도커 시작 : sudo systemctl start docker
+ - 3. 도커 실행 권한 : sudo chmod 666 /var/run/docker.sock
+ - 4. 가상 메모리 사이즈 키워줌 (ES는 가상메모리를 많이 사용하기 때문에)
+      sudo sysctl -w vm.max_map_count=262144
+```
+
+### 1번 노드
+---
+```
+  ※ 1번은 네트워크 생성 & 포함 과정이 있음
+  1. 네트워크 생성 : docker network create somenetwork 
+  2. 네트워크 포함 : 
+  2번 명령어---start---- (한줄씩이 아니라 통째로 명 넣기 환경변수)
+  ----예시----
+  docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 \
+  -e "discovery.seed_hosts={2번IP},{3번IP},{4번IP}" \
+  -e "node.name=es01" \
+  -e "cluster.initial_master_nodes=es01,es02,es03,es04" \
+  -e "network.publish_host={1번 IP}" \
+  elasticsearch:7.10.1
+  ---end----
+
+
+ docker network create somenetwork
+ docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 \
+ -e "discovery.seed_hosts=10.146.0.3,10.146.0.4,10.146.0.5" \
+ -e "node.name=es01" \
+ -e "cluster.initial_master_nodes=es01,es02,es03,es04" \
+ -e "network.publish_host=10.146.0.2" \
+ elasticsearch:7.10.1
+```
+
+### 2번 노드
+---
+```
+docker network create somenetwork
+docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 \
+-e "discovery.seed_hosts=10.146.0.2,10.146.0.4,10.146.0.5" \
+-e "node.name=es01" \
+-e "cluster.initial_master_nodes=es01,es02,es03,es04" \
+-e "network.publish_host=10.146.0.3" \
+elasticsearch:7.10.1
+```
+
+
+### 3번 노드
+---
+```
+docker network create somenetwork
+docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 \
+-e "discovery.seed_hosts=10.146.0.2,10.146.0.3,10.146.0.5" \
+-e "node.name=es01" \
+-e "cluster.initial_master_nodes=es01,es02,es03,es04" \
+-e "network.publish_host=10.146.0.4" \
+elasticsearch:7.10.1
+```
+
+
+### 4번 노드
+---
+```
+docker network create somenetwork
+docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 \
+-e "discovery.seed_hosts=10.146.0.2,10.146.0.3,10.146.0.4" \
+-e "node.name=es01" \
+-e "cluster.initial_master_nodes=es01,es02,es03,es04" \
+-e "network.publish_host=10.146.0.5" \
+elasticsearch:7.10.1
 ```
