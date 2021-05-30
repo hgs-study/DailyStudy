@@ -52,6 +52,7 @@
  
  + [Mysql-SQL](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/Mysql/Mysql-SQL.md)
 
+ + [PostgreSQL](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/PostgreSQL/PostgreSQL.md)
 
 ### NOSQL
 ---------
