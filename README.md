@@ -39,6 +39,12 @@
  + [JPA-JPQL](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-JPQL.md)
 
 
+### 메시지 큐
+---------
+
+ + [RabbitMQ](https://github.com/hgs-study/DailyStudy/blob/main/%EB%A9%94%EC%8B%9C%EC%A7%80%20%ED%81%90/RabbitMQ.md)
+
+
 ### RDBMS
 ---------
 
@@ -82,7 +88,9 @@
 
 ### 스트레스툴
 ------
+
  + [Artillery](https://github.com/hgs-study/DailyStudy/blob/main/Stress/Artillery.md)
+ 
 
 ### 협업툴
 ------
