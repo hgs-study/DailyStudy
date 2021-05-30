@@ -39,7 +39,7 @@
 ```
 
 
-### 실습
+### 실습#1
 ---
 ```
  ※ 공통
@@ -54,7 +54,7 @@
 ### 1번 노드
 ---
 ```
-  ※ 1번은 네트워크 생성 & 포함 과정이 있음
+  ※ 1번은 네트워크 생성 과정이 있음
   1. 네트워크 생성 : docker network create somenetwork 
   2. 네트워크 포함 : 
   2번 명령어---start---- (한줄씩이 아니라 통째로 명 넣기 환경변수)
@@ -68,22 +68,21 @@
   ---end----
 
 
- docker network create somenetwork
- docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 \
- -e "discovery.seed_hosts=10.146.0.3,10.146.0.4,10.146.0.5" \
- -e "node.name=es01" \
- -e "cluster.initial_master_nodes=es01,es02,es03,es04" \
- -e "network.publish_host=10.146.0.2" \
- elasticsearch:7.10.1
+docker network create somenetwork
+docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 \
+-e "discovery.seed_hosts=10.146.0.3,10.146.0.4,10.146.0.5" \
+-e "node.name=es01" \
+-e "cluster.initial_master_nodes=es01,es02,es03,es04" \
+-e "network.publish_host=10.146.0.2" \
+elasticsearch:7.10.1
 ```
 
 ### 2번 노드
 ---
 ```
-docker network create somenetwork
-docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 \
+docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 \
 -e "discovery.seed_hosts=10.146.0.2,10.146.0.4,10.146.0.5" \
--e "node.name=es01" \
+-e "node.name=es02" \
 -e "cluster.initial_master_nodes=es01,es02,es03,es04" \
 -e "network.publish_host=10.146.0.3" \
 elasticsearch:7.10.1
@@ -93,10 +92,9 @@ elasticsearch:7.10.1
 ### 3번 노드
 ---
 ```
-docker network create somenetwork
-docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 \
+docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 \
 -e "discovery.seed_hosts=10.146.0.2,10.146.0.3,10.146.0.5" \
--e "node.name=es01" \
+-e "node.name=es03" \
 -e "cluster.initial_master_nodes=es01,es02,es03,es04" \
 -e "network.publish_host=10.146.0.4" \
 elasticsearch:7.10.1
@@ -106,11 +104,34 @@ elasticsearch:7.10.1
 ### 4번 노드
 ---
 ```
-docker network create somenetwork
-docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 \
+docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 \
 -e "discovery.seed_hosts=10.146.0.2,10.146.0.3,10.146.0.4" \
--e "node.name=es01" \
+-e "node.name=es04" \
 -e "cluster.initial_master_nodes=es01,es02,es03,es04" \
 -e "network.publish_host=10.146.0.5" \
 elasticsearch:7.10.1
 ```
+
+### 실습#2
+```
+- instance 9200포트 방화벽 열기 : [방화벽 규칙 만들기] - es-9200 
+   => 대상 : 네트워크의 모든 인스턴스
+   => 소스ip 범위 : 0.0.0.0/0
+   => 9200 열기 : tcp 체크 후 9200 입력
+- 인스턴스ip:9200 접속하면 es관련 정보, 클러스터 정보 나옴
+- es head extension(es를 더 잘 볼 수 있도록하는 크롬 확장자)
+
+```
+![image](https://user-images.githubusercontent.com/76584547/120106599-a4435d00-c198-11eb-87f5-4671e55f34c3.png)
+
+![image](https://user-images.githubusercontent.com/76584547/120106656-eec4d980-c198-11eb-987f-da79b66089f3.png)
+
+
+### ES vs DB
+-----
+```
+- ES : 실시간 처리 불가능(insert 후 잠깐의 딜레이 필요) VS DB : insert 되는 순간부터 조회 가능
+- ES : 트랜잭션과 롤백 지원 X (비즈니스 로직이 트랜잭션에 많이 의존적이면 ES 도입이 어려울 수 있다.)
+- ES : 문서 업데이트 X (기능은 있지만 문서를 삭제했다 다시 만드는 동작이다)
+```
+
