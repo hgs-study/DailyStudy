@@ -48,7 +48,7 @@
 ### 검색 엔진
 ---------
 
- + [ElasticSearch](https://github.com/hgs-study/DailyStudy/tree/main/SearchEngine)
+ + [ElasticSearch](https://github.com/hgs-study/DailyStudy/blob/main/SearchEngine/ElasticSearch.md)
 
 
 ### RDBMS
