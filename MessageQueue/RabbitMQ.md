@@ -19,3 +19,15 @@
   - requeue true 시 Get message 이후 다시 Queue에 들어감
   - requeue false 시 Get message 이후 다시 Queue에 들어가지 않음
 ```
+
+### Producer
+----
+```
+- 메시지를 큐로 집어넣는 역할
+```
+
+### Consumer
+----
+```
+- 메시지를 큐에서 꺼내오는 역할
+```
