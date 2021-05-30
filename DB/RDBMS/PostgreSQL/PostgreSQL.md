@@ -12,4 +12,14 @@
 ```
 # postgresql을 도커로 실행시키는 명령어
 docker run --name pgsql -d -p 5432:5432 -e POSTGRES_USER=postgresql -e POSTGRES_PASSWORD=postgrespassword postgres
+  - 5432 : Postgre 기본 포트
+  - -e (환경변수) : POSTGRES_USER , POSTGRES_PASSWORD
+  - postgres : 이미지 이름
+  
+  
+# postgresql-instance-1에서 실행해야할 명령어
+- sudo yum install -y docker
+- sudo systemctl start docker
+- sudo chmod 666 /var/run/docker.sock
+- docker run --name pgsql -d -p 5432:5432 -e POSTGRES_USER=postgresql -e POSTGRES_PASSWORD=postgrespassword postgres
 ```
