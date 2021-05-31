@@ -51,6 +51,12 @@
  + [ElasticSearch](https://github.com/hgs-study/DailyStudy/blob/main/SearchEngine/ElasticSearch/ElasticSearch.md)
 
 
+### 아키텍처
+---------
+
+ + [Software-Architecture](https://github.com/hgs-study/DailyStudy/blob/main/Architecture/SoftwareArchitecture.md)
+
+
 ### RDBMS
 ---------
 
