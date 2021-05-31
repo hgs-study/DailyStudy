@@ -56,6 +56,10 @@
 
  + [Software-Architecture](https://github.com/hgs-study/DailyStudy/blob/main/Architecture/SoftwareArchitecture.md)
 
+ + [CloudNative-Architecture](https://github.com/hgs-study/DailyStudy/blob/main/Architecture/CloudNative-Architecture.md)
+
+ + [12-Factors](https://github.com/hgs-study/DailyStudy/blob/main/Architecture/12-Factors.md)
+
 
 ### RDBMS
 ---------
