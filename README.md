@@ -60,7 +60,7 @@
 ### 아키텍처
 ---------
 
- + [Software-Architecture](https://github.com/hgs-study/DailyStudy/blob/main/Architecture/SoftwareArchitecture.md)
+ + [Software-Architecture](https://github.com/hgs-study/DailyStudy/blob/main/Architecture/Software-Architecture.md)
 
  + [CloudNative-Architecture](https://github.com/hgs-study/DailyStudy/blob/main/Architecture/CloudNative-Architecture.md)
 
