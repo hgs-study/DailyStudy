@@ -39,6 +39,12 @@
  + [JPA-JPQL](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-JPQL.md)
 
 
+### 모던 자바
+------
+
+ + [동작 파라미터화](https://github.com/hgs-study/DailyStudy/blob/main/Java/Modern/behaviorParameterization.md)
+
+
 ### 메시지 큐
 ---------
 
