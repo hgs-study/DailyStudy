@@ -34,3 +34,23 @@
     - MSA : 각 독립된 서비스가 노출된 REST API를 사용
 ```
 
+## Microservice Architecture
+------
+```
+ 독립적으로 배포,확장될 수 있는 서비스를 조합해서 거대한 서비스를 구성하는 아키텍처 패턴
+```
+![image](https://user-images.githubusercontent.com/76584547/120504000-baeaed80-c3fe-11eb-9061-b8c585b4ca1d.png)
+
++ 구성
+  + API GateWay
+  + Service Discovery
+  + Orchestration
+  + 등등등
+  
++ 사용처
+  + 넷플릭스
+  + 트위터
+  + 아마존
+  + 나이키
+
+
