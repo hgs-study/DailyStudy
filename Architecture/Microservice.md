@@ -53,4 +53,28 @@
   + 아마존
   + 나이키
 
+### Service Mesh
+---
+```
+  - Service Discovery, Load Blancer, Service Router, Config Store 등 포함
+  - 서비스간의 통신을 추상화하고 안전하고 빠르고 신뢰성있게 만들어주는 인프라 컨스트럭쳐 레이어 
+```
+![image](https://user-images.githubusercontent.com/76584547/120504194-e7066e80-c3fe-11eb-9d59-9676be163c18.png)
++ 특징
+  + URI 경로, HOST 헤더, API 버전 등 응용 프로그램 규칙을 기반으로 하는 네트워크 레이어
+  + 경량 아키텍처를 통해 라우팅, 공통 기능 설정 가능
+  + 서비스 배포 전략에도 도움이 된다.
+  + 인증 관련, 암호화
++ MSA 인프라 -> 미들웨어
+  + 프록시 역할, 인증, 권한 부여, 암호화, 서비스 검색, 요청 라우팅, 로드밸런싱
+  + 자가 치유 복구 서비스
++ 서비스 간의 통신과 관련된 기능을 자동화 
 
+
+### MSA 표준 구성
+------
+```
+  - CNCF(Cloud Native Computing Foundation)
+    - 클라우드 환경으로 구성하면 상호 작용을 하면서 구성
+```
+![image](https://user-images.githubusercontent.com/76584547/120507642-f33ffb00-c401-11eb-994b-155b8d330daa.png)
