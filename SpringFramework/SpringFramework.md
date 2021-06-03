@@ -99,3 +99,48 @@ spring -> proxy 의존 많이 하고 있음
         - CLASS : 컴파일 타임 때만 존재, 런타임 때는 없어진다.
         - SOURCE : 컴파일 후에 정보가 사라진다. EX) @Override와 @SuppressWarnings
 ```
+
+
++ @Valid
+``` 
+[SpringLegacy-maven]
+<dependency> 
+	<groupId>javax.validation</groupId> 
+	<artifactId>validation-api</artifactId> 
+	<version>1.0.0.GA</version> 
+</dependency> 
+
+<dependency> 
+	<groupId>org.hibernate</groupId> 
+	<artifactId>hibernate-validator</artifactId> 
+	<version>4.2.0.Final</version> 
+</dependency>
+
+[SpringBoot-gradle]
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+```
+
++ @Valid
+  - DTO에 들어오는 유효성 검사 확인 가능
+  - @NotNull(boolean, int) -null값 허용 안한다
+  - @NotEmpty - 공백 허용 안한다.
+  - @NotBlank(String)  - null값과 공백 허용 안한다.
+
+
++ MapStruct
+``` 
+- MapStruct & Lombok gradle 의존성 순서&버전 중요 ★
+
+ext {
+    mapstructVersion = "1.3.0.Final"
+    lombokVersion = "1.18.6"
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation "org.mapstruct:mapstruct:${mapstructVersion}"
+    annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+```
