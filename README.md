@@ -18,13 +18,13 @@
 ### 스프링 프레임워크
 ------
 
- + [Anotation-DTO](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/Anotation-DTO.md)
+ + [SpringBatch](https://github.com/hgs-study/Batch-Scheduler-Basic) 
 
  + [SpringBoot](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/SpringBoot.md)
+
+ + [SpringCloud](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/SpringCloud.md)
  
  + [SpringFramework](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/SpringFramework.md)
-
- + [MapStruct](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/MapStruct.md)
 
 
 ### 자바
