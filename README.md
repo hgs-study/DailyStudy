@@ -15,6 +15,11 @@
  + [Kubernetes](https://github.com/hgs-study/DailyStudy/blob/main/Infra/Kubernetes.md)
 
 
+### MSA
+----
+ + [ServiceDiscovery](https://github.com/hgs-study/DailyStudy/blob/main/MSA/Service-Discovery.md)
+
+
 ### 스프링 프레임워크
 ------
 
