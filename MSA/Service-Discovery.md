@@ -32,3 +32,11 @@
 + http://localhost:8761 (유레카 서버 기본 화면)
 
 ![image](https://user-images.githubusercontent.com/76584547/120663536-0ff13700-c4c5-11eb-9161-e3b9261d8183.png)
+
+
+### Discovery Client 연동
+-----
+  + 하위에 Discovery Client(user-service)를 붙임
+  
+  ![image](https://user-images.githubusercontent.com/76584547/120832056-2cf83980-c59b-11eb-9008-df0b7a0cb06a.png)
+
