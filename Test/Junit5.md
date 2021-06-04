@@ -50,7 +50,7 @@
     + 스태틱일 필요는 없다.
 
 
-### Assert
+### Assertion
 ---
 
 ![image](https://user-images.githubusercontent.com/76584547/120801504-3625de00-c57c-11eb-80e2-98b5f220ab68.png)
@@ -64,6 +64,24 @@
 ![image](https://user-images.githubusercontent.com/76584547/120803568-a6356380-c57e-11eb-97d0-8e0bb093a496.png)
 
  
++ assertThrows
+![image](https://user-images.githubusercontent.com/76584547/120804326-789cea00-c57f-11eb-9605-159e58514deb.png)
+
++ assertTimeout
+  + 코드블록({ }) 안에 로직이 300밀리 세컨드로 설정되어있는데 이 300밀리 세컨드를 다 기다리고 테스트가 완료된다.
+![image](https://user-images.githubusercontent.com/76584547/120805812-28bf2280-c581-11eb-836a-02114b4c472e.png)
+
++ assertTimeoutPreemptively
+  + 코드블록({ }) 안에 로직이 300밀리 세컨드로 설정되어있는데  이 테스트는 100밀리 세컨드가 넘으면 즉시 완료된다
+  + 문제점 : ThreadLocal을 사용하는 로직이 있으면 예상치 못한 에러를 발생시킬 수 있다.
+  + ThreadLocal : Spring Transaction은 ThreadLocal을 사용하는데, 다른 쓰레드에선 공유가 안 된다.
+  +   -> 스프링 트랜잭션 설정이 제대로 테스트 안 될 수가 있다. (롤백이 안 되고 디비에 반영될 수 있다.)
+![image](https://user-images.githubusercontent.com/76584547/120805939-43919700-c581-11eb-9424-fb2c118992e0.png)
+
+
++ assertThat
+  + assertThat(assertj 라이브러리 사용, 이건 junit은 아님, 취향 것 사용)
+![image](https://user-images.githubusercontent.com/76584547/120806386-c0247580-c581-11eb-8afb-2fc6ad5f441f.png)
 
 
 
