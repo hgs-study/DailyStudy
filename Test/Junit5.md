@@ -84,6 +84,9 @@
 ![image](https://user-images.githubusercontent.com/76584547/120806386-c0247580-c581-11eb-8afb-2fc6ad5f441f.png)
 
 
+### 커스텀 태그
+---
+
 + Tag
   + 테스트마다 Tag 설정 가능 & 인텔리제이에서 특정 tag만 실행 가능
   ![image](https://user-images.githubusercontent.com/76584547/120915887-486d5c80-c6e1-11eb-9280-e2f97531791b.png)
@@ -101,6 +104,9 @@
   ![image](https://user-images.githubusercontent.com/76584547/120918010-2aa5f480-c6ed-11eb-9e41-4ac3611b17d3.png)
   ![image](https://user-images.githubusercontent.com/76584547/120918015-32fe2f80-c6ed-11eb-868e-f928d62a506b.png)
 
+
+### 반복 테스트
+---
 
 + ParameterizedTest, ValueSource (테스트 반복)
   +  파라미터 테스트 (파라미터 갯수만큼 테스트)
