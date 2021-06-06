@@ -56,6 +56,8 @@
 ![image](https://user-images.githubusercontent.com/76584547/120801504-3625de00-c57c-11eb-80e2-98b5f220ab68.png)
 
 + 람다 서플라이어
+
+
 ![image](https://user-images.githubusercontent.com/76584547/120801620-5a81ba80-c57c-11eb-9e09-dcf7bcdfd0b9.png)
 
 + assertAll : 여러 테스트 한 번에 가능
@@ -89,12 +91,16 @@
 
 + Tag
   + 테스트마다 Tag 설정 가능 & 인텔리제이에서 특정 tag만 실행 가능
+
+
   ![image](https://user-images.githubusercontent.com/76584547/120915887-486d5c80-c6e1-11eb-9280-e2f97531791b.png)
   ![image](https://user-images.githubusercontent.com/76584547/120915897-59b66900-c6e1-11eb-8007-76e477c79e70.png)
   
   
 + 커스텀 태그
   + 커스텀 어노테이션을 사용할 경우 <-> 기존의 @TAG("fast")는 타입 세이프하지 않다. fasd, fadt 등 오타가 날 수 있다.
+
+
   ![image](https://user-images.githubusercontent.com/76584547/120916117-a189c000-c6e2-11eb-8e4f-c445147d7b3c.png)
   ![image](https://user-images.githubusercontent.com/76584547/120916125-ac445500-c6e2-11eb-91c4-4980ef72a319.png)
 
@@ -110,6 +116,8 @@
 
 + ParameterizedTest, ValueSource (테스트 반복)
   +  파라미터 테스트 (파라미터 갯수만큼 테스트)
+
+
   ![image](https://user-images.githubusercontent.com/76584547/120918219-4067e980-c6ee-11eb-981c-8014ab4e7c11.png)
   ![image](https://user-images.githubusercontent.com/76584547/120918221-44940700-c6ee-11eb-9bf7-9b345899fd8b.png)
 
