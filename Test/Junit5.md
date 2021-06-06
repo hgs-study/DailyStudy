@@ -84,4 +84,17 @@
 ![image](https://user-images.githubusercontent.com/76584547/120806386-c0247580-c581-11eb-8afb-2fc6ad5f441f.png)
 
 
++ Tag
+  + 테스트마다 Tag 설정 가능 & 인텔리제이에서 특정 tag만 실행 가능
+  ![image](https://user-images.githubusercontent.com/76584547/120915887-486d5c80-c6e1-11eb-9280-e2f97531791b.png)
+  ![image](https://user-images.githubusercontent.com/76584547/120915897-59b66900-c6e1-11eb-8007-76e477c79e70.png)
+  
+  
++ 커스텀 태그
+  + 커스텀 어노테이션을 사용할 경우 <-> 기존의 @TAG("fast")는 타입 세이프하지 않다. fasd, fadt 등 오타가 날 수 있다.
+  ![image](https://user-images.githubusercontent.com/76584547/120916117-a189c000-c6e2-11eb-8e4f-c445147d7b3c.png)
+  ![image](https://user-images.githubusercontent.com/76584547/120916125-ac445500-c6e2-11eb-91c4-4980ef72a319.png)
+
+
+
 
