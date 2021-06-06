@@ -96,5 +96,41 @@
   ![image](https://user-images.githubusercontent.com/76584547/120916125-ac445500-c6e2-11eb-91c4-4980ef72a319.png)
 
 
++ RepeatedTest (테스트 반복)
+  + 반복 테스트
+  ![image](https://user-images.githubusercontent.com/76584547/120918010-2aa5f480-c6ed-11eb-9e41-4ac3611b17d3.png)
+  ![image](https://user-images.githubusercontent.com/76584547/120918015-32fe2f80-c6ed-11eb-868e-f928d62a506b.png)
+
+
++ ParameterizedTest, ValueSource (테스트 반복)
+  +  파라미터 테스트 (파라미터 갯수만큼 테스트)
+  ![image](https://user-images.githubusercontent.com/76584547/120918219-4067e980-c6ee-11eb-981c-8014ab4e7c11.png)
+  ![image](https://user-images.githubusercontent.com/76584547/120918221-44940700-c6ee-11eb-9bf7-9b345899fd8b.png)
+
++ EmptySource & NullSource
+  + 비어있는 문자열을 테스트에 추가 / Null 추가 이것을 합친 것이 => @NullAndEmptySource
+  ![image](https://user-images.githubusercontent.com/76584547/120918637-5080c880-c6f0-11eb-9d7a-757256208770.png)
+  ![image](https://user-images.githubusercontent.com/76584547/120918644-5d052100-c6f0-11eb-8166-d775178d9e18.png)
+
+
++ Converter (테스트 반복)
+  + 커스텀한 타입(Study)으로 변환하고 해서 파라미터를 받고 싶을 땐 SimpleArgumentConverter 상속받은 구현체를 사용한다. (인자 하나) 
+  ![image](https://user-images.githubusercontent.com/76584547/120919544-2aa9f280-c6f5-11eb-8fe7-b6d192c09ad9.png)
+  
+
++ 복수 인자 (테스트 반복)
+  + 커스텀한 타입(Study)을 여러개 받고 싶을 때
+  + [#1] : 타입 변수 인자로 받아옴
+  ![image](https://user-images.githubusercontent.com/76584547/120919630-8f654d00-c6f5-11eb-9d24-634ea7590d19.png)
+  ![image](https://user-images.githubusercontent.com/76584547/120919631-92f8d400-c6f5-11eb-9ea3-4c3567aa40d8.png)
+
+  + [#2] : ArgumentsAccessor argumentsAccessor 활용
+  ![image](https://user-images.githubusercontent.com/76584547/120919734-1adede00-c6f6-11eb-9cd2-b107700a38be.png)
+  ![image](https://user-images.githubusercontent.com/76584547/120919738-1fa39200-c6f6-11eb-8177-5bddab9d400b.png)
+  
+  + [#3] : ArgumentsAggregator 활용 더 줄일 수 있다 (※퍼블릭 클래스이거나 이너 스태틱 클레스여야한다.)
+  ![image](https://user-images.githubusercontent.com/76584547/120919850-b4a68b00-c6f6-11eb-86d8-8e41777579b5.png)
+
+
 
 
