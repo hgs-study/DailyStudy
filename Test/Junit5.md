@@ -121,7 +121,9 @@
 + 복수 인자 (테스트 반복)
   + 커스텀한 타입(Study)을 여러개 받고 싶을 때
   + [#1] : 타입 변수 인자로 받아옴
-  ![image](https://user-images.githubusercontent.com/76584547/120919630-8f654d00-c6f5-11eb-9d24-634ea7590d19.png)
+
+
+  ![image](https://user-images.githubusercontent.com/76584547/120919630-8f654d00-c6f5-11eb-9d24-634ea7590d19.png)  
   ![image](https://user-images.githubusercontent.com/76584547/120919631-92f8d400-c6f5-11eb-9ea3-4c3567aa40d8.png)
 
   + [#2] : ArgumentsAccessor argumentsAccessor 활용
