@@ -39,7 +39,7 @@
 
  + [JPA](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA.md)
 
- + [JPA-02](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-02.md)
+ + [JPA#2](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA#2.md)
 
  + [JPA-JPQL](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-JPQL.md)
 
