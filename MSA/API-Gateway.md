@@ -15,6 +15,8 @@
       ![image](https://user-images.githubusercontent.com/76584547/120923539-102e4400-c70a-11eb-946e-4157e813cfef.png)
     
     + Feign Client
+
+
     ![image](https://user-images.githubusercontent.com/76584547/120923620-8468e780-c70a-11eb-8be0-5880a4d0b086.png)
 
     
@@ -24,8 +26,23 @@
       + 서비스 이름으로 호출
       + Health Check
       + Spring Cloud Ribbon은 Spring Boot 2.4에서 Maintenance 상태 (더이상 지원하지 않는 보류 상태)
+      + Spring Boot 2.4 이상에서 지원 안 함
 
    + Zuul : 
     + API Gateway 역할
     + Routing 역할 
     + Spring Cloud Ribbon은 Spring Boot 2.4에서 Maintenance 상태 (더이상 지원하지 않는 보류 상태)
+    + Spring Boot 2.4 이상에서 지원 안 함
+    + 실습 zuul 연동
+      + first-service (localhost:8081)
+      + second-service (localhost:8082)
+    + first-service 
+    ![image](https://user-images.githubusercontent.com/76584547/120925477-d06c5a00-c713-11eb-9201-152677279e3c.png)
+    + second-service
+    ![image](https://user-images.githubusercontent.com/76584547/120925505-e548ed80-c713-11eb-8d9a-db3ed49ea0a7.png)
+    + zuul-gateway-service
+    ![image](https://user-images.githubusercontent.com/76584547/120925550-feea3500-c713-11eb-9de8-9d6f7f9ed052.png)
+    ![image](https://user-images.githubusercontent.com/76584547/120925576-1de8c700-c714-11eb-9bd4-cf721b93c944.png)
+    ![image](https://user-images.githubusercontent.com/76584547/120925606-3f49b300-c714-11eb-8cff-f1d5603e8fde.png)
+
+  
