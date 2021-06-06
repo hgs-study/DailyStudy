@@ -17,7 +17,9 @@
 
 ### MSA
 ----
- + [ServiceDiscovery](https://github.com/hgs-study/DailyStudy/blob/main/MSA/Service-Discovery.md)
+ + [Discovery-Service](https://github.com/hgs-study/DailyStudy/blob/main/MSA/Discovery-Service.md)
+
+ + [API-Gateway](https://github.com/hgs-study/DailyStudy/blob/main/MSA/API-Gateway.md)
 
 
 ### 스프링 프레임워크
