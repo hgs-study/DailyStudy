@@ -20,7 +20,12 @@
 ### Filter
 ----
 + API Gateway에서 필터 사용
+
+
 ![image](https://user-images.githubusercontent.com/76584547/121021204-1987e100-c7dc-11eb-81a3-d6ce4bafea11.png)
+
+![image](https://user-images.githubusercontent.com/76584547/121030478-79828580-c7e4-11eb-9d98-a8ad6e8377a2.png)
+
 
 + application.yml 설정 주석 (config파일로 사용하려고)
 
@@ -38,3 +43,9 @@
 
 + 결과
 ![image](https://user-images.githubusercontent.com/76584547/121027328-d7619e00-c7e1-11eb-91cb-a7c7a745cef5.png)
+
+
++ application.yml 활용
+
+
+![image](https://user-images.githubusercontent.com/76584547/121030113-26a8ce00-c7e4-11eb-8fee-4eee7bc2b320.png)
