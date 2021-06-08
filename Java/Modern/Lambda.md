@@ -134,9 +134,100 @@
   + 언박싱 : 참조형을 기본형으로 변환하는 기능
   + 오토박싱 : 편리하게 코드를 구현할 수 있도록 박싱과 언박싱이 자동으로 이루어진다.
 
+<br/>
+
 + 문제점
 ```
   비용 소모
   - 박싱한 값은 기본형을 감싸는 래퍼이며 힙에 저장된다.
   - 박싱한 값은 메모리를 더 소비하며 기본형을 가져올 때도 메모리를 탐색하는 과정이 필요
 ```
+<br/>
+
++ 해결
+
+![image](https://user-images.githubusercontent.com/76584547/121234584-d2c6e380-c8ce-11eb-825c-426b5605b378.png)
+
+
++ 함수형 인터페이스 이름 앞에 형식명을 붙여주면 오토박싱 동작을 피하여 방식하지 않는다.
+
+![image](https://user-images.githubusercontent.com/76584547/121234921-35b87a80-c8cf-11eb-8aec-0fb24f01ad33.png)
+
+
+### 형식 검사, 추론, 제약
+-------
+```
+  람다가 사용되는 콘텍스트를 이용해서 람다의 형식을 추론할 수 있다.
+```
+
++ 형식 검사
+```java
+        List<Person> tallerThan180cm =
+        filter(people,(Person person) -> person.getHeight() > 180 ); 
+```
+  1. 람다가 사용된 콘텍스트는 무엇인가? filter의 정의를 확인하자.
+  2. filter 메서드를 확인해보니 대상 형식은 Predicate<Person>
+  3. Predicate<Person> 인터페이스의 추상 메서드는 무엇인가?
+  4. Person을 인수로 받아 boolean을 반환하는 test 메서드
+  5. 함수 디스크립터는 Person->boolean이므로 람다의 시그니처와 일치한다. 람다도 Person을 인수로 받아 boolean을 반환하므로 형식 검사 완료
+<br/>
+  
++ 형식 
+```
+  - 자바 컴파일러는 람다 표현식이 사용된 콘텍스트(대상 형식)를 이용해서 람다 표현식과 관련된 함수형 인터페이스를 추론한다.
+  - 대상형식을 이용해서 함수 디스크립터를 알 수 있으므로 컴파일러는 람다의 시그니처도 추론할 수 있다.
+```
+  
+  
+### 메서드 참조
+```
+  - 특정 메서드만을 호출하는 람다의 축약형
+  - 기존의 메서드를 재사용하고 직접 참조
+  - 가독성을 높일 수 있으며, 구분자(::)를 사용한다.
+```
+
+```java
+   (Person p)-> p.getHeight()   => (Person::getHeight)   
+```
+  + 정적 메서드 참조
+  + 다양한 형식의 인스턴스 메서드 참조
+  + 기존 객체의 인스턴스 메서드 참조
+  
+![image](https://user-images.githubusercontent.com/76584547/121237163-b6787600-c8d1-11eb-9d62-12ac2754302e.png)
+
+### Comparator 조합
+----
++ Comparator.comparing : 비교에 사용할 키를 추출
++ 역정렬 : reversed()
+```java
+  inventory.sort(comparing(Person::getHeight).reversed()); //키를 내림차순으로 정렬
+```
++ 두 번째 비교자 : thenComparing
+```java
+  inventory.sort(comparing(Person::getHeight)
+           .reversed()
+           .thenComparing(Person::getAge)); // 키가 같으면 나이로 정렬
+```
+  
+### Predicate 조합
+----
++ negate() : 
+  ```java
+    Predicate<Person> not180Person = 180Person.negate(); // 결과반전
+  ```
++ and() : 
+  ```java
+    Predicate<Person> 180cmAnd20AgePerson = 180Person.and(p -> p.getAge ==20); // 두 람다 조합
+  ```
++ or() :
+  ```java
+    Predicate<Person> 180cmOr20AgePerson = 180Person.or(p -> p.getAge ==20); // or 조합
+  ```
+  
+### Function 조합
+----
++ andThen : 주어진 함수를 먼저 적용할 결과를 다른 함수의 입력으로 전달하는 함수
++ compose : 인수로 주어진 함수를 먼저 실행한 다음에 그 결과를 외부 함수의 인수로 제공
+  
+  
+![image](https://user-images.githubusercontent.com/76584547/121238565-32bf8900-c8d3-11eb-8555-4f59f2e812eb.png)
