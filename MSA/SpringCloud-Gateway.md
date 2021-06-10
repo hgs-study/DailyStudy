@@ -49,3 +49,37 @@
 
 
 ![image](https://user-images.githubusercontent.com/76584547/121030113-26a8ce00-c7e4-11eb-8fee-4eee7bc2b320.png)
+
+
+### Custom Filter
+----
+```
+  - 사용자 지정 필터 만들 수 있다.
+  - Pre, Post 필터 지정 가능
+```
++ CustomFilter
+
+
+![image](https://user-images.githubusercontent.com/76584547/121520721-34ea2a80-ca2e-11eb-8b02-d1318ec7cfbd.png)
+
+
++ 상단 박스가 Pre필터, 하단 박스가 Post 필터 구성
++ AbstractGatewayFilterFactory를 상속 받아서 필터 구현
+
+<br/>
+
++ application.yml
+
+
+![image](https://user-images.githubusercontent.com/76584547/121520868-64993280-ca2e-11eb-8fc7-a3879e92f253.png)
+
+
++ 결과
+
+![image](https://user-images.githubusercontent.com/76584547/121520927-74b11200-ca2e-11eb-92fd-bb75379ac824.png)
+
+
++ request id가 1씩 증가하는 걸 알 수 있으며, response 상태 코드도 알 수 있다.
+
+
+
