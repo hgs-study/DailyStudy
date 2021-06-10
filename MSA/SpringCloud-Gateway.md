@@ -155,3 +155,97 @@
 
 
 
+### Load Balancer
+```
+  클라이언트에서 요청이 오면 Discovery에서 요청 api에 맞는 서비스의 주소를 반환해주고 요청 응답이 이루어진다.
+```
+
+![image](https://user-images.githubusercontent.com/76584547/121539034-42101500-ca40-11eb-9fdc-cf668aaf8721.png)
+
+<br/>
+
+
++ Api-Gateway
+```
+  - eureka 관련 설정(등록,조회)와 defaultZone을 설정
+  - routes에 uri이 다른 Service의 spring.application.name 과 매핑된다.
+  - lb://(서비스 어플리케이션 이름)  ex) lb://MY-FIRST-SERVICE
+```
+<br/>
+![image](https://user-images.githubusercontent.com/76584547/121539221-6f5cc300-ca40-11eb-9052-8b7931807c08.png)
+<br/>
+
+![image](https://user-images.githubusercontent.com/76584547/121539613-cb274c00-ca40-11eb-8be5-ec90ab6bde6e.png)
+<br/>
+
++ First-Service
+```
+  서비스는 spring.application.name을 설정한다.
+```
+
+![image](https://user-images.githubusercontent.com/76584547/121539291-826f9300-ca40-11eb-9dd4-efbaa89657bd.png)
+
+<br/>
+
++ Second-Service
+```
+  서비스는 spring.application.name을 설정한다.
+```
+<br/>
+
+![image](https://user-images.githubusercontent.com/76584547/121539380-97e4bd00-ca40-11eb-939e-cbed34aa9658.png)
+
+<br/>
+
+
++ 할당하는 포트 확인
+```
+  - 똑같은 서비스가 여러개(2개 이상) 실행되었을 때 어떻게 요청을 서버에 할당하는지
+  - (A 서비스가 3개 띄어져있을 경우 어떤 서버로 요청/응답하는지?)
+  - 라운드 로빈 방식으로 한 번씩 돌아가면서 요청한다.
+```
+
++ 실습
+<br/>
+```
+  랜덤 포트 사용
+```
+
+<br/>
+
+![image](https://user-images.githubusercontent.com/76584547/121548628-227cea80-ca48-11eb-95f1-9eb0fffa36aa.png)
+
+<br/>
+
+```
+  어떤 포트로 요청들어오는지 로그 확인
+```
+
+<br/>
+
+![image](https://user-images.githubusercontent.com/76584547/121548735-3de7f580-ca48-11eb-9a6a-77962fb7960f.png)
+
+<br/>
+
++ 결과
+```
+  총 12번 실행했는데 
+  11341 -> 10017 -> 11341 -> 10017 -> 11341 -> 10017 -> ...
+  이런식으로 한 번씩 서버를 할당한다 (라운드 로빈 방식)
+```
+<br/>
+
+![image](https://user-images.githubusercontent.com/76584547/121548816-4d673e80-ca48-11eb-801f-506297ba30f3.png)
+
+![image](https://user-images.githubusercontent.com/76584547/121548862-548e4c80-ca48-11eb-8fb2-51f1c3a219be.png)
+
+<br/>
+
++ 라운드 로빈이란?
+```
+- 라운드 로빈 스케줄링(Round Robin Scheduling, RR)은 시분할 시스템을 위해 설계된 선점형 스케줄링의 하나로서, 
+   프로세스들 사이에 우선순위를 두지 않고, 순서대로 시간단위(Time Quantum/Slice)로 CPU를 할당하는 방식의 CPU 스케줄링 알고리즘입니다.
+
+- 순서대로 시간단위(Time Quantum/Slice)로 CPU를 할당 
+```
+
