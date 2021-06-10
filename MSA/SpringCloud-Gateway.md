@@ -82,4 +82,35 @@
 + request id가 1씩 증가하는 걸 알 수 있으며, response 상태 코드도 알 수 있다.
 
 
+### Global Filter
+----
+```
+  - 서비스 전역에 해당되는 필터를 만들 수 있다.
+  - 실행 순서는 GlobalFilter가 먼저 실행 -> CustomFilter pre-> CustomFilter post -> GlobalFilter 실행
+```
++ GlobalFilter
+
+![image](https://user-images.githubusercontent.com/76584547/121523260-fa35c180-ca30-11eb-8d2b-21d6b43b9718.png)
+
+
++ 이너클래스 Config에 baseMessage, preLogger, postLogger 추가
+
+
++ application.yml
+
+
+![image](https://user-images.githubusercontent.com/76584547/121523614-5d275880-ca31-11eb-9d28-ed8df04f7637.png)
+
+
++ default-filters를 지정함으로서 글로벌 필터로 사용 가능
++ args를 지정할 수 있다.
++ 나중엔 yml로 관리 안 하고 외부 파일에서 관리해서 마이크로 서비스가 재배포 되지 않아도 필터는 변경할 수 있도록 외부에서 관리
+
+<br/>
+
++ 결과
+```
+  실행 순서는 GlobalFilter가 먼저 실행 -> CustomFilter pre-> CustomFilter post -> GlobalFilter 실행
+```
+![image](https://user-images.githubusercontent.com/76584547/121523820-99f34f80-ca31-11eb-8014-fc337a88c100.png)
 
