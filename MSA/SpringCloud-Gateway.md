@@ -17,6 +17,9 @@
 
   + cloudgate way predicates는 해당 service uri 뒤에 붙어서 매핑된다.
 
+<br/>
+
+
 ### Filter
 ----
 + API Gateway에서 필터 사용
@@ -25,7 +28,7 @@
 ![image](https://user-images.githubusercontent.com/76584547/121021204-1987e100-c7dc-11eb-81a3-d6ce4bafea11.png)
 
 ![image](https://user-images.githubusercontent.com/76584547/121030478-79828580-c7e4-11eb-9d98-a8ad6e8377a2.png)
-
+<br/>
 
 + application.yml 설정 주석 (config파일로 사용하려고)
 
@@ -40,6 +43,8 @@
   + RouteLocator를 반환해야 application.yml에서 설정한 것처럼 라우터 역할을 한다.
   + RouteLocatorBuilder 인자로 받아 빌더를 라우트 설정 후 리턴
   + 각각의 route path와 uri로 라우트 시키고 filter를 작성한다 (request, response header에 테스트 문구 삽입)
+<br/>
+
 
 + 결과
 ![image](https://user-images.githubusercontent.com/76584547/121027328-d7619e00-c7e1-11eb-91cb-a7c7a745cef5.png)
@@ -49,7 +54,7 @@
 
 
 ![image](https://user-images.githubusercontent.com/76584547/121030113-26a8ce00-c7e4-11eb-8fee-4eee7bc2b320.png)
-
+<br/>
 
 ### Custom Filter
 ----
@@ -77,7 +82,7 @@
 + 결과
 
 ![image](https://user-images.githubusercontent.com/76584547/121520927-74b11200-ca2e-11eb-92fd-bb75379ac824.png)
-
+<br/>
 
 + request id가 1씩 증가하는 걸 알 수 있으며, response 상태 코드도 알 수 있다.
 
@@ -91,7 +96,7 @@
 + GlobalFilter
 
 ![image](https://user-images.githubusercontent.com/76584547/121523260-fa35c180-ca30-11eb-8d2b-21d6b43b9718.png)
-
+<br/>
 
 + 이너클래스 Config에 baseMessage, preLogger, postLogger 추가
 
@@ -100,7 +105,7 @@
 
 
 ![image](https://user-images.githubusercontent.com/76584547/121523614-5d275880-ca31-11eb-9d28-ed8df04f7637.png)
-
+<br/>
 
 + default-filters를 지정함으로서 글로벌 필터로 사용 가능
 + args를 지정할 수 있다.
@@ -113,4 +118,40 @@
   실행 순서는 GlobalFilter가 먼저 실행 -> CustomFilter pre-> CustomFilter post -> GlobalFilter 실행
 ```
 ![image](https://user-images.githubusercontent.com/76584547/121523820-99f34f80-ca31-11eb-8014-fc337a88c100.png)
+
+
+### Logging Filter
+```
+  - 로깅 필터(커스텀 필터)를 우선순위를 정해서 출력할 수 있다. (글로벌필터보다 빠른 순위로 필터링 가능)
+```
+
++ LoggingFilter
+```
+  - 이번엔 GatewayFilter의 자식인 OrderedGatewayFilter를 생성하여 우선순위(Order) 설정 가능
+  - Ordered.HIGHEST_PRECEDENCE : HIGHEST라서 가장 먼저 실행 가능  <-> LOWEST_PRECEDENCE
+```
+<br/>
+
+![image](https://user-images.githubusercontent.com/76584547/121527774-bbeed100-ca35-11eb-901c-fbd40fa96e3d.png)
+<br/>
+
++ application.yml
+```
+  1. 서비스 filters에 name을 붙이고 필터명 기입
+  2. arg(baseMessage,preLogger,postLogger) 설정 가능
+```
+<br/>
+
+![image](https://user-images.githubusercontent.com/76584547/121528325-50593380-ca36-11eb-9639-9513a3fd5a5d.png)
+<br/>
+
++ 결과
+```
+  Ordered.HIGHEST_PRECEDENCE : HIGHEST라서 GlobalFilter보다 우선 시작
+```
+<br/>
+
+![image](https://user-images.githubusercontent.com/76584547/121528144-2bfd5700-ca36-11eb-8309-a7f2f5cc592c.png)
+
+
 
