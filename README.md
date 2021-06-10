@@ -94,6 +94,8 @@
 ### RDBMS
 ---------
 
+ + [MariaDB](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/Mysql/MariaDB.md)
+
  + [Mysql](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/Mysql/Mysql.md)
  
  + [Mysql-SQL](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/Mysql/Mysql-SQL.md)
