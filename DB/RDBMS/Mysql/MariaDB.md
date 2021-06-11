@@ -1,11 +1,14 @@
 ## MariaDB
 ```
   ㅇ 설치 (AWS)
+  ㅇ 자동 백업
 ```
+<br/>
 
-ㅇ 설치 (AWS - Ubuntu)
+### 설치 (AWS - Ubuntu)
+-----
   + 참고 : https://mirmond.tistory.com/entry/%EC%9A%B0%EB%B6%84%ED%88%AC-mariadb-103-%EC%84%A4%EC%B9%98
-```
+```sh
   apt-get -y install software-properties-common dirmngr
   apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xF1656F24C74CD1D8
   add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://mirror.zol.co.zw/mariadb/repo/10.3/debian stretch main'
@@ -13,27 +16,39 @@
   apt-get install -y mariadb-server-10.3
   apt-get install mysql-client
 ```
+<br/>
 
 ㅇ 시간 변경
-```
-  mysql -u root -p
+```shell
+  $ mysql -u root -p
   SELECT NOW();
   sudo timedatectl set-timezone 'Asia/Seoul';
   sudo systemctl restart mysqld
 ```
+<br/>
 
 ㅇ 외부 포트 열기
-```
+```sh
   /etc/mysql/my.cnf 
   -> bind-address = 0.0.0.0 으로 변경
 ```
+<br/>
 
+ㅇ 권한 부여
+```mysql
+  grant all privileges on *.* to root@'%' identified by '루트계정 비밀번호'; 
+```
+<br/>
+<br/>
 
-ㅇ 리눅스에서 mariadb 자동 백업 (crontab) 
+### 리눅스에서 mariadb 자동 백업 (crontab) 
+----
 ```
    - https://code-aid.tistory.com/7 참고
    - sudo crontab -e (관리자 권한으로 실행)
 ```
+<br/>
+
 + backup.sh
 ```sh
 #!/bin/sh
