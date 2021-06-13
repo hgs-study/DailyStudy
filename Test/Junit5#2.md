@@ -70,3 +70,62 @@
   org.junit.jupiter.api.DisplayNameGenerator$ReplaceUnderscores
   + @DisplayNameGeneration 보다는 메서드에 있는 @DisplayName이 우선순위가 더 높다
   ![image](https://user-images.githubusercontent.com/76584547/121015956-88623b80-c7d6-11eb-82cc-e74c986cd0a5.png)
+
+
+### Junit5 확장 모델
+----
+```
+  - Junit 4의 확장 모델은 @RunWith(Runner), TestRule, MethodRule
+  - Junit 5의 확장 모델은 단 하나, Extension
+  1. 선언적 방법 => @ExtendWith(FindSlowTestExtension.class)
+  2. 프로그래밍적 방법 => @RegisterExtension
+```
+
++ 확장팩 등록 방법
+  + 선언적인 등록 @ExtendWith 
+  ```
+    1초 이상 걸리는 메서드 확인하는 Extension Method 
+  ```
+  <BR/>
+  
+  ![image](https://user-images.githubusercontent.com/76584547/121802087-c5ff1280-cc75-11eb-9383-7423005f6d20.png)
+
+  <BR/>
+  + 선언적인 등록 방법 : @ExtendWith(FindSlowTestExtenstion.class) 
+  ![image](https://user-images.githubusercontent.com/76584547/121802082-bed80480-cc75-11eb-9928-6269610389fc.png)
+
+
+  + 결과 
+  <br/>
+  
+  ![image](https://user-images.githubusercontent.com/76584547/121802131-0494cd00-cc76-11eb-8428-0be511969bbe.png)
+  
+  + 1초 이상 걸리는 메서드는 @SlowTest 권장
+  ```java
+    - 리플렉션을 이용한 @SlowTest 어노테이션 확인 후 null 값이면 권장 메세지 표시
+
+    Method requiredTestMethod = context.getRequiredTestMethod();   // 리플렉션을 활용한 방법
+    SlowTest annotation = requiredTestMethod.getAnnotation(SlowTest.class); // 리플렉션을 활용한 방법
+    
+    if( ... && annotation == null) // 어노테이션도 없을 경우 권장 메시지 출력
+  ```
+  ![image](https://user-images.githubusercontent.com/76584547/121802420-204ca300-cc77-11eb-89e8-1dd145be98bb.png)
+ 
+ 
+  + 프로그래밍적 방법
+  ```
+    생성자로 직접 등록 (@RegisterExtension)
+  ```
+  + THRESHOLD 를 유동적으로 사용하기 위해 생성자 등록
+  ![image](https://user-images.githubusercontent.com/76584547/121802811-57bc4f00-cc79-11eb-8851-88b7746b036b.png)
+  
+  <BR/>
+  + @RegisterExtension를 사용하여 생성자 등록 (THRESHOLD : 유동적 처리 가능)
+  
+  <BR/>  
+  
+  ![image](https://user-images.githubusercontent.com/76584547/121802869-a9fd7000-cc79-11eb-86b0-f459d291a233.png)
+
+  
+  
+  
