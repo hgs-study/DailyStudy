@@ -128,4 +128,23 @@
 
   
   
+  ### Junit5 마이그레이션
+  ```
+    Junit5 환경에서 Junit5이하의 환경을 사용하고 싶을 때 사용
+  ```
+  
+  + gradle 추가 (vintage, 사용할 버전)
+  ![image](https://user-images.githubusercontent.com/76584547/121803335-019cdb00-cc7c-11eb-9579-e4ea3f793115.png)
+  <br/>
+
+  + junit4 테스트 작성 (jupiter가 아닌 junit 아래의 메소드들)
+  ![image](https://user-images.githubusercontent.com/76584547/121803356-1aa58c00-cc7c-11eb-9949-33eec97f08d6.png)
+  <br/>
+  
+  + 실행한 엔진에 따라 실행한 것을 확인할 수 있다 (Jupiter : 5, Vintage : 4)
+  ![image](https://user-images.githubusercontent.com/76584547/121803377-35780080-cc7c-11eb-8467-41e64db7d9b8.png)
+
+
+
+
   
