@@ -140,10 +140,19 @@
 
  + [Artillery](https://github.com/hgs-study/DailyStudy/blob/main/Stress/Artillery.md)
  
+ 
+ 
+### IDE
+------
+ + [Eclipse](https://github.com/hgs-study/DailyStudy/blob/main/IDE/Eclipse.md)
+
+ + [Intellij](https://github.com/hgs-study/DailyStudy/blob/main/IDE/Intellij.md)
+
 
 ### 협업툴
 ------
  + [Jira & Confluence](https://github.com/hgs-study/DailyStudy/blob/main/Collaboration/Jira.md)
+
 
 
 
