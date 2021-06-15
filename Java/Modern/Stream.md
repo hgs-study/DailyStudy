@@ -63,12 +63,8 @@
 ```
 
 
-### 스트림 활용
-```
-  ㅇ filter
-  ㅇ distinct
-```
-
+### 스트림 필터링 & 슬라이싱
+------
 + filter : 일치하는 요소 반환
 ```java
         //filter 프레디케이트
@@ -86,3 +82,182 @@
                                         .collect(Collectors.toList());
 ```
 
++ takewhile : 조건에 맞지 않는 데이터가 나올 경우 중단 (자바 9부터 지원)
+```java
+        // 조건에 맞지 않는 데이터가 나올 경우 중단 (takeWhile)
+        List<Dish> takewhileMenu = menu.stream()
+                                        .takeWhile( d-> d.getCalories() < 320)
+                                        .collect(Collectors.toList());
+```
+
+
++ dropWhile : 거짓이 되는 요소가 발견되면 중단하고 남은 요소 반환(자바 9부터 지원)
+```java
+        // 거짓이 되는 요소가 발견되면 중단하고 남은 요소 반환 (dropWhile)
+        List<Dish> dropWhileMenu = menu.stream()
+                                        .dropWhile( d-> d.getCalories() < 320)
+                                        .collect(Collectors.toList());
+```
+
+
++ limit : 주어진 값 이하의 크기를 갖는 새로운 스트림 반환
+```java
+        //스트림 축소 (limit)
+        List<Dish> vegetarianLimitMenu = menu.stream()
+                                        .filter(Dish::isVegetarian)
+                                        .limit(3)
+                                        .collect(Collectors.toList());
+```
+
+
++ skip : 처음 n개의 요소를 제외한 스트림을 반환
+```java
+        //요소 건너띄기 (skip)
+        List<Dish> skipMenu = menu.stream()
+                                        .filter(d-> d.getCalories() < 320)
+                                        .limit(2)
+                                        .collect(Collectors.toList());
+```
+
+### 스트림 매핑
+-----
+```
+  특정 데이터를 선택하고 새로운 요소를 매핑해서 새로운 버전을 만듦
+```
++ map
+```java
+        // 요리명을 다시 길이로 매핑
+        List<Integer> dishNameLengths = menu.stream()
+                                            .map(Dish::getName)
+                                            .map(String::length)
+                                            .collect(Collectors.toList());
+```
+
++ flatMap : 스트림의 각 값을 다른 스트림으로 만든 다음에 모든 스트림을 하나의 스트림으로 만드는 평면화
+```java
+        List<String> uniqueCharacters = words.stream()
+                                             .map(word -> word.split(""))
+                                             .flatMap(Arrays::stream)
+                                             .distinct()
+                                             .collect(Collectors.toList());
+```
+![image](https://user-images.githubusercontent.com/76584547/122053638-e370df80-ce21-11eb-9848-3920ca551a4a.png)
+
+<br/>
+
+### 스트림 검색
+---
+```
+  - 특정 속성이 데이터 집합에 있는지 여부를 검색
+  - allMatch, anyMatch, noneMatch, findFirst, findAny
+```
+
++ allMatch : 모든 요소가 주어진 프레디케이트와 일치하는지 검사 <-> noneMatch : 요소 없는지 검사
+```java
+        //allMatch
+        boolean isHealthy = menu.stream()
+                                .allMatch(d -> d.getCalories() <1000);
+```
+
++ 쇼트서킷
+```
+  - anyMatch, allMatch, noneMatch는 쇼트서킷 기법 + limit
+  - 표현식에서 하나라도 거짓이라는 결과가 나오면 나머지 표현식의 결과와 상관없이 전체 결과도 거짓이 된다.
+```
+
++ findAny : 현재 스트림에서 임의의 요소를 반환
++ findFirst : 첫번째 요소 찾기
+
+### 리듀싱
+----
+```
+  모든 스트림의 요소를 처리해서 값으로 도출하는 것 (=폴드)
+```  
+
++ reduce : 스트림 요소의 합, 초깃값 : 0
+```java
+        //reduce 스트림 요소의 합 , 초깃값 : 0
+        int sum = numbers.stream() 
+                         .reduce(0, (a,b) -> a + b);
+```
+
+###  스트림 연산 : 상태 없음과 상태 있음
+----
+```
+  ㅇ 상태를 갖지 않는 연산 : filter, map
+  ㅇ 상태를 갖고 있는 연산 : reduce, sum, max (크기 한정)
+  ㅇ 상태 o, 모든 요소 버퍼에 추가 : sorted, distinct (과거 이력을 알고 있어야함) 
+```
+
+### 기본형 특화 스트림
+----
++ 박싱 비용을 가지고 있다.
+```java
+        int sum = numbers.stream()
+                         .reduce(0, (a,b) -> a + b);
+```
+<br/>
+
+
++ 언박싱 stream을 박싱 stream으로 변환
+```java
+        IntStream intStream = menu.stream().mapToInt(Dish::getCalories);
+        Stream<Integer> integerStream = intStream.boxed();
+```
+
+### 숫자 범위
+----
++ range(x,y) : x,y 제외
++ rangeClosed(x,y) : x,y 포함 결과
+```java
+        //숫자 범위
+        IntStream evenNumber = IntStream.rangeClosed(1,100)
+                                        .filter(n -> n % 2 ==0);
+```
+
+### 값으로 스트림 만들기
+---
++ of
+```java
+        Stream<String> stringStream = Stream.of("Modern" , "java", "Name" , "Hyun");
+        stringStream.map(String::toUpperCase)
+                    .forEach(System.out::println);
+```
+
++ empty 
+```java
+        //스트림 비우기
+        Stream<String> emptyStream = Stream.empty();
+```
+
+### 무한 스트림
+```
+  ㅇ iterate 
+  ㅇ generate
+```
+
++ iterate
+```
+  - 크기가 고정되지 않은 무한 스트림을 만들 수 있다.
+  - 요청할 때마다 끝 없이 생산 (=언바운드 스트림)
+  - 스트림과 컬렉션의 큰 차이점
+```
++ 예제
+```java
+        //무한 스트림 (iterate)
+        Stream.iterate( 0, m-> m +3)
+              .limit(10)
+              .forEach(System.out::println);  
+```
+
++ generate
+```
+  - iterate와 달리 값을 연속적으로 계산하지 않는다.
+```
++ 예제
+```java
+        //무한 스트림 (generate)
+        Stream.generate(Math::random)
+              .limit(5)
+              .forEach(System.out::println);
+```
