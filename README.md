@@ -56,6 +56,8 @@
 
  + [람다 표현식](https://github.com/hgs-study/DailyStudy/blob/main/Java/Modern/Lambda.md)
 
+ + [스트림](https://github.com/hgs-study/DailyStudy/blob/main/Java/Modern/Stream.md)
+
 
 ### 테스트
 ------
