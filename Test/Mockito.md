@@ -95,3 +95,11 @@
 + 메서드가 동일한 매개변수로 여러번 호출될 때 각기 다르게 행동하도록 조작할 수 있다.
 ![image](https://user-images.githubusercontent.com/76584547/122669753-c78e8480-d1f9-11eb-9bdc-7b875d09e895.png)
 <br/>
+
++ 연습 문제
+```
+    TODO : memberService 객체에 findById 메소드를 1L 값으로 호출하면 member 객체를 리턴하도록 Stubbing
+    TODO : studyRepository 객체에 save 메소드를 study 객체로 호출하면 study 객체 그대로 리턴하도록 Stubbing
+```
+![image](https://user-images.githubusercontent.com/76584547/122670279-23f2a380-d1fc-11eb-9639-6495b07c792c.png)
+
