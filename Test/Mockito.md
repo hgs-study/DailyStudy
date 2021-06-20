@@ -65,3 +65,33 @@
   @Mock 어노테이션을 직접 파라미터에 넣어도 만들어준다.
 ```
 ![image](https://user-images.githubusercontent.com/76584547/122668232-0fa9a900-d1f2-11eb-88ad-abcfe216f04d.png)
+
+<br/>
+
+### Mock 객체 Stubbing
+----
+```
+  Mock 객체의 행동을 조작하는 것
+```
+<br/>
+
++ Mock 객체의 행동
+```
+  - Null을 리턴한다. (Optional 타입은 Optional.empty 리턴)
+  - Primitive 타입은 기본 Primitive 값
+  - 콜렉션은 비어있는 콜렉션
+  - Void 메소드는 예외를 더니짖 않고 아무런 일도 발생하지 않는다.
+```
+<br/>
+
++ 특정한 매개변수를 받는 경우 특정한 값을 리턴하거나 예외를 던진다
+![image](https://user-images.githubusercontent.com/76584547/122669551-e3455b00-d1f8-11eb-9803-c2009e54a19c.png)
+<br/>
+
++ Void 메서드 특정 매개변수를 받거나 호출된 경우 예외 처리를 발생 시킬 수 있다.
+![image](https://user-images.githubusercontent.com/76584547/122669495-a24d4680-d1f8-11eb-9e12-a83c726d58a9.png)
+<br/>
+
++ 메서드가 동일한 매개변수로 여러번 호출될 때 각기 다르게 행동하도록 조작할 수 있다.
+![image](https://user-images.githubusercontent.com/76584547/122669753-c78e8480-d1f9-11eb-9bdc-7b875d09e895.png)
+<br/>
