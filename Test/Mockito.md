@@ -37,3 +37,31 @@
   - Mock이 어떻게 동작해야 하는지 관리하는 방법
   - Mock의 행동을 검증하는 방법
 ```
+<br/>
+
++ Mock을 사용하기 좋은 경우
+```
+  의존 받는 것이 인터페이스만 있고 구현체는 없는 경우
+```
+<br/>
+
++ Mock 객체 생성#1
+```
+  Mockito.mock() 메소드를 활용하면 인자로 받는 해당 클래스의 목 객체를 생성해준다.
+```
+![image](https://user-images.githubusercontent.com/76584547/122667873-26e79700-d1f0-11eb-8867-891b7cd45ea8.png)
+
+
++ Mock 객체 생성#2 (Mock 어노테이션 활용)
+```
+  - @Mock과 @ExtendWith(MockitoExtension.class)를 활용하여 객체 생성
+  - @Mock만 사용한다고 만들어주지 않는다. null값이 들어가고 @ExtendWith(MockitoExtension.class)를 함께 사용해야함
+```
+![image](https://user-images.githubusercontent.com/76584547/122667899-51395480-d1f0-11eb-8c57-f951e4d8beed.png)
+<br/>
+
++ Mock 객체 생성#3 (파라미터에 삽입)
+```
+  @Mock 어노테이션을 직접 파라미터에 넣어도 만들어준다.
+```
+![image](https://user-images.githubusercontent.com/76584547/122668232-0fa9a900-d1f2-11eb-88ad-abcfe216f04d.png)
