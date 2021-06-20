@@ -21,3 +21,19 @@
   ㅇ 기선님은 studyController의 api를 하나의 행위로 보고 다른 묶여있는 service 등 클래스를 다 같이 하나의 묶여있는
      단위 테스트라고 생각하심 이 부분은 논란이 많을 것.
 ```
+<br/>
+
++ 의존성
+```
+  - 스프링 부트에서 spring-boot-starter-test를 의존받고 있는데 이 안에 mockito가 포함, junit5도 포함\
+  - mockito-core : mockito가 제공하는 기본적인 기능들
+  - mockito-junit-jupiter : junit 테스트에서 mockito를 연동해서 사용할 수 있는 구현체
+```
+<br/>
+
++ Mock 활용 방법
+```
+  - Mock을 만드는 방법
+  - Mock이 어떻게 동작해야 하는지 관리하는 방법
+  - Mock의 행동을 검증하는 방법
+```
