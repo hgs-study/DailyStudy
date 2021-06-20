@@ -36,7 +36,7 @@
  
  + [SpringFramework](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/SpringFramework.md)
 
- + [SpringFramework#2](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/SpringFramework#2.md)
+ + [SpringFramework#2](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/SpringFramework%232.md)
 
 
 ### 자바
