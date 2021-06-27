@@ -38,6 +38,8 @@
 
  + [SpringFramework#2](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/SpringFramework%232.md)
 
+ + [SpringSecurity](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/SpringSecurity.md)
+
 
 ### 자바
 ------
