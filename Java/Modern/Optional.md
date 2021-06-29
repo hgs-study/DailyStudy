@@ -172,4 +172,18 @@ void printUserName(Person person) {
 }
 ```
 
+### 단지 값을 얻을 목적이라면 Optional 대신 null 비교
+----
++ 나쁜 예:
+```java
+  return Optional.ofNullable(status).orElse(READY);
+```
+
++ 좋은 예:
+```
+  return status != null ? status : READY;
+```
+
+
 추가 참고 : https://www.latera.kr/blog/2019-07-02-effective-optional/
+추가 참고2 : http://homoefficio.github.io/2019/10/03/Java-Optional-%EB%B0%94%EB%A5%B4%EA%B2%8C-%EC%93%B0%EA%B8%B0/
