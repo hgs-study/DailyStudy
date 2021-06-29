@@ -180,7 +180,7 @@ void printUserName(Person person) {
 ```
 
 + 좋은 예:
-```
+```java
   return status != null ? status : READY;
 ```
 
