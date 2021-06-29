@@ -79,3 +79,6 @@ DATABASE="DB스키마"
 mysqldump -u$USERNAME -p$PASSWORD  $DATABASE > /backup/maria_db_backUp_${DATE}.sql 
 
 ```
+
+ㅇ UTF-8 설정
+참고 : https://kyome.tistory.com/134
