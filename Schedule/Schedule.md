@@ -39,3 +39,7 @@
   + 2021-05-08 : [Batch & Scheduler](https://github.com/hgs-study/Batch-Scheduler-Basic) - [KSS Pilot프로젝트] 스케줄러 & 배치를 활용한 1분마다 사용자 Klay Balance 확인 후 업데이트
   + 2021-05-09 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - Batch & Scheduler 초기 세팅
   + 2021-05-10 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - 00:00시마다 0.01 Klay 스테이킹 보상 지급 완료
+
+  #### 2021.07
+  ----
+  + 2021-07-04 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - [Jwt] Spring Security + Jwt(Access/Refresh) + Redis / 각 도메인 컨트롤러, 서비스 역할 부분 변경
