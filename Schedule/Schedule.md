@@ -43,3 +43,5 @@
   #### 2021.07
   ----
   + 2021-07-04 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - [Jwt] Spring Security + Jwt(Access/Refresh) + Redis / 각 도메인 컨트롤러, 서비스 역할 부분 변경
+  + 2021-07-05 : [KSS](https://github.com/hgs-study/Klay-Staking-Service) - [Jwt] Spring Security 예외처리 추가#1
+
