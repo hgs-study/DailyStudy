@@ -80,6 +80,7 @@
 
  + [RabbitMQ](https://github.com/hgs-study/DailyStudy/blob/main/MessageQueue/RabbitMQ.md)
 
+ + [Kafka](https://github.com/hgs-study/DailyStudy/blob/main/MessageQueue/Kafka.md)
 
 ### 검색 엔진
 ---------
