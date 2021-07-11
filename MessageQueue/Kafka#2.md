@@ -65,3 +65,43 @@
 ![image](https://user-images.githubusercontent.com/76584547/125189723-84618780-e274-11eb-9032-b8a3bbe6f355.png)
 
 
+
+### 버로우(Burrow)란?
+---
+```
+  - 컨슈머 랙 모니터링 애플리케이션 , 오픈소스 버로우, Go lang
+  - 멀티 카프카 클러스터 지원
+  - Sliding window를 통한 Consumer의 status 확인
+  - HTTP API 제공
+```
+
++ lag을 실시간으로 모니터링 하고 싶은 경우
+```
+  ㅇ 데이터를 Elasticsearch나 InfluxDB와 같은 저장소에 넣은 뒤 Grafana 대시보드를 통해 확인할 수 있다.
+  ㅇ 컨슈머 단위에서 lag을 모니터링하는 것은 아주 위험하고 운영요소가 많이 들어간다.
+    => 왜냐하면 컨슈머 로직단에서 lag을 수집하는 것은 컨슈머 상태에 디펜던시가 걸리기 때문이다.
+    => 컨슈머가 비정상적으로 종료하게 된다면 더이상 컨슈머는 lag정보를 보낼 수 없기 때문에 더이상 lag을 측정할 수 없다. 
+    => 그리고 컨슈머가 추가될 때마다 해당 컨슈머에 lag 정보를 특정 저장소에 저장할 수 있도록 로직을 개발해야한다. (운영이 까다롭다)
+  ㅇ 그래서 링크드인에서는 카프카와 함께 랙을 모니터링 하도록 버로우를 내놓았다.
+```
+
++ 멀티 카프카 클러스터 지원
+```
+  ㅇ 대부분 2개 이상의 카프카 클러스터를 운영하고 있을 것
+  ㅇ 이렇게 카프카 클러스터가 여러개라도 Burrow 애플리케이션 1개만 실행해서 연동한다면
+  ㅇ 카프카 클러스터들에 붙은 컨슈머의 lag을 모두 모니터링할 수 있다.
+```
+
++ Sliding window를 통한 Consumer의 status 확인
+```
+  ㅇ Burrow에는 sliding window를 통해서 컨슈머의 status를 'ERROR', 'WARNING', 'OK' 표현할 수 있다.
+  ㅇ 'WARNING' : 만약 데이터량이 일시적으로 많아져서 consumer offset이 증가하고 있는 상태
+  ㅇ 'ERROR': 만약 데이터량이 많아지고 있는데 consummer가 데이터를 가져가지 않는 상태
+```
+
++ HTTP API 제공
+```
+  ㅇ Burrow의 정보를 HTTP API를 통해 조회 가능하다
+```
+
++ Burrow 참고 자료 : https://blog.voidmainvoid.net/243
