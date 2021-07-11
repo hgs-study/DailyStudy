@@ -72,3 +72,76 @@
   - log.retention.ms : 최대 record 보존시간 설정 가능
   - log.retention.byte : 최대 record 보존 크기(byte) 설정 가능
 ```
+
+
+### 브로커(broker)란?
+---
+```
+  - 카프카가 설치되어 있는 서버 단위
+  - 보통 3개 이상의 브로커로 구성하여 사용하는 것을 권장
+```
+
++ 만약 파티션이 1개이고, 레플리케이션이 1인 토픽이 존재하고 브로커가 3대라면 브로커 3대 중 1대에 해당 토픽의 정보(데이터)가 저장된다.
+![image](https://user-images.githubusercontent.com/76584547/125185339-4c037e80-e25f-11eb-8aec-e762a2a38446.png)
+
+
+### 레플리케이션(replication)이란?
+---
+```
+  - 파티션의 복제를 뜻한다
+  - 파티션의 고가용성을 위해 사용된다.
+  - 하나의 브로커가 장애가 생기더라도 다른 복제본 파티션(레플리카)이 있으므로 사용 가능하다.
+  - 나머지 하나 남은 복제본 파티션이 Leader partition 역할을 승계하는 것
+```
+
++ 만약 레플리케이션이 1이라면, 파티션은 1개만 존재한다는 것이고
++ 만약 레플리케이션이 2라면, 파티션은 원본 1개와 복제본 1개로 존재한다는 것
++ 만약 레플리케이션이 3이라면, 파티션은 원본 1개와 복제본 2개로 존재한다는 것
++ 원본 파티션은 Leader partition이라고 부른다.
++ 복제 파티션은 Follower partition 이라고 부른다.
+
+![image](https://user-images.githubusercontent.com/76584547/125186078-3c863480-e263-11eb-8a88-6f828fa0be70.png)
+
++ 브로커 개수에 따라 replication 개수가 제한된다.
++ 브로커 개수가 3이면 레플리케이션은 4가 될 수가 없다.
++ 레플리케이션이 많아지면 그만큼 브로커 리소스량도 많아진다 
+  + 하나에 1TB라고 가정했을 경우, 브로커 개수만큼 1TB x 개수가 된다. 
+  + 카프카에 들어오는 데이터량과 retention date 즉, 저장시간을 잘 생각해서 레플리케이션 개수를 정하는 것이 좋다.
+  ※ 3개 이상의 브로커를 사용할 때 레플리케이션을 3으로 하는 것
+
+<br/>
+
++ Leader partition
+  + Kafka 프로듀서가 토픽으로 데이터를 전달할 때 전달받는 주체가 바로 Leader patition 
+  + 프로듀서에는 ack라는 상세 옵션이 있다.
+  + ack를 고가용성을 유지할 수 있는데, 이 옵션은 partition의 replication과 관련이 있다.
+  ```
+    ㅇ ack는 0,1,all (3개 중 1개 선택 가능)
+    
+    ㅇ 0일 경우, Leader patition에게 데이터를 전송하고 응답값을 받지 않는다.
+      - 응답값을 받지 않기 때문에 Leader partition에 데이터가 정상적으로 전송됐는지 알 수 없다.
+      - 또한 나머지 partition에 정상적으로 복제되었는지 알 수 없고, 보장할 수 없다. 
+      - 속도는 ↑, 하지만 데이터 유실 가능성 있다.
+      
+    ㅇ 1일 경우, Leader patition에게 데이터를 전송하고 응답값을 받는다.
+      - 다만 나머지 파티션이 복제되었는지 알 수 없다.
+      - Leader partition이 데이터를 받자마자 장애가 나면 나머지 partition에 데이터가 미처 전송되지 못한 상태이기 때문에
+      - 데이터 유실 가능성이 있다.
+
+    ㅇ all일 경우, Leader patition에게 데이터를 전송하고 응답값을 받고, followr partition에 복제가 잘 이루어졌는지 응답값 받음
+      - Leader partition에 데이터를 보낸 후, 나머지 partition에도 복제가 이루어졌는지 확인 절차를 거침
+      - 속도는 ↓, 데이터 유실은 없다.
+  ```
+  
+    
+
+
+### ISR(In Sync Replica)
+----
+```
+  - 만약 리더가 있는 브로커가 장애가 난다면 팔로워는 새로운 리더가 될 수 있다. 
+```
++ Leader partition, Follower partition을 합쳐서 ISR이라고 볼 수 있다.
+![image](https://user-images.githubusercontent.com/76584547/125186230-12814200-e264-11eb-81dd-9475b7a55943.png)
+
+
