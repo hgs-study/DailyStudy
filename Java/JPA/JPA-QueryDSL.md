@@ -257,10 +257,13 @@
     }
   ```
   + 결과
+
+  <br/>
+  
   ![image](https://user-images.githubusercontent.com/76584547/125482007-eb4bf72d-8ac3-4bb3-82e8-b1e200362d13.png)
 
 
 
   
 
-참고 사이트 : https://github.com/Youngerjesus/Querydsl
+  참고 사이트(★) : https://github.com/Youngerjesus/Querydsl
