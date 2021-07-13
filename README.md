@@ -52,6 +52,8 @@
 
  + [JPA-JPQL](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-JPQL.md)
 
+ + [JPA-QueryDSL](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-QueryDSL.md)
+
 
 ### 모던 자바
 ------
