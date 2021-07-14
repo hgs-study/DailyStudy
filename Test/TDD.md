@@ -120,14 +120,32 @@
       ...
     }
     
-    class Dollar extend Money{
+    class Dollar extends Money{
     }
     
-    class Franc extend Money{
+    class Franc extends Money{
     }
   ```
   + Dollar와 Franc는 Money를 상속 받아서 공통 필드(amount)를 사용한다
-  + 하위 클래스의 존재를 테스트에서 분리함으로써 어떤 모델 코드에서도 영향을 주지 않는다.
   + 중복이 제거됐다.
 
+
+  ```java
+    abstract class Money
+    abstract Money times (int Multiplier)
+    
+    static Money dollar(int amount){
+      return new Dollar(amount);
+    }
+    
+    public void testEquality(){
+      assertTrue(Money.dollar(5).equals(Money.dollar(5)));
+      assertFalse(Money.dollar(5).equals(Money.dollar(6)));
+    }
+  ```
+  + 팩토리 메서드를 도입하여 테스트 코드에서 콘크리트 하위 클래스의 존재 사실을 분리해냈다.
+  + 아무도 Dollor라는 이름의 하위 클래스가 있다는 사실을 알지 못한다.
+  + 하위 클래스의 존재를 테스트에서 분리함으로써 어떤 모델 코드에서도 영향을 주지 않는다.
+
 + TDD 자바지기(박재성)님 영상 참고 : https://www.youtube.com/watch?v=bIeqAlmNRrA
++ TDD 백명설님 영상 참고 : https://www.youtube.com/watch?v=wmHV6L0e1sU
