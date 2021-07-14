@@ -106,4 +106,28 @@
       assertFalse(new Dollar(6).equals(new Dollar(6)));
     }
   ```
+  
+  ### 분리(Decoupling)
+  ----
+  ```
+    서로 다른 클래스의 공통 기능을 상위 클래스를 만들어 상속 받는 구조로 만들 수 있다.
+  ```
+  
+  ```java
+    class Money{
+      protected int amount;
+      
+      ...
+    }
+    
+    class Dollar extend Money{
+    }
+    
+    class Franc extend Money{
+    }
+  ```
+  + Dollar와 Franc는 Money를 상속 받아서 공통 필드(amount)를 사용한다
+  + 하위 클래스의 존재를 테스트에서 분리함으로써 어떤 모델 코드에서도 영향을 주지 않는다.
+  + 중복이 제거됐다.
 
++ TDD 자바지기(박재성)님 영상 참고 : https://www.youtube.com/watch?v=bIeqAlmNRrA
