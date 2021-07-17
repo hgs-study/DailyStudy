@@ -151,3 +151,21 @@
 
 + TDD 자바지기(박재성)님 영상 참고 : https://www.youtube.com/watch?v=bIeqAlmNRrA
 + TDD 백명설님 영상 참고 : https://www.youtube.com/watch?v=wmHV6L0e1sU
+
+
+  ### Expression
+  ----
+  ```
+    - 연산의 결과로 Expression들이 생기는데, 이중 sum(합)이 생김
+    - Expression은 우리가 하는 일의 핵심에 해당한다.
+  ```
+    + 서로 다른 통화의 합을 구할 때
+    ```java
+      ㅇ Bank라는 객체를 생성 후 reduce 책임을 준다
+      Money reduced = bank.reduce(sum, "USD");
+    ```
+    + Expression (★)
+      + Expression은 우리가 하는 일의 핵심에 해당한다.
+      + 핵심이 되는 객체가 다른 부분에서 될 수 있는 한 모르도록 노력한다
+      + 그렇게 하면 핵심 객체가 가능한 오랫 동안 유연할 수 있다.
+      + 테스트 하기 쉽다. 재활용 가능하다. 이해하기 쉬운 상태로 남아 있는다.
