@@ -50,7 +50,7 @@
 
  + [JPA#2](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA#2.md)
 
- + [JPA#Summary](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA#Summary.md)
+ + [JPA#Summary](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA%23Summary.md)
 
  + [JPA-JPQL](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-JPQL.md)
 
