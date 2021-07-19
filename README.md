@@ -50,6 +50,8 @@
 
  + [JPA#2](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA#2.md)
 
+ + [JPA#Summary](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA#Summary.md)
+
  + [JPA-JPQL](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-JPQL.md)
 
  + [JPA-QueryDSL](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-QueryDSL.md)
