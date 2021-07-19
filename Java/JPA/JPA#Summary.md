@@ -98,3 +98,17 @@
     em.persist(new Member()); // 6
     em.persist(new Member()); // 7
   ```
+
+  + 데이터베이스 테이블 로우에 락 걸리는 시간 최소화(★)
+  ```JAVA
+    update(memberA); // UPDATE SQL A
+    비즈니스로직A(); // UPDATE SQL ...
+    비즈니스로직B(); // INSERT SQL ...
+    commit();
+  ```
+    + SQL을 사용할 경우
+      + UPDATE 시점부터 비즈니스로직A(), 비즈니스로직B()를 모두 실행하고 COMMIT 시점까지 해당 ROW에 락이 걸린다.
+      + UPDATE후 비즈니스로직A(), 비즈니스로직B()시점에도 락 걸려있음
+    + JPA의 경우 
+      + COMMIT할 때 UPDATE SQL을 실행하고 데이터베이스 트랜잭션을 커밋하기 때문에 락 걸리는 시간을 최소화 할 수 있다.
+      + COMMIT 시점에만 UPDATE 하므로 비즈니스 로직 A,B 때는 락이 안 걸려있다.
