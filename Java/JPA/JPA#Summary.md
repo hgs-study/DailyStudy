@@ -1,4 +1,4 @@
-##JPA
+## JPA
 
 ### 특징
 ---
@@ -8,6 +8,7 @@
   ㅇ 트랜잭션을 지원하는 쓰기 지연
   ㅇ 변경 감지
   ㅇ 지연 로딩
+  ㅇ 단방향 
 ```
 
 ### 1차 캐시 / 동일성 보장
@@ -169,3 +170,46 @@
     + 참고로 한 테이블에 컬럼이 30개 이상 된다는 것은 테이블 설계상 책임이 적절히 분리되지 않았을 가능성이 높다. 
 
   
+  ### 단방향 연관관계 / 양방향 연관관계
+  -----
+  ![image](https://user-images.githubusercontent.com/76584547/126342590-9d3063a7-12e2-4d7b-8e63-8b08362ee7ff.png)
+  
+  + 단방향 연관관계
+  ```
+    ㅇ member.team 필드를 통해서 team을 알 수 있지만 team -> member는 알 수 없다.
+  ```
+  + 양방향 연관관계
+  ```
+    ㅇ 회원 테이블의 TEAM_ID 외래 키를 통해서 회원과 팀을 조인할 수 있고 반대로 팀과 회원도 조인할 수 있다.
+    ㅇ MEMBER 테이블의 TEAM_ID 외래키 하나로 MEMBER JOIN TEAM과 TEAM JOIN MEMBER 둘 다 가능하다.
+  ```
+  
+  + 예시
+    + 서로 MEMBER 테이블의 TEAM_ID 외래키 하나로 MEMBER JOIN TEAM과 TEAM JOIN MEMBER 둘 다 가능한 걸 확인할 수 있다.
+  ```SQL
+    SELECT *
+    FROM MEMBER M
+    JOIN TEAM T ON M.TEAM_ID = T.TEAM_ID
+  ```
+  ```SQL
+    SELECT *
+    FROM TEAM T
+    JOIN MEMBER M ON M.TEAM_ID = T.TEAM_ID
+  ```
+  
+  + 객체 연관관계 VS 테이블 연관관계
+  ```
+    ㅇ 객체는 참조(주소)로 연관관계를 맺는다.
+    ㅇ 테이블은 외래 키로 연관관계를 맺는다.
+    
+    ※ 이 둘은 비슷해보이지만 매우 다른 특징을 가진다. 연관된 데이터를 조회할 때
+       객체는 참조(a.getB().getC())를 사용하지만 테이블은 조인 JOIN을 사용한다.
+  ```
+  + 참조를 사용하는 객체의 연관관계는 단방향이다.
+    + A -> B (a.b)
+  + 외래키를 사용하는 테이블의 연관관계는 양방향이다.
+    + A JOIN B가 가능하면 반대로 B JOIN A도 가능하다.  
+  + 객체를 양방향으로 참조하려면 단방향 연관관계를 2개 만들어야한다.
+    + A -> B (a.b)
+    + B -> A (b.a) 
+
