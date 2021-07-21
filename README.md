@@ -112,7 +112,9 @@
  + [MariaDB](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/Mysql/MariaDB.md)
 
  + [Mysql](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/Mysql/Mysql.md)
- 
+
+ + [Mysql 최적화](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/Mysql/Mysql%20%EC%B5%9C%EC%A0%81%ED%99%94.md)
+
  + [Mysql-SQL](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/Mysql/Mysql-SQL.md)
 
  + [PostgreSQL](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/PostgreSQL/PostgreSQL.md)
