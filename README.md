@@ -88,6 +88,8 @@
 
  + [Kafka](https://github.com/hgs-study/DailyStudy/blob/main/MessageQueue/Kafka.md)
 
+ + [Kafka#2](https://github.com/hgs-study/DailyStudy/blob/main/MessageQueue/Kafka%232.md)
+
 ### 검색 엔진
 ---------
 
