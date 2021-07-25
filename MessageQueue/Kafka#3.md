@@ -1,4 +1,4 @@
-### 설치
+### 멀티 브로커로 카프카 클러스터 구축하기
 ---
 ```
   카프카 설치하기 위해 두가지 애플리케이션이 필요
@@ -36,22 +36,22 @@ server.3=test-broker02:2888:3888
 
 + 호스트 네임 수정
 ```shell
-  $ vim /etc/hosts
+$ vim /etc/hosts
   
-  [test-broker01 인스턴스]
-  0.0.0.0 test-broker01
-  52.78.74.23 test-broker02
-  52.78.229.105 test-broker03
+[test-broker01 인스턴스]
+0.0.0.0 test-broker01
+3.37.104.87 test-broker02
+3.37.93.184 test-broker03
   
-  [test-broker02 인스턴스]
-  0.0.0.0 test-broker02
-  3.35.131.185 test-broker01
-  52.78.229.105 test-broker03
+[test-broker02 인스턴스]
+0.0.0.0 test-broker02
+3.35.30.214 test-broker01
+3.37.93.184 test-broker03
   
-  [test-broker03 인스턴스]
-  0.0.0.0 test-broker03
-  3.35.131.185 test-broker01
-  52.78.74.23 test-broker02
+[test-broker03 인스턴스]
+0.0.0.0 test-broker03
+3.35.30.214 test-broker01
+3.37.104.87 test-broker02
 ```
 ![image](https://user-images.githubusercontent.com/76584547/126800736-ffcaaf98-8701-4932-b0bd-5760bd032ff1.png)
 
@@ -86,7 +86,7 @@ server.3=test-broker02:2888:3888
   sudo yum install -y java-1.8.0-openjdk-devel.x86_64
 ```
 
-+ 각 주키퍼 연결
++ 각 주키퍼 연결 (주키퍼 서버 - 다른 인스턴스)
 ```shell
   $ ./zkCli.sh -server 인스턴스Ip:2181
 ```
@@ -140,6 +140,55 @@ server.3=test-broker02:2888:3888
 + 해결
   + kafka-server-start.sh파일 수정
 ![image](https://user-images.githubusercontent.com/76584547/126813109-ea7406f7-c2b6-4160-93e1-13a928e1cf15.png)
+
+
++ etc/hosts 변경 (주키퍼 서버)
+```shell
+$ sudo /etc/hosts
+
+3.35.30.214 test-broker01
+3.37.104.87 test-broker02
+3.37.93.184 test-broker03
+```
+
++ 테스트 토픽(test_log) 생성 (주키퍼 서버)
+```
+  $ ./kafka-topics.sh --create --zookeeper test-broker01:2181,test-broker02:2181,test-broker03/test --replication-factor 1 --partitions 1 --topic test_log
+```
+
+![image](https://user-images.githubusercontent.com/76584547/126889992-1ca51e89-fb37-413d-8751-4d0b15c6154c.png)
+
+
++ 토픽(test_log)에 console-producer로 데이터 넣기 (주키퍼 서버)
+```shell
+  $ ./kafka-console-producer.sh --broker-list 3.35.30.214:9092,3.37.104.87:9092,3.37.93.184:9092 --topic test_log
+```
+![image](https://user-images.githubusercontent.com/76584547/126890059-74abcc7a-f260-4cb6-b075-790d158df35f.png)
+
++ 토픽에 producer로 데이터를 넣는 동시에 consumer로 확인하기 (주키퍼 서버)
+```shell
+  $ ./kafka-console-consumer.sh --bootstrap-server 3.35.30.214:9092,3.37.104.87:9092,3.37.93.184:9092 --topic test_log --from-beginning
+```
+
++ 프로듀서에서 메세지 전달
+
+![image](https://user-images.githubusercontent.com/76584547/126890139-c580e377-8d1f-4c06-a1e7-a12cca1207c4.png)
+
+
++ 컨슈머에서 메세지 받음
+
+![image](https://user-images.githubusercontent.com/76584547/126890145-793c46db-cbed-4214-866b-7bc1599210a4.png)
+
+
++ 라운드 로빈 방식으로 offset 증가하는 걸 확인할 수 있다
+  + test-broker01
+  ![image](https://user-images.githubusercontent.com/76584547/126890243-aa50458f-4194-4b52-bfe0-1c1fe7cfc3c9.png)
+
+  + test-broker02
+  ![image](https://user-images.githubusercontent.com/76584547/126890254-b6e62737-df68-4a63-beea-6b3974e1fad1.png)
+  
+  + test-broker03
+  ![image](https://user-images.githubusercontent.com/76584547/126890258-f2cb4a4e-0929-4de0-b0dc-ef2db8ca3ca8.png)
 
 
 
