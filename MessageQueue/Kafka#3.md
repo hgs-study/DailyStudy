@@ -86,6 +86,11 @@ server.3=test-broker02:2888:3888
   sudo yum install -y java-1.8.0-openjdk-devel.x86_64
 ```
 
++ 각 주키퍼 연결
+```shell
+  $ ./zkCli.sh -server 인스턴스Ip:2181
+```
+
 ### 카프카
 + 다운로드
 ```
