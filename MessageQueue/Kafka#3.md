@@ -28,8 +28,8 @@ clientPort=2181
 initLimit=20
 syncLimit=5
 server.1=test-broker01:2888:3888
-server.2=test-broker03:2888:3888
-server.3=test-broker02:2888:3888
+server.2=test-broker02:2888:3888
+server.3=test-broker03:2888:3888
 ```
 ![image](https://user-images.githubusercontent.com/76584547/126800784-60c4f8b9-774d-4530-80e2-f09489e6422f.png)
 
