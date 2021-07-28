@@ -48,7 +48,7 @@ scenarios:
   target: "http://측정 아이피"
   phases:
     - duration: 60
-      arrivalRate: 1
+      arrivalRate: 5
       name: Warm up
 scenarios:
   - name: "just get hash"
@@ -60,11 +60,15 @@ scenarios:
   
   ```
   4. 아틸러리 실행 
-    + artillery.cmd run --output report.json .\test.yaml
+  ```
+    artillery.cmd run --output report.json .\test.yaml
+  ```
   5. 테스트 완료 되면 report.json이 생성됨 
   6. 만들어진 report.json -> html로 만드려면
-    +  artillery.cmd report .\report.json 
-    +  실행하면 성능 측정 html이 뜸
+  ```
+    artillery.cmd report .\report.json 
+    실행하면 성능 측정 html이 뜸
+  ```
   7. 아틸러리 테스트 중 가장 중요한 목록 "Latency At Intervals" (가로축 - 시간, 세로축 - 지연시간(latency))
     + arrivalRate 1일 경우 (매초 1명)
   ![image](https://user-images.githubusercontent.com/76584547/117819977-106f2700-b2a5-11eb-8561-c140520db425.png)
