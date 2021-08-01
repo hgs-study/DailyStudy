@@ -101,3 +101,90 @@
       - 위와 동일하게 조건문을 from 서브쿼리에 두고 연산 이후에 아우터 조인을 한다.
    ```
    
+### 트랜잭션 Isolation 레벨
+---
+```
+   트랜잭션을 처리할 때 어느 수위까지 데이터의 일관성을 보장해줄 것이냐하는 것
+   
+   
+   ㅇ READ-UNCOMMITTED
+   ㅇ READ-COMMITTED
+   ㅇ REPEATABLE READ
+   ㅇ SERIALIZABLE
+   ※ 밑으로 갈 수록 격리수준이 높아지지만 성능이 떨어진다 (데이터 정합성과 성능이 반비례)
+```
+   
+   ### READ-UNCOMMITTED
+   ---
+   ```
+      - 격리 수준이 가장 낮다
+      - 한 트랜잭션이 아직 커밋되지 않은 상태임에도 불구하고 변경된 값을 다른 트랜잭션에서 읽을 수 있다.
+      - 더티리드 문제, 논 리피터블 리드 문제, 팬텀리드 문제
+   ```
+   + update 후 커밋을 하지 않았음에도, 변경된 트랜잭션 A의 값을 조회하는 것을 볼 수 있다.
+   ![image](https://user-images.githubusercontent.com/76584547/127758928-d6f79277-7108-4fe7-912b-844ff09201b6.png)
+   
+   + 더티리드 문제(Dirty Read)
+   ```
+      트랜잭션 A가 만약 트랜잭션을 끝마치지 못하고 롤백한다면 트랜잭션 B는 무효가 된 데이터 값을 읽고 처리하기 때문에 문제가 생긴다.
+   ```
+   
+   
+   ### READ-COMMITTED
+   ---
+   ```
+      - 커밋이 완료된 트랜잭션의 변경 사항만 다른  트랜잭션에서 조회 가능
+      - 트랜잭션이 이루어지는 동안 다른 사용자는 해당 데이터에 접근이 불가능
+      - 논 리피터블 리드 문제, 팬텀리드 문제
+   ```
+   + 커밋하면 변경된 데이터를 읽어온다.
+   ![image](https://user-images.githubusercontent.com/76584547/127759103-f97bf4b8-479a-49cc-ab55-ee0cac1b63a1.png)
+
+   + 논 리피터블 리드 문제(Non-Repeatable Read)
+   ```
+      위와 같이("히히","허허") 같은 트랜잭션 내에서 select문을 두 번 조회했는데 두 값이 다른 값이 나오는 데이터 불일치 문제.
+   ```
+   
+   ### REPEATEABLE-READ
+   ---
+   ```
+      - READ-COMMITTED와 마찬가지로 커밋이 된 데이터만 읽을 수 있다.
+      - READ-COMMITTED와 다른 점은 한 트랜잭션이 조회한 데이터는 트랜잭션이 종료될 때까지 다른 트랜잭션이 변경하거나 삭제 불가
+   ```
+   + 한 번 조회한 트랜잭션이 다른 트랜잭션에 의해 변경,커밋되어도 반복적으로 조회해도 같은 값을 반환한다.
+   ![image](https://user-images.githubusercontent.com/76584547/127759195-e94a9eb9-188f-48b2-8249-3b83a0c26942.png)
+   
+   + Phantom READ 문제
+   ```
+      - Phantom READ는 Non-Repeatable Read의 한 종류로 조건이 걸렸든 안 걸렸든 select 문을 쓸 때 나타날 수 있는 현상
+      - 해당 쿼리로 읽히는 데이터에 들어가는 행위, 새로 생기거나 없어져 있는 현상
+   ```
+   ![image](https://user-images.githubusercontent.com/76584547/127759288-ccf008d2-e219-41fe-b3fe-3f38e96f1807.png)
+
+   
+   ### SERIALIZABLE
+   ---
+   ```
+      - 한 트랜잭션에서 사용하는 데이터를 다른 트랜잭션에서 접근 불가
+      - 트랜잭션의 ACID 성질이 엄격하게 지켜지나 성능은 가장 떨어진다.
+      - 단순 SELECT 만이라도 트랜잭션이 커밋될 때까지 모든 데이터에 잠금이 설정되어 다른 트랜잭션에서 해당 트랜잭션 변경 불가
+   ```
+   
+   ### 각 격리 수준에서 발행할 수 있는 문제점
+   ---
+   
+   ![image](https://user-images.githubusercontent.com/76584547/127759395-efd2c555-44b8-4893-909b-4add13bd3730.png)
+
+   
+   ### 트랜잭션 전파 타입
+   ---
+   ```
+    부모 트랜잭션이 있냐 없냐에 따라 타입별로 트랜잭션의 경계 설정 가능
+   ```
+   ![image](https://user-images.githubusercontent.com/76584547/127759431-d5ab9a7d-4ac6-48ef-a453-e370e1539189.png)
+   
+   + 스프링에서 제공하는 전파 타입 7가지
+   
+   ![image](https://user-images.githubusercontent.com/76584547/127759449-5ea1ee87-9589-4906-b134-10ee80ccd249.png)
+
+   
