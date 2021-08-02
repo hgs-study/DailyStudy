@@ -28,6 +28,9 @@
     + STEP3. 테이블 B에 테이블 풀스캔, 인덱스 풀스캔, 인덱스 범위 스캔 등으로 데이터 접근한다.
     + 여기서 테이블 B의 스캔하는 횟수는 "조인 버퍼에 데이터가 적재되는 횟수"와 동일하다.
 
+![image](https://user-images.githubusercontent.com/76584547/127860625-31d8ff5d-a909-4ab1-ba32-67118bb9bf95.png)
+
+
 
 ### Sort Merge Join
 -----
