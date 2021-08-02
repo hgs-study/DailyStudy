@@ -43,6 +43,29 @@
 
 <br/>
 
++ dept_no으로 정렬하고 dept_no이 90미만인 것을 SORT로 가져온 후, 결과 값을 dept_no 순으로 정렬한다.
++ dept_no으로 정렬하고 E.sal이 59000것을 가져와서 dept_no 순으로 정렬한다.
 ![image](https://user-images.githubusercontent.com/76584547/127831658-f31fffb1-0a08-4ec1-8218-2542d681dcdc.png)
 
 
+### Hash Join
+----
+```
+  해쉬 테이블을 생성하여 조인하는 방식
+```
+![image](https://user-images.githubusercontent.com/76584547/127835439-28705c82-47f0-4f1d-8476-d693994d0a89.png)
+
++ 특징
+  + 선행 테이블에서 dept_no이 90미만은 데이터에 해쉬 펑션을 적용하여 "해쉬 테이블을 생성"하게 된다. 이 작업을 모든 행위에 대해 "반복 수행"한다.
+  + 후행 테이블은 해쉬 테이블의 해쉬 밸류를 검사하며, 샐러리가 59000원 초과하는 행을 찾는다.
+  + 그리고 후행 테이블의 조인키를 기준으로 해시 함수를 적용하여 해시 테이블 내에 동일한 데이터를 찾는 것
+  + 매칭이 되면 운반 단위로 보내게 된다.
+  + 해시 테이블은 조건키(dept_no)으로 찾기 때문에 등치조건(D.dept_no = E.dept_no)이 반드시 필요하다.
+
+![image](https://user-images.githubusercontent.com/76584547/127835798-dd1267fb-a308-4953-a383-3a0eba15b7ea.png)
+
+
+#### 참고
+----
+1. https://hoon93.tistory.com/46
+2. https://www.youtube.com/watch?v=Lq9BVruQMKg
