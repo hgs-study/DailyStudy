@@ -56,7 +56,39 @@
    - 테이블 파티셔닝도 지원하므로 일별 또는 우러별 데이터를 관리할 수 있다.
    - 통계 서비스 기초 데이터를 백업할 때 디스크 용량을 1/10으로 절약
    ```
-   
+  
+### 프로파일링
+---
+```
+   각 단계별 작업에 시간이 얼마나 걸렸는지 확인하며, 병목이 되는 부분을 찾아낼 수 있다.
+```
++ 프로파일링 관련 세션 변수 활성화
+```sql
+   SET PROFILING = 1;
+```
+
++ 프로파일링 리스트 조회
+```sql
+   show profiles;
+```
+![image](https://user-images.githubusercontent.com/76584547/128180698-6af4ac12-0420-4ccb-8d25-29e20f1ecd55.png)
+
+
++ 직전에 실행한 프로파일 조회
+```sql
+   show profile;
+```
+![image](https://user-images.githubusercontent.com/76584547/128180468-eebbc203-bc51-4ff9-82b1-2cbdca7f86ed.png)
+
+
++ 해당 쿼리 프로파일 조회
+   + 보통 excuting(sending data)이 제일 오래 걸린다.
+```sql
+   show profile for query 6;
+```
+![image](https://user-images.githubusercontent.com/76584547/128180825-b820ee60-8dd6-4453-8534-d39750cceb29.png)
+
+  
 ### 데이터 처리
 -------
 ```
