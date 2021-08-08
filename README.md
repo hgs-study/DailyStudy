@@ -158,7 +158,9 @@
 ### 네트워크
 ---------
 
- + [운영체제](https://github.com/hgs-study/DailyStudy/blob/main/Network/OS.md)
++ [운영체제](https://github.com/hgs-study/DailyStudy/blob/main/Network/OS.md)
+
++ [OSI 7 Layer](https://github.com/hgs-study/DailyStudy/blob/main/Network/OSI7Layer.md)
 
 ### API
 ---------
