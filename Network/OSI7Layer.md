@@ -5,6 +5,7 @@
   ㅇ Data-Link Layer
   ㅇ Network Layer
   ㅇ Transport Layer
+  ㅇ Application Layer
 ```
 
 ### Psysical Layer
@@ -148,6 +149,40 @@
 ---
 + 운영체제의 커널에 소프트웨어적으로 구현되어 있다. (3계층과 마찬가지)
 
+
+### Application Layer
+---
++ Session Layer와 Presentataion Layer를 건너 뛴 이유?
+```
+  1. 사실 현대의 인터넷은 OSI 모델이 아니라 TCP/IP 모델을 따르고 있다.
+  2. TCP/IP 모델도 OSI 모델과 마찬가지로 네트워크 시스템에 대한 모델
+  3. 현대의 인터넷이 TCP/IP 모델을 따르는 이유는 OSI 모델이 TCP/IP 모델과 시장 점유 싸움에서 졌기 때문에
+```
+
++ TCP/IP 모델
+![image](https://user-images.githubusercontent.com/76584547/129168307-54769434-338a-4cf6-9517-dc4b54678b32.png)
+
++ TCP/IP모델 업데이트
+![image](https://user-images.githubusercontent.com/76584547/129170215-1027306f-24b0-4736-8343-555ef5669b52.png)
+
++ Application Layer
+  + TCP/IP 소켓 프로그래밍
+    + 운영체제의 Transport Layer에서 제공하는 API를 활용해서 통신 가능한 프로그램을 만드는 것을
+    + "TCP/IP 소켓 프로그래밍" 또는 "네트워크 프로그래밍"이라고 합니다.
+  + 소켓 프로그래밍 만으로도 클라이언트, 서버프로그램을 따로따로 만들어서 동작시킬 수 있다.
+  + 또한 TCP/IP 소켓 프로그래밍을 통해 누구나 자신만의 Application Layer 인코더와 디코더를 만들 수 있다.
+  + 누구든 자신만의 Application Layer 프로토콜을 만들어서 사용할 수 있다
+
++ 대표적인 Application Layer 프로토콜 "HTTP"
+  + HTTP 인코더 & 디코더 : status code 등 http 관련 속성이 붙는다
+![image](https://user-images.githubusercontent.com/76584547/129171071-78851e68-2c0d-49bf-a2a0-b7d91bc3221a.png)
+
+
+## OSI 7 Layer
+----
+```
+  거대한 네트워크 소프트웨어의 구조를 설명하는 것
+```
 
 
 ### 참고 
