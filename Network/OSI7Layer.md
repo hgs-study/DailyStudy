@@ -3,6 +3,7 @@
 ```
   ㅇ Psysical Layer
   ㅇ Data-Link Layer
+  ㅇ Network Layer
 ```
 
 ### Psysical Layer
@@ -90,6 +91,42 @@
 ---
 + 랜카드
 + 2계층 모듈도 1계층 모듈처럼 하드웨어 모듈로 구성되어 있다.
+
+### Network Layer
+---
++ A는 B에게 데이터를 보내고 싶다!
+  + A는 B의 IP의 주소를 어떻게 아는 것일까?
+    + DNS : 우리가 주소창에 www.naver.com을 입력하면 이 영어주소는 IP주소로 변환되어 사용된다.
+    + 패킷 : 55.10.54.75 data를 "패킷"이라고 부른다.
+![image](https://user-images.githubusercontent.com/76584547/129155491-3deab9de-5143-4249-bfc3-9fc8d5533f89.png)
+
++ A -> B로 패킷 전송
+```
+  1. A -> "가"(라우터)로 패킷을 보낸다
+  2. "가"는 이 패킷을 받아서 열어본다
+  3. 목적지 IP주소를 확인한다.
+  4. "가"가 구성하고 있는 컴퓨터 중엔 해당 IP주소가 없으므로 해당 패킷을 "마"에게 준다.
+  5. "마"는 데이터를 다시 패킷으로 포장해서, "바"에게 넘겨준다.
+  6. "바"는 "라"에게 패킷을 주고, "라"는 B에게 패킷을 전송한다.
+```
+![image](https://user-images.githubusercontent.com/76584547/129156134-112a90eb-1db1-4b00-8ab7-827a5237a7cf.png)
+
++ 결국 Network Layer란?
+  + 수 많은 네트워크들의 연결로 이루어지는 inter-network 속에서 (여러 네트워크를 여러 라우터가 연결해주고있다.)
+  + 어딘가에 있는 목적지 컴퓨터로 데이터를 전송하기 위해,
+  + IP 주소를 이용해서 길을 찾고 (routing)
+  + 자신 다음의 라우터에게 데이터를 넘겨주는 것 (forwarding)
+![image](https://user-images.githubusercontent.com/76584547/129157106-78d81fab-fa70-4ff6-88f0-41a5e5ab68be.png)
+
++ 라우터 패킷 전송
+  + 라우터는 데이터를 받고 (decoder) 주기(encoder) 역할을 담당한다.
+![image](https://user-images.githubusercontent.com/76584547/129157679-7b91954b-1be9-4506-802e-29ed810ae0dd.png)
+
+#### Network Layer 기술은 어디에 구현되어 있을까?
+---
++ 운영체제의 커널에 소프트웨어적으로 구현되어 있다.
+
+
 
 ### 참고 
 ---
