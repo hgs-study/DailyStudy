@@ -4,6 +4,7 @@
   ㅇ Psysical Layer
   ㅇ Data-Link Layer
   ㅇ Network Layer
+  ㅇ Transport Layer
 ```
 
 ### Psysical Layer
@@ -64,7 +65,7 @@
 ![image](https://user-images.githubusercontent.com/76584547/129148157-78c4bd84-66ed-4b90-a0c0-f625531e84e4.png)
 
  
-#### Data-Link Layer 
+### Data-Link Layer 
 ---
 + 한 번에 들어오는 데이터를 끊어 읽어야할 필요가 생겼다
 ![image](https://user-images.githubusercontent.com/76584547/129148886-20df78cc-b77a-4e75-99ff-7c8d6971596f.png)
@@ -125,6 +126,27 @@
 #### Network Layer 기술은 어디에 구현되어 있을까?
 ---
 + 운영체제의 커널에 소프트웨어적으로 구현되어 있다.
+
+
+### Transport Layer (전송 계층)
+---
++ 보내는 사람이 어떤 프로세스에 데이터를 줄 지 알려주기 위해 프로세스의 "포트번호"를 붙인다.
+![image](https://user-images.githubusercontent.com/76584547/129166983-8fb29a71-7baa-4d07-b536-18e94cfd4c1d.png)
+
+#### 결국 Transport Layer란?
+---
++ Port 번호를 사용하여
++ 도착지 컴퓨터의 최종 도착지인 프로세스까지
++ 데이터가 도달하게 하는 모듈
+
+#### 흐름도
++ 포트 번호를 데이터 앞에 보내게 된다.
+![image](https://user-images.githubusercontent.com/76584547/129167483-f62e2bce-d388-4b7c-917d-feb42d80cd87.png)
+
+
+#### Transport Layer 기술은 어디에 구현되어 있을까?
+---
++ 운영체제의 커널에 소프트웨어적으로 구현되어 있다. (3계층과 마찬가지)
 
 
 
