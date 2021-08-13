@@ -156,6 +156,8 @@
 
  + [DFS](https://github.com/hgs-study/DailyStudy/blob/main/DataStructure/DFS.md)
 
+ + [PriorityQueue](https://github.com/hgs-study/DailyStudy/blob/main/DataStructure/PriorityQueue.md)
+
 ### 네트워크
 ---------
 
