@@ -5,6 +5,7 @@
 ```
 + 미로를 탐색할 때 한 방향으로 갈 수 있을 때까지 계속 가다가 더 이상 갈 수 없게 되면 다시 가장 가까운 갈림길로 돌아와서 이곳으로부터 다른 방향으로 다시 탐색을 진행하는 방법과 유사하다.
 + 참고 : https://velog.io/@sohi_5/algorithmDFS
++ 참고 : https://codingnojam.tistory.com/44
 
 
 ### 문제
