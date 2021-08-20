@@ -37,7 +37,13 @@
 ![image](https://user-images.githubusercontent.com/76584547/130187009-539b0b51-9fd5-4b55-9e8e-1c80cfee1195.png)
 
 
-+ 출처
-``` 
-  - https://wooono.tistory.com/109
+### VirtualBox란?
+---
 ```
+  리눅스 환경을 구성하는 툴 (vm ware 등등 있음)
+```
++ 출처: https://www.virtualbox.org/
+![image](https://user-images.githubusercontent.com/76584547/130187435-44a5d8db-ace3-4986-a4b7-b7dd06811039.png)
+
+
+
