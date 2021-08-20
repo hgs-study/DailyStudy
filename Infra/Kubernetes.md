@@ -46,4 +46,21 @@
 ![image](https://user-images.githubusercontent.com/76584547/130187435-44a5d8db-ace3-4986-a4b7-b7dd06811039.png)
 
 
+### Vagrant 실행
+----
+```shell
+  $ vagrant up 
+```
++ 쿠버네티스 클러스터(마스터 1, 워커 3개 생성)
+![image](https://user-images.githubusercontent.com/76584547/130192990-664f9bd3-ee59-4d54-8f3e-914b6ed1ea3d.png)
+
+#### master node 접속 후 node 확인
+---
+```shell
+  kubectl get nodes
+```
+![image](https://user-images.githubusercontent.com/76584547/130193169-a5d86763-a513-4126-b166-5beb56bc60d9.png)
+
+
+
 
