@@ -61,6 +61,12 @@
 ```
 ![image](https://user-images.githubusercontent.com/76584547/130193169-a5d86763-a513-4126-b166-5beb56bc60d9.png)
 
+### SuperPutty
+----
+```
+  세션을 입력하여 간편하게 여러 cli를 다룰 수 있다 
+```
+![image](https://user-images.githubusercontent.com/76584547/130194745-280f0402-bc98-4046-a333-76b146e4a72a.png)
 
 
 
