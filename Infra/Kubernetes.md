@@ -22,6 +22,20 @@
   - 호환성(Vendor Lock In 해결)
 ```
 
+### Kubernetes란?
+---
+```
+  컨테이너( 대표적으로 도커)를 관리하는 툴
+```
+
+### Vagrant 란?
+---
+```
+  Vitual Box에 쿠버네티스 환경을 구성하기 위해 스크립트 코드를 보내면 Virtual Box에 여러 Node를 구성해준다 
+```
++ 출처 : https://www.vagrantup.com/
+![image](https://user-images.githubusercontent.com/76584547/130187009-539b0b51-9fd5-4b55-9e8e-1c80cfee1195.png)
+
 
 + 출처
 ``` 
