@@ -31,3 +31,13 @@
   $ curl 172.16.103.129
 ```
 ![image](https://user-images.githubusercontent.com/76584547/130197944-bda4bd19-1f4c-4d88-8409-4f77b9d9798c.png)
+
++ 디테일하게 확인
+  + 할당된 ip와 이미지를 상세 확인할 수 있다 
+```shell
+  $ kubectl get pod nginx -o yaml
+```
+![image](https://user-images.githubusercontent.com/76584547/130198791-92299401-020c-49ef-8356-8c1f08f0e810.png)
+
+![image](https://user-images.githubusercontent.com/76584547/130198820-10870622-782a-424c-b0a9-51b08ff4cffc.png)
+
