@@ -16,6 +16,8 @@
 
  + [Kubernetes#2](https://github.com/hgs-study/DailyStudy/blob/main/Infra/Kubernetes%232.md)
 
+ + [Kubernetes#3](https://github.com/hgs-study/DailyStudy/blob/main/Infra/Kubernetes%233.md)
+
  + [로드밸런싱](https://github.com/hgs-study/Docker-Nginx-LoadBalance)
 
  + [스케일 업 & 스케일 아웃](https://blog.naver.com/hgstudy_/222449146288)
