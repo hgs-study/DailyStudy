@@ -134,3 +134,53 @@
 ```
 
 ![image](https://user-images.githubusercontent.com/76584547/130312605-1de0af92-5436-4691-88bf-36ea990cf6f7.png)
+
+### 로드밸런서
+----
+```
+  현재 NodePort로 배포하고 있지만 이는 가장 좋은 방법이 아니다. 
+  로드밸런서를 이용해서 구성해야할 것
+```
+
++ 로드밸런서의 좋은 점
+```
+  1. 노드포트는 노드의 IP를 다 알아야하는데, 로드밸런서는 고유의 ip를 만들어서 사용자에게 알려줄 수 있다.
+  그래서 노드의 ip를 오픈하는 부담이 없다.
+  2. 로드밸런서가 가야할 경로를 최적화할 수 있다.
+  3. MeetalLB라는 로드밸런서 타입을 선언할 수 있다.
+```
+![image](https://user-images.githubusercontent.com/76584547/130313156-ca139596-777b-4874-ae1a-ad941c5d3d1c.png)
+
++ 현재 프로젝트에서 metalLb 설치 (이미 설치해놓음)
+```shell
+  $ kubectl apply -f ~/_Lecture_k8s_starter.kit/ch2/2.4/metallb.yaml
+```
+![image](https://user-images.githubusercontent.com/76584547/130313220-3b85770d-d9e8-4cf7-8524-12867bdd47a3.png)
+
+
++ chk-hn의 디플로이먼트 생성
+```shell
+  $ kubectl create deployment chk-hn --image=sysnet4admin/chk-hn
+```
+
++ 여러개 생성
+```shell
+  $ kubectl scale deployment chk-hn --replicas=3
+```
+![image](https://user-images.githubusercontent.com/76584547/130313292-b41b7da9-a593-47ca-81dd-50fab2c4e42c.png)
+
+
++ 생성한 디플로이먼트를 노출하기
+```shell
+  - 디플로이먼트 노출 : kubectl expose deployment
+  - 이름 : chk-hn
+  - 타입 (로드밸런서) : --type=LoadBalancer
+  - 포트 : --port=80
+
+  $ kubectl expose deployment chk-hn --type=LoadBalancer --port=80
+```
+
++ 192.168.1.11 가 EXTERNAL-IP로 설정이 되었기 때문에 더이상 노드포트를 알려줄 필요가 없다.
+  + 고정된 해당 IP로 접근 가능하다. 
+![image](https://user-images.githubusercontent.com/76584547/130313383-5eefb565-3a90-4131-9ab7-c0d0f3f6e7ac.png)
+
