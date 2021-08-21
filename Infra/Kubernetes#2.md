@@ -41,3 +41,46 @@
 
 ![image](https://user-images.githubusercontent.com/76584547/130198820-10870622-782a-424c-b0a9-51b08ff4cffc.png)
 
+
+#### 서비스(Service)
+----
+```
+  파드를 외부에서도 접속하게 하는 서비스(Service)
+```
++ 노드포트(Node Port) : 노드에 접속해서 Pod가 위치하는 곳을 찾는 것 (파드를 직접 찾는 것은 아님)
+![image](https://user-images.githubusercontent.com/76584547/130311468-1c5e0171-b1df-4545-8794-25df8cc0ed01.png)
+
++ 파드 노출
+```shell
+  - 오픈하려고 하는 타입(type) : NodePort
+  - 실제로 그 파드가 내부에 있는 컨테이너랑 통신하기 위한 포트 : 80
+  
+  $ kubectl expose pod nginx --type=NodePort --port=80
+```
+
++ 노출된 파드 확인 
+```shell
+  - 밖으로 노출된 포트는 30451이라는 포트를 확인할 수 있다.
+  
+  $ kubectl get service
+```
+
++ 노드 정보 확인
+```shell
+  - 노드를 알아야 파드에 접근할 수 있기 때문에 노드 정보가 필요하다.
+  - 현재 배포할 때 192.168.10, 101, 102, 103으로 배포되게 설계가 되어있다. 
+  - 마스터 - 10, w1 - 101, w2- 102, w3- 103 (외부에 노출되는 아이피)
+  
+  $ kubectl get nodes -o wide
+```
+![image](https://user-images.githubusercontent.com/76584547/130311677-e553447c-90a0-4dd3-8bc4-2f5e0e112fa0.png)
+
+
++ 브라우저에서 확인
+```
+  - 마스터 노드에 nginx의 파드를 확인할 수 있다.
+  - 노드 아이피 (192.168.1.10) : 외부에 노출된 파드포트(30451)
+```
+![image](https://user-images.githubusercontent.com/76584547/130311783-ad658071-0c1b-4f5d-b9da-b31076f4434c.png)
+
+
