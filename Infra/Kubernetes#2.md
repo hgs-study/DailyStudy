@@ -84,3 +84,53 @@
 ![image](https://user-images.githubusercontent.com/76584547/130311783-ad658071-0c1b-4f5d-b9da-b31076f4434c.png)
 
 
+#### 디플로이먼트(Deployment)
+---
+```
+  파드를 여러개 모아놓은 단위
+```
+
++ 파드, 디플로이 생성 방법
+```
+  ㅇ kubectl run 
+    - 테스트 목적에 가깝다.
+    - 1.1.8 이후 버전에서는 파드만 배포할 수 있고 디플로이는 배포할 수 없다.
+    - 파드 하나만 배포할 때 유용함
+    
+  ㅇ kubectl create
+    - 파드와 디플로이 모두 배포 가능
+    
+  ㅇ kubectl apply
+    - 파드와 디플로이 모두 배포 가능
+    - 하지만 파일이 필요하다.
+```
+![image](https://user-images.githubusercontent.com/76584547/130312010-f55150a8-6651-4265-a4d4-57cdd975d4d7.png)
+
+
++ nginx 디플로이 배포
+```shell
+  - 디플로이 배포시 : kubectl create deploment
+  - 파드 배포 시 : kubectl create pod
+  - 이름 명시 : deploy-nginx
+  - 이미지 사용 : --image=nginx
+
+  $ kubectl create deploment deploy-nginx --image=nginx
+```
+
++ 파드 확인
+```shell
+  $ kubectl get pods
+```
+![image](https://user-images.githubusercontent.com/76584547/130312149-758ad311-7d22-4343-837d-2d672318be3d.png)
+
++ 배포 파드 여러개로 늘리기
+```
+  ReplicaSet의 replicas 가 디폴트로 파드 1개로 되어있는데 이를 늘려야한다.
+```
+
++ 2개가 더 늘어나서 3개가 된 것을 확인할 수 있다.
+```shell
+  $ kubectl scale deployment deploy=nginx --replicas=3
+```
+
+![image](https://user-images.githubusercontent.com/76584547/130312605-1de0af92-5436-4691-88bf-36ea990cf6f7.png)
