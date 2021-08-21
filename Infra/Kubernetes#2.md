@@ -184,3 +184,14 @@
   + 고정된 해당 IP로 접근 가능하다. 
 ![image](https://user-images.githubusercontent.com/76584547/130313383-5eefb565-3a90-4131-9ab7-c0d0f3f6e7ac.png)
 
+#### 배포된 것 삭제
+---
+```shell
+  $ kubectl delete service 서비스명
+  $ kubectl delete pod 서비스명
+  $ kubectl delete deployment 서비스명
+  $ kubectl delete -f ~/_Lecture_k8s_starter.kit//ch2/2.4/metallb.yaml
+```
+![image](https://user-images.githubusercontent.com/76584547/130313827-48f8f2f8-c1fd-4c28-a9b5-530e4af3a8fd.png)
+
+
