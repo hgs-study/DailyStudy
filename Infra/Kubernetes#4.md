@@ -32,3 +32,25 @@
 ![image](https://user-images.githubusercontent.com/76584547/130344120-ef19213a-409e-4d5c-835d-fe4103f534a9.png)
 
 
+### 볼륨 오브젝트
+---
+```
+  - 영속적인 데이터를 보존하기 위한 것
+  - 파드가 이곳 저곳으로 돌아다니면 안되기 때문에 파드를 만들 때 볼륨을 붙이는 구조 필요
+```
+
+#### NFS 서버
+----
+```
+  네트워크 파일 시스템 : 모두 다 같이 사용할 수 있는 볼륨 시스템을 만들 수 있다.
+  워커노드 3개가 모두 같은 것을 바라봐야하기 때문에 사용
+```
++ 미리 만들어둔 쉘을 이용해서 nfs 생성
+  + nfs shared에 워커노드 3개를 공유할 수 있는 곳 : 192.168.1.0/24
+![image](https://user-images.githubusercontent.com/76584547/130344524-f914aa63-b067-4781-9bd0-02ba5f677b00.png)
+
++ 볼륨은 영속적으로 데이터가 남아있다
++ ![image](https://user-images.githubusercontent.com/76584547/130345354-8b6c3fcf-4bb8-43d3-8d55-a4dd7bb7d643.png)
+
+
+
