@@ -85,3 +85,21 @@
 + w1 - docker 종료 후 scaele로 배포
   + w1엔 배포를 시도조차하지 않는 것을 확인할 수 있다. 
 ![image](https://user-images.githubusercontent.com/76584547/130343216-41b92761-b65e-44af-8013-af8261b46e1d.png)
+
+
+### 마스터 노드에 문제가 생겼을 경우
+
+#### 스케줄러가 삭제되었을 경우
+---
+```shell
+  $ kubectl delete pod kube-scheduler-m-k8s -n kube-system
+```
+
++ 마스터노드에 있는 중요한 것들은 파드에 있더라도 다시 생성해낸다
+![image](https://user-images.githubusercontent.com/76584547/130343468-ee56c434-4861-493e-8156-123c51efbb42.png)
+
++ 마스터노드에 있는 쿠버렛이 종료되었을 경우
+  + 쿠버렛으로 명령이 날아가서 삭제든 종료든 돼야하는데, 쿠버렛이 종료돼서 터미네이팅중이다
+![image](https://user-images.githubusercontent.com/76584547/130343657-8525f4ad-0598-45a7-97a4-07ef11827e1f.png)
+
++ 하지만 마스터노드 쿠버렛이 종료되더라도 모든것이 안정적으로 돌아가고있다.
