@@ -1,4 +1,4 @@
-## 쿠버네티스 인사이드
+## 쿠버네티스 인사이드 & 문제
 
 ### 쿠버네티스 구성요소 확인 (EKS,AKS,GKE 관리형 쿠버네티스)
 ----
@@ -58,3 +58,30 @@
 ```shell
   $ kubectl delete deployment del-deploy
 ```
+
+#### kubelet 문제
+---
+```shell
+  $ systemctl stop kubelet
+  $ systemctl status kubelet
+```
+
++ 워커노드에서 kubelet이 종료되어 있는 상태에서 배포하면 pending 상태가 유지된다.
++ 다시 kubelet을 실행하면 정상배포된다.
+
++ kubelet 종료 후 배포
+![image](https://user-images.githubusercontent.com/76584547/130343112-5ef8d6cd-3f0f-4e64-83e3-23aa2d281095.png)
+
++ kubelet 재가동 후
+![image](https://user-images.githubusercontent.com/76584547/130343124-dcabd19c-76ce-486e-adff-224ee66a2be6.png)
+
+
+#### Container Runtime(도커) 문제
+----
+```shell
+  $ systemctl stop docker (워커노드)
+```
+
++ w1 - docker 종료 후 scaele로 배포
+  + w1엔 배포를 시도조차하지 않는 것을 확인할 수 있다. 
+![image](https://user-images.githubusercontent.com/76584547/130343216-41b92761-b65e-44af-8013-af8261b46e1d.png)
