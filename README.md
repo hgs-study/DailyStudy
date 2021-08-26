@@ -20,6 +20,8 @@
 
  + [Kubernetes#4](https://github.com/hgs-study/DailyStudy/blob/main/Infra/Kubernetes%234.md)
 
+ + [SystemDesign](https://github.com/hgs-study/DailyStudy/blob/main/Infra/SystemDesign.md)
+
  + [로드밸런싱](https://github.com/hgs-study/Docker-Nginx-LoadBalance)
 
  + [스케일 업 & 스케일 아웃](https://blog.naver.com/hgstudy_/222449146288)
