@@ -20,6 +20,8 @@
   3. 사용자 인증
   4. IP 허용 목록관리
 ```
+![image](https://user-images.githubusercontent.com/76584547/130916803-006debea-6070-4826-abe9-0db6ae921890.png)
+
 + API Gateway를 API 서버 앞에 두어 해당 기간 안에 특정 요청횟수만큼 요청을하면 429 : Too many request를 응답한다.
 + 처리율 제한 알고리즘
   + 토큰 버킷
