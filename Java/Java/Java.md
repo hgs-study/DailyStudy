@@ -49,10 +49,15 @@
 
 + Json 파싱
 ```
-  1. https://codechacha.com/ko/java-parse-json/ 참고
+  참고 : https://codechacha.com/ko/java-parse-json/
 ```
 
 + 멀티 쓰레드 환경에서 동시성 제어
 ```
   참고 : https://deveric.tistory.com/104
+```
+
++ 블럭, 논블럭, 동기, 비동기
+```
+  참고 : https://hamait.tistory.com/930
 ```
