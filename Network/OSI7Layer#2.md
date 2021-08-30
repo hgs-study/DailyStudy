@@ -18,11 +18,7 @@
   ㅇ Transport Layer
   ㅇ Network Layer
   ㅇ Data-Link Layer
-  
-  ㅇ Data-Link Layer
-  ㅇ Network Layer
-  ㅇ Transport Layer
-  ㅇ Application Layer
+  ㅇ Physical Layer
 ```
 
 ### Application Layer
@@ -107,6 +103,15 @@
 
 + 트랜스포트 계층(4계층)에선 해당 데이터가 없으면 다시 보내준다.
 ![image](https://user-images.githubusercontent.com/76584547/131277018-6b55c52e-d1a6-4bec-8194-117ff29369ac.png)
+
+
+### Physical Layer
+---
+```
+  ㅇ 1계층
+  ㅇ "0101110" 같은 비트 단위들을 전기 신호로 변환해주고 전송해주는 역할
+```
+![image](https://user-images.githubusercontent.com/76584547/131280300-be79a256-3543-45c8-9825-65ffffa0194b.png)
 
  
 ### 참고
