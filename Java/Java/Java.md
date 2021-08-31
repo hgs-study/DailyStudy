@@ -1,5 +1,10 @@
 ## Java
 
+#### JVM 구조
+```
+  참고 : https://velog.io/@litien/JVM-%EA%B5%AC%EC%A1%B0
+```
+
 #### 변수
 ``` 
   1. 클래스 변수 (클래스 영역) : 클래스가 메모리에 올라갈 때 생성
@@ -77,3 +82,5 @@
   ```
     참고 : https://hamait.tistory.com/930
   ```
+  
+  
