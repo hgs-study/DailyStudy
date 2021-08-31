@@ -60,7 +60,7 @@
 
  + [JPA](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA.md)
 
- + [JPA#2](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA#2.md)
+ + [JPA#2](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA%232.md)
 
  + [JPA#Summary](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA%23Summary.md)
 
