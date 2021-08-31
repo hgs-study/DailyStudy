@@ -2,6 +2,7 @@
 ---
 ```
   ㅇ Context Switch
+  ㅇ 세마포어 vs 뮤텍스
 ```
 
 ### Context Switch
