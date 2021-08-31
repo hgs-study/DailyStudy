@@ -1,8 +1,10 @@
 ## Java
 
 #### JVM 구조
+
++ 참고
 ```
-  참고 : https://velog.io/@litien/JVM-%EA%B5%AC%EC%A1%B0
+  https://velog.io/@litien/JVM-%EA%B5%AC%EC%A1%B0
 ```
 
 #### 변수
