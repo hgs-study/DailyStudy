@@ -10,6 +10,14 @@
 
 #### GC
 ---
+
++ GC 과정
+  + GC의 과정을 Mark and Sweep이라고도 한다. 
+  + GC가 스택의 모든 변수 또는 Reachable 객체를 스캔하면서 각각 어떤 객체를 참조하고 있는지 찾는 과정이 Mark라고 한다. 
+  + 이 과정에서 Stop the world가 발생한다. 
+  + 이후 Mark 되어있지 않은 객체들을 힙에서 제거하는 과정이 Sweep이다.
+
+
 + 참고
 ```
   https://velog.io/@litien/%EA%B0%80%EB%B9%84%EC%A7%80-%EC%BB%AC%EB%A0%89%ED%84%B0GC
