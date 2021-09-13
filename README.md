@@ -56,6 +56,8 @@
 ### 자바
 ------
 
+ + [GC](https://github.com/hgs-study/DailyStudy/blob/main/Java/Java/GC.md)
+
  + [Java](https://github.com/hgs-study/DailyStudy/blob/main/Java/Java/Java.md)
 
  + [JPA](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA.md)
