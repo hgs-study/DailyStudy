@@ -18,8 +18,6 @@
 ```
 + Object.defineProperty 
 
-<br>
-
 ![image](https://user-images.githubusercontent.com/76584547/135591852-87d57fc7-bf98-41d4-8416-4e785ba4f6aa.png)
 
 + get : 속성에 접근했을 때의 동작 정의
@@ -61,19 +59,13 @@
 ```
   + 생성자 함수 설정 (함수명 앞이 대문자)
 
-<br>
-
   ![image](https://user-images.githubusercontent.com/76584547/135597188-5230589a-4639-46aa-9ca9-000088d1b632.png)
 
   + 생성자 함수 활용
 
-<br>
-
   ![image](https://user-images.githubusercontent.com/76584547/135597212-4f0080c2-d177-499d-b6f8-0364e7a74549.png)
 
   + logText 함수를 미리 정의해서 인스턴스로 바로 사용가능
-
-<br>
 
   ![image](https://user-images.githubusercontent.com/76584547/135597613-aed89f40-bb42-4761-a926-7d05136ef0bf.png)
 
@@ -98,9 +90,11 @@
 ![image](https://user-images.githubusercontent.com/76584547/135601182-565dbc3d-e8b5-4c61-ad80-9f46770156a4.png)
 
 + [전역 컴포넌트] - app-header라는 컴포넌트를 등록하고 el(app)안에 <app-header>태그를 사용하면서 컴포넌트를 사용한다
+  
 ![image](https://user-images.githubusercontent.com/76584547/135601590-0806a331-d1a7-4e58-88a5-08456e167faf.png)
 
 + [지역 컴포넌트] - 인스턴스 안에 컴포넌트 설정
+  
  ![image](https://user-images.githubusercontent.com/76584547/135602887-b75dc30f-87fd-4522-9f2e-78f3fb90aa79.png)
 
 
