@@ -86,3 +86,21 @@
 ```
 ![image](https://user-images.githubusercontent.com/76584547/135598691-82ace9de-8ebc-437e-a0d9-56df7e6d7093.png)
 
+
+
+#### 컴포넌트
+---
+```
+  - 컴포넌트는 화면의 영역을 영역별로 구분해서 개발하는 것
+  - 재사용성에 유리하다
+```
++ 인스턴스를 생성하면 기본적으로 Root 컴포넌트로 인식
+![image](https://user-images.githubusercontent.com/76584547/135601182-565dbc3d-e8b5-4c61-ad80-9f46770156a4.png)
+
++ [전역 컴포넌트] - app-header라는 컴포넌트를 등록하고 el(app)안에 <app-header>태그를 사용하면서 컴포넌트를 사용한다
+![image](https://user-images.githubusercontent.com/76584547/135601590-0806a331-d1a7-4e58-88a5-08456e167faf.png)
+
++ [지역 컴포넌트] - 인스턴스 안에 컴포넌트 설정
+ ![image](https://user-images.githubusercontent.com/76584547/135602887-b75dc30f-87fd-4522-9f2e-78f3fb90aa79.png)
+
+
