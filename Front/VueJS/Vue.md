@@ -35,3 +35,42 @@
   변수의 유효범위를 관리하고 있다.
 ```
 ![image](https://user-images.githubusercontent.com/76584547/135593685-f73ba473-3859-4b37-81dc-713f5c2ac3f7.png)
+
+### 인스턴스
+----
+
+#### Vue 인스턴스 생성
+---
+```
+  Vue가 개발자들이 개발하기 쉽게끔 인스턴스를 제공한다.
+```
+![image](https://user-images.githubusercontent.com/76584547/135596017-c208b099-05a2-495f-82d7-fdb227b57df6.png)
+
++ body 태그 안에서 app이라고 생긴 id를 찾아서 Vue 인스턴스를 붙이겠다
+![image](https://user-images.githubusercontent.com/76584547/135596616-4e987748-da0b-4cd2-b9ec-25980fc4b223.png)
+
+
+#### 생성자 함수
+---
+```
+  생성자 함수로 어떤 API와 속성들을 정의해놓고 개발자는 가져다 사용하거나 재사용하는 것
+  -> new Vue()를 사용하는 이유
+```
+  + 생성자 함수 설정 (함수명 앞이 대문자)
+  ![image](https://user-images.githubusercontent.com/76584547/135597188-5230589a-4639-46aa-9ca9-000088d1b632.png)
+
+  + 생성자 함수 활용
+  ![image](https://user-images.githubusercontent.com/76584547/135597212-4f0080c2-d177-499d-b6f8-0364e7a74549.png)
+
+  + logText 함수를 미리 정의해서 인스턴스로 바로 사용가능
+  ![image](https://user-images.githubusercontent.com/76584547/135597613-aed89f40-bb42-4761-a926-7d05136ef0bf.png)
+
+
+#### 인스턴스 옵션
+----
++ 참고 
+```
+  https://joshua1988.github.io/vue-camp/vue/instance.html#%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5%E1%86%AB%E1%84%89%E1%85%B3-%E1%84%89%E1%85%A2%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC
+```
+![image](https://user-images.githubusercontent.com/76584547/135598691-82ace9de-8ebc-437e-a0d9-56df7e6d7093.png)
+
