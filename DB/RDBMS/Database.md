@@ -69,3 +69,8 @@
   
   참고 : https://github.com/ksundong/backend-interview-question
 ```
+
+### 인덱스 수직적 탐색, 수평적 탐색
+```
+  https://blog.naver.com/hgstudy_/222523205918
+```
