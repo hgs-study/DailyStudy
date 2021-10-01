@@ -47,6 +47,9 @@
 ![image](https://user-images.githubusercontent.com/76584547/135596017-c208b099-05a2-495f-82d7-fdb227b57df6.png)
 
 + body 태그 안에서 app이라고 생긴 id를 찾아서 Vue 인스턴스를 붙이겠다
+
+<br>
+
 ![image](https://user-images.githubusercontent.com/76584547/135596616-4e987748-da0b-4cd2-b9ec-25980fc4b223.png)
 
 
@@ -57,12 +60,21 @@
   -> new Vue()를 사용하는 이유
 ```
   + 생성자 함수 설정 (함수명 앞이 대문자)
+
+<br>
+
   ![image](https://user-images.githubusercontent.com/76584547/135597188-5230589a-4639-46aa-9ca9-000088d1b632.png)
 
   + 생성자 함수 활용
+
+<br>
+
   ![image](https://user-images.githubusercontent.com/76584547/135597212-4f0080c2-d177-499d-b6f8-0364e7a74549.png)
 
   + logText 함수를 미리 정의해서 인스턴스로 바로 사용가능
+
+<br>
+
   ![image](https://user-images.githubusercontent.com/76584547/135597613-aed89f40-bb42-4761-a926-7d05136ef0bf.png)
 
 
