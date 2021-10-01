@@ -86,6 +86,8 @@
   - 컴포넌트는 화면의 영역을 영역별로 구분해서 개발하는 것
   - 재사용성에 유리하다
 ```
+![image](https://user-images.githubusercontent.com/76584547/135607655-ddf78342-5b1f-4a49-b13f-7527159bf6c7.png)
+
 + 인스턴스를 생성하면 기본적으로 Root 컴포넌트로 인식
 ![image](https://user-images.githubusercontent.com/76584547/135601182-565dbc3d-e8b5-4c61-ad80-9f46770156a4.png)
 
