@@ -147,10 +147,12 @@
 ----------
  + [JavaScript](https://github.com/hgs-study/DailyStudy/blob/main/Front/JavaScript/JavaScript.md)
 
+
 ### Vue.js
 ------
- + [Vue.js](https://github.com/hgs-study/DailyStudy/blob/main/Front/VueJS/Vue.md)
+ + [Vue#1](https://github.com/hgs-study/DailyStudy/blob/main/Front/VueJS/Vue%231.md)
 
+ + [Vue#2](https://github.com/hgs-study/DailyStudy/blob/main/Front/VueJS/Vue%232.md)
 
 ### Jsp
 ----------
