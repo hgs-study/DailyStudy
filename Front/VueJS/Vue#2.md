@@ -8,3 +8,17 @@
 ```
 
 ![image](https://user-images.githubusercontent.com/76584547/135607910-3f9417f7-50f2-401f-83e1-1efbf9e3ed16.png)
+
+
+#### props
++ Root 컴포넌트(상위) message를 app-header 컴포넌트(하위)로 props(데이터)를 내려준다
+![image](https://user-images.githubusercontent.com/76584547/135708422-edf3a3b3-f49d-4d2c-b602-4966008d9e73.png)
+
++ 상위 컴포넌트의 데이터를 바꾸면 하위 컴포넌트의 데이터도 바뀐다 (Reactivity가 일어난다)
+![image](https://user-images.githubusercontent.com/76584547/135708552-57f8b401-746e-478d-bf65-52f8c1261a6d.png)
+
+![image](https://user-images.githubusercontent.com/76584547/135708568-a9886482-58e8-473f-aa55-280a4455ae6b.png)
+
+
++ app-content 추가 (하위 컴포넌트)
+![image](https://user-images.githubusercontent.com/76584547/135708789-a9a93f3d-d99f-414d-8ae4-01788d1f8e43.png)
