@@ -36,3 +36,10 @@
 + data의 num 증가시키기 (methods에서 this.num으로 접근)
 ![image](https://user-images.githubusercontent.com/76584547/135710590-fe9ca4de-b657-42cc-af89-96dc5ec42cb1.png)
 
+
+#### 같은 컴포넌트 레벨에서의 통신
+-----
+  + 같은 컴포넌트 레벨에서의 통신
+    + 상위 컴포넌트에 값을 올리고(event)
+    + 다시 하위 컴포넌트에 값을 내린다(props) 
+![image](https://user-images.githubusercontent.com/76584547/135711638-61a82be5-2b3a-4611-ae20-e945362f9542.png)
