@@ -28,3 +28,21 @@
   + router-link를 사용하여 "/login" "/main" 접속 (= <a href="">)
   
   ![image](https://user-images.githubusercontent.com/76584547/135717633-803cf81b-c293-4529-ae1f-eac2b3d0fef0.png)
+
+ 
+### Axios
+---
+```
+  뷰에서 권고하는 HTTP 통신 라이브러리는 액시오스(Axios)입니다. Promise 기반의 HTTP 통신 라이브러리이며 상대적으로 다른 
+  HTTP 통신 라이브러리들에 비해 문서화가 잘되어 있고 API가 다양합니다.
+```
+  + 설치
+    + cdn
+    ```
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    ```
+  
+    + npm
+    ```
+      npm install axios
+    ```
