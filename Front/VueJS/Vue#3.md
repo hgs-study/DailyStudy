@@ -46,3 +46,8 @@
     ```
       npm install axios
     ```
+  
+  + 구현
+    + response 받은 data를 users에 담기 위해 "var vm = this"를 명시
+    ![image](https://user-images.githubusercontent.com/76584547/136000436-212b0656-5f97-447e-b468-097e2c5b898c.png)
+
