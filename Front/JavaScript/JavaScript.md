@@ -65,3 +65,11 @@
 
 3. 그렇기 때문에 ella는 inner함수가 outer()함수의 렉시컬 환경을 참조 받는다
 ![image](https://user-images.githubusercontent.com/76584547/136183109-ea350985-11bb-46c3-aa3f-5d67d379544d.png)
+
+
+-----
+## 실행 컨텍스트
++ 참고
+```
+ https://www.zerocho.com/category/JavaScript/post/5741d96d094da4986bc950a0
+```
