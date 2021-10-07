@@ -68,7 +68,7 @@
 
 
 -----
-## 실행 컨텍스트
+## 실행 컨텍스트 / 호이스팅
 + 참고
 ```
  https://www.zerocho.com/category/JavaScript/post/5741d96d094da4986bc950a0
