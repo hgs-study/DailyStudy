@@ -207,6 +207,11 @@
  + [Intellij](https://github.com/hgs-study/DailyStudy/blob/main/IDE/Intellij.md)
 
 
+### 형상관리
+------
+ + [GitHub](https://github.com/hgs-study/DailyStudy/blob/main/SCM/GitHub.md)
+
+
 ### 협업툴
 ------
  + [Jira & Confluence](https://github.com/hgs-study/DailyStudy/blob/main/Collaboration/Jira.md)
