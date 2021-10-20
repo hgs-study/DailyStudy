@@ -80,3 +80,17 @@
 ![image](https://user-images.githubusercontent.com/76584547/138065619-1b334e39-da53-4936-93aa-74d85c0f1e11.png)
 
 
+### watch 속성
+---
+```
+  data의 값이 변경될 때 실행
+```
++ data의 num이 변경될 때 logText()가 실행된다.
+![image](https://user-images.githubusercontent.com/76584547/138069312-cda5516e-fdb2-4a93-ba22-e60286103942.png)
+
+  
++ watch vs computed
+```
+   - computed : 벨리데이션 , 간단한 텍스트 연산 , 캐싱 제공 (공홈에선 간단한 작업은 거의 computed 추천)
+   - watch : 무거운 동작들 (데이터 요청, 메서드 요청, api 등)
+```
