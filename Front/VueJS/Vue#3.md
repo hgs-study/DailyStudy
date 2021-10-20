@@ -51,3 +51,11 @@
     + response 받은 data를 users에 담기 위해 "var vm = this"를 명시
     ![image](https://user-images.githubusercontent.com/76584547/136000436-212b0656-5f97-447e-b468-097e2c5b898c.png)
 
+### Computed 속성
+---
+```
+  data의 값에 따라서 바뀌는 값을 처리할 때 사용하는 속성
+```
++ doubleNum Function 정의
+![image](https://user-images.githubusercontent.com/76584547/138040408-2c77088e-fb3c-4a24-898a-379441013c2f.png)
+
