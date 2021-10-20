@@ -57,5 +57,17 @@
   data의 값에 따라서 바뀌는 값을 처리할 때 사용하는 속성
 ```
 + doubleNum Function 정의
+  
 ![image](https://user-images.githubusercontent.com/76584547/138040408-2c77088e-fb3c-4a24-898a-379441013c2f.png)
+
+  
+### 디렉티브
+---
+```
+  v-bind 처럼 태그에 사용함으로써, Vue객체 접근 가능
+```
+  
++ id와 class 적용
+  
+![image](https://user-images.githubusercontent.com/76584547/138043985-f8ee313b-6ad0-47c2-a2ff-765e726fa60b.png)
 
