@@ -71,3 +71,12 @@
   
 ![image](https://user-images.githubusercontent.com/76584547/138043985-f8ee313b-6ad0-47c2-a2ff-765e726fa60b.png)
 
++ on : click, keyup, keypress 등등 사용 가능
+ 
+![image](https://user-images.githubusercontent.com/76584547/138065374-b87e51ee-defb-48c7-add6-94c9daeb7906.png)
+  
++ eventModifier (keyup뒤에 .enter 붙이고 사용 / 더 있으니까 공식 문서 참고)
+  
+![image](https://user-images.githubusercontent.com/76584547/138065619-1b334e39-da53-4936-93aa-74d85c0f1e11.png)
+
+
