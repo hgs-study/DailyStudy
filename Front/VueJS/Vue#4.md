@@ -31,6 +31,7 @@
   ![image](https://user-images.githubusercontent.com/76584547/138284583-31ed9029-61df-46ca-873b-7e58c40d2771.png)
 
   + str 값을 바꾸면 props로 인해 propsdata 값 변경
+  
   ![image](https://user-images.githubusercontent.com/76584547/138284724-9a5a7cf1-e2c5-41da-a853-0539cbfa0062.png)
 
 
@@ -45,5 +46,6 @@
   ![image](https://user-images.githubusercontent.com/76584547/138284915-1b844387-0096-4340-8e95-84e4144b46e1.png)
 
   + 버튼 클릭 시 header -> hi로 텍스트 변경
+  
   ![image](https://user-images.githubusercontent.com/76584547/138285154-164f1d18-8614-4d06-8292-9fa5aab77d7a.png)
 
