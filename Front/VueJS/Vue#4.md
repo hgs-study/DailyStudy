@@ -23,9 +23,11 @@
   #### 외부 Component props
   ---
   + App.vue
+  
   ![image](https://user-images.githubusercontent.com/76584547/138284503-8fed9a97-4255-42a0-a3e6-3462ef6c7cb5.png)
 
   + AppHeader.vue
+  
   ![image](https://user-images.githubusercontent.com/76584547/138284583-31ed9029-61df-46ca-873b-7e58c40d2771.png)
 
   + str 값을 바꾸면 props로 인해 propsdata 값 변경
@@ -35,9 +37,11 @@
   #### 외부 Component emit
   ---
   + App.vue
+  
   ![image](https://user-images.githubusercontent.com/76584547/138285070-abaabb2a-65eb-47fa-9209-a5b19501b448.png)
 
   + AppHeader.vue
+  
   ![image](https://user-images.githubusercontent.com/76584547/138284915-1b844387-0096-4340-8e95-84e4144b46e1.png)
 
   + 버튼 클릭 시 header -> hi로 텍스트 변경
