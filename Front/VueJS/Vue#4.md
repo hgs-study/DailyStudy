@@ -56,9 +56,11 @@
 ![image](https://user-images.githubusercontent.com/76584547/138295067-2c61101e-6ff7-40a3-93bf-b30fca82f2d1.png)
 
 + axios로 데이터 통신
+
 ![image](https://user-images.githubusercontent.com/76584547/138295163-6b689dbc-bad8-4a0f-bded-ae164451e12f.png)
 
 + 결과 OK
+
 ![image](https://user-images.githubusercontent.com/76584547/138295251-527a4162-2b84-4128-bc98-968f4043b0f6.png)
 
 
