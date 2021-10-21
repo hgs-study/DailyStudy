@@ -49,3 +49,10 @@
   
   ![image](https://user-images.githubusercontent.com/76584547/138285154-164f1d18-8614-4d06-8292-9fa5aab77d7a.png)
 
+
+### 참고
+---
+  + 이벤트 버블링 & 캡처링
+  ```
+    https://joshua1988.github.io/web-development/javascript/event-propagation-delegation/
+  ```
