@@ -76,4 +76,18 @@
   + Action에서 데이터를 변경하진 않음
   + Mutations(동기 메서드) 실행해서 데이터
   + State의 데이터를 변경
+  
 ![image](https://user-images.githubusercontent.com/76584547/138591703-cf66be57-6a81-4c12-a850-abf41bd7c7e8.png)
+
++ Vuex 설치
+```
+  npm install vuex --save
+```
+
++ Vue.use?
+```
+  뷰 모든 영역에 특정 기능을 사용하고 싶을 때 사용 
+```
+![image](https://user-images.githubusercontent.com/76584547/138599254-5f771bd7-c2c6-492d-94b0-d680e58dfbd1.png)
+
+
