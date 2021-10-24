@@ -36,3 +36,28 @@
 
 ![image](https://user-images.githubusercontent.com/76584547/138582176-fef24021-5443-41e6-b62b-f0e61f20fc29.png)
 
+
+### Vuex
+---
+```
+  상태 관리 라이브러리
+  - 복잡한 애플리케이션의 컴포넌트를 효율적으로 관리하는 라이브러리
+  - 무수히 많은 컴포넌트의 데이터를 관리하기 위한 상태 관리 패턴이자 라이브러리
+  - React Flux 패턴에서 기인함
+```
+
++ 개요
+  + Flux패턴 
+  + state (data), getters (computed), mutations (method), actions (비동기 메소드) 학습
+  + Helper 소개
+  + 프로젝트 구조화 및 모듈 구조화 
+
++ Flux 패턴 (데이터가 한방향)
+```
+  MVC 패턴의 복잡한 데이터 흐름 문제를 해결하는 개발 패턴
+  - MVC 패턴 문제점 : 수많은 model이 수많은 view를 갱신하기 때문에 데이터의 흐름을 추적할 수 없다.
+```
+1. action : 화면에서 발생하는 이벤트 또는 사용자의 입력
+2. dispatcher : 데이터를 변경하는 방법, 메서드
+3. model : 화면에 표시할 데이터
+4. view : 사용자에게 비춰지는 화면
