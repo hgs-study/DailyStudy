@@ -27,7 +27,7 @@
 ![image](https://user-images.githubusercontent.com/76584547/138582157-f8ac0d27-08d5-467c-8793-1a3e85ed4101.png)
 
 
-+ 하지만 이를 상위 컴토넌트에서 재사용할 수 있다 (header slot)
++ 하지만 이를 상위 컴토넌트에서 재정의 할 수 있다 (header slot)
 
 ![image](https://user-images.githubusercontent.com/76584547/138582171-5080bde1-6bf0-4e23-9872-505ba9eb9594.png)
 
