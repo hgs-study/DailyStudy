@@ -61,3 +61,19 @@
 2. dispatcher : 데이터를 변경하는 방법, 메서드
 3. model : 화면에 표시할 데이터
 4. view : 사용자에게 비춰지는 화면
+
++ 단방향 데이터 흐름
+  + state : 컴포넌트 간에 공유하는 데이터 data()라고 생각
+  + view : 데이터를 표시화는 화면 template
+  + action : 사용자의 입력에 따라 데이터를 변경하는 methods
+![image](https://user-images.githubusercontent.com/76584547/138591639-b64dd2bf-9923-4e61-95f3-16aca9392bc8.png)
+
++ Vuex 구조
+```
+  컴포넌트 -> 비동기 로직 -> 동기 로직 -> 상태
+```
+  + Vue Components에서 Action(비동기 메서드)를 호출
+  + Action에서 데이터를 변경하진 않음
+  + Mutations(동기 메서드) 실행해서 데이터
+  + State의 데이터를 변경
+![image](https://user-images.githubusercontent.com/76584547/138591703-cf66be57-6a81-4c12-a850-abf41bd7c7e8.png)
