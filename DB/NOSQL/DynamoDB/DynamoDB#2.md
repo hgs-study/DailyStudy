@@ -16,4 +16,4 @@
   3. 각각 테이블의 prefix를 설정(USER#, NEWS# )
   4. USER는 PK,SK - USER#001
   5. 각 나머지 다 테이블은 PK - NEWS#001, SK- USER#001로 릴레이션 맺음
-  ![관계 매핑](https://user-images.githubusercontent.com/76584547/141109560-74afc364-323b-4e8b-8d4d-0e6ebfeefe54.png)
+  ![관계 매핑_2](https://user-images.githubusercontent.com/76584547/141109756-c1186ab9-0477-40a0-a7e8-e8f6fa732325.png)
