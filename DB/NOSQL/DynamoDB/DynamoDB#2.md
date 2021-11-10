@@ -1,2 +1,19 @@
 ## DynamoDB#2
 
+### 설계시 주의사항 
+---
+  1. GSI가 5개 이상이면 RDB를 고려해봐야한다 (너무 많아지면 안됨) 
+  2. LSI는 테이블 생성할 때 파티션키를 이미 가지고 있기 때문에 이미 하나 가지고 있는 것
+  3. Dynamo는 RDBMS와 다르게 쿼리 기반으로 설계해야한다.
+  4. 제일 처음 ERD 관계를 알아야한다!! (개발자는 이미 RDBMS ERD가 기본적인 베이스기 때문에)
+  5. GSI Hashkey가 sk를 갖고 SortKey는 pk를 가질 수 있다
+
+
+### 파티션간 Relation
+---
+  1. primary 테이블을 USER로 잡고 
+  2. NEWS, DEVICE, TOKEN과 일대다 관계를 맺는다고 가정할 경우
+  3. 각각 테이블의 prefix를 설정(USER#, NEWS# )
+  4. USER는 PK,SK - USER#001
+  5. 각 나머지 다 테이블은 PK - NEWS#001, SK- USER#001로 릴레이션 맺음
+  ![관계 매핑](https://user-images.githubusercontent.com/76584547/141109560-74afc364-323b-4e8b-8d4d-0e6ebfeefe54.png)
