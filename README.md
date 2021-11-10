@@ -145,6 +145,8 @@
  + [Redis](https://github.com/hgs-study/DailyStudy/blob/main/DB/NOSQL/Redis/Redis.md)
 
  + [DynamoDB](https://github.com/hgs-study/DailyStudy/blob/main/DB/NOSQL/DynamoDB/DynamoDB.md)
+
+ + [DynamoDB#2](https://github.com/hgs-study/DailyStudy/blob/main/DB/NOSQL/DynamoDB/DynamoDB%232.md)
  
 ### 자바스크립트
 ----------
