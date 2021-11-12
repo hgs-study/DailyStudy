@@ -147,6 +147,8 @@
  + [DynamoDB](https://github.com/hgs-study/DailyStudy/blob/main/DB/NOSQL/DynamoDB/DynamoDB.md)
 
  + [DynamoDB#2](https://github.com/hgs-study/DailyStudy/blob/main/DB/NOSQL/DynamoDB/DynamoDB%232.md)
+
+ + [DynamoDB#link](https://github.com/hgs-study/DailyStudy/blob/main/DB/NOSQL/DynamoDB/DynamoDB%23link.md)
  
 ### 자바스크립트
 ----------
