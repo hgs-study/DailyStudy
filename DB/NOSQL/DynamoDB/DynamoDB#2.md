@@ -17,3 +17,20 @@
   4. USER는 PK,SK - USER#001
   5. 각 나머지 다 테이블은 PK - NEWS#001, SK- USER#001로 릴레이션 맺음
   ![관계 매핑_2](https://user-images.githubusercontent.com/76584547/141109756-c1186ab9-0477-40a0-a7e8-e8f6fa732325.png)
+
+
+### 설계 순서
+---
+1. ERD 작성 
+  => 개발자는 RDBMS에 익숙해져있기 때문에 ERD로 먼저 흐름을 알 수 있다.
+2. Access Pattern 정의 
+  => 엔티티별로 데이터를 어떻게 Access할 것인지 정의를 내려야한다.
+  => 쿼리 기반이기 때문에 이 파트가 굉장히 중요함 (<-> RDBMS는 데이터 기반)
+3. DynamoDB 테이블 설계
+4. PK SK 정의
+5. 인덱스 정의 (GSI)
+6. DynamoDB 정의서 설계
+
+```
+  NoSQL은 ERD과 문서 작성을 열심히 신경 써야한다
+```
