@@ -34,3 +34,13 @@
 ```
   NoSQL은 ERD과 문서 작성을 열심히 신경 써야한다
 ```
+
+### NoSQL CAP 중 AP에 속함
+---
+ + DynamoDB
+    + DynamoDB는 aws에서 지원하는 key/Value의 NoSQL로 AP에 속한다고 알려져있습니다. Dynamo는 key값을 hashing 하고 또 이 값을 mod하여 맞는 서버에 저장해둡니다. 그리고 전체 노드 중 일부 node에 복제해 둡니다. 그리고 data versioning도 진행합니다. DynamoDB에는 strongly consistent 설정을 할 수 있습니다. 이 설정을 하게 되면 DynamoDB는 CP로 변하게 됩니다. 이 설정을 하게 되면 가장 최신의 데이터를 반드시 리턴하게 됩니다. 따라서 모든 노드를 찾기 때문에 가용성은 조금 떨어지게 됩니다.
+ + 참고
+ ```
+  ㅇ https://sjh836.tistory.com/97
+  ㅇ https://sabarada.tistory.com/91
+ ```
