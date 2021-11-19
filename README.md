@@ -72,6 +72,8 @@
 
  + [JPA-QueryDSL](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-QueryDSL.md)
 
+ + [JPA-Link](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-Link.md)
+
 
 ### 모던 자바
 ------
