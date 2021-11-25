@@ -155,5 +155,6 @@
 
   + CompletableFuture
   ```
-    https://brunch.co.kr/@springboot/267
+    - https://brunch.co.kr/@springboot/267
+    - https://duooo-story.tistory.com/39
   ```
