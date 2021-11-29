@@ -278,3 +278,10 @@
    FROM log_stat
    WHERE name = 'RED';
 ```
+
+### master / slave
+---
+```
+   https://tjdrnr05571.tistory.com/14
+   http://cloudrain21.com/mysql-replication
+```
