@@ -43,3 +43,9 @@
     + 상위 컴포넌트에 값을 올리고(event)
     + 다시 하위 컴포넌트에 값을 내린다(props) 
 ![image](https://user-images.githubusercontent.com/76584547/135711638-61a82be5-2b3a-4611-ae20-e945362f9542.png)
+
+#### 참고
+----
+```
+  https://velog.io/@kihyeon8949/TIL.-Vue.jsprops%EC%A0%84%EB%8B%AC
+```
