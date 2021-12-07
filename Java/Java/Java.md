@@ -158,3 +158,85 @@
     - https://brunch.co.kr/@springboot/267
     - https://duooo-story.tistory.com/39
   ```
+
+#### 공변, 반공변
+---
++ 공변
+```
+  A가 B의 상위 타입이고 T<A>가 T<B>의 상위 타입이면 공변
+```
+
+```java
+  public class Animal {}
+  public class Carnivore extends Animal {}
+  public class Tiger extends Carnivore {}
+  public class Lion extends Carnivore {}
+  
+  -----
+
+  public class Zookeeper{
+    public void giveMeat{
+      Cage<? extends Carnivore> cage,
+      Meat meat){
+      List<Carnivores> cs = cage.getAll9();
+      ...
+    }
+  }
+  
+  -----------
+  
+  Zookeeper zk = new Zookeeper();
+  
+  //Cage<? extends Carnivore> 타입에
+  //Cage<Tiger> 할당 가능
+  Cage<Tiger> ct = new Cage<>();
+  zk.giveMeat(ct, someMeat);
+  
+  //Cage<? extends Carnivore> 타입에
+  //Cage<Lion> 할당 가능
+  Cage<Lion> cl = new Cage<>();
+  zk.giveMeat(cl, someMeat);
+```
+
++ 하지만 공변에서 지네릭 타입을 사용하는 메서드에 값 전달 안 됨
+```java
+  Cage<Tiger> ct = new Cage<Tiger>();
+  
+  Cage<? extends Carnivore> cage = ct;
+  cage.push(new Tiger()); // 에러
+  // push(? extends Carnivore)
+  // cage의 실제 타입이
+  // Cage<Tiger>인지 Cage<Lion>인지 알 수 없음
+  
+  -------
+  public class Cage<T>{
+    public void push(T animal){
+      ...
+    }
+  }
+```
+
++ 반공변
+```
+  A가 B의 상위 타입이고 T<A>가 T<B>의 하위 타입이면 반공변
+```
+
+```JAVA
+  Cage<Tiger> ct = new Cage<>();
+  //Cage<? super Tiger> 타입에 Cage<Tiger> 할당 가능
+  Cage<? super Tiger> ctt = ct;
+  ctt.push(new Tiger()); //OK, ctt는 최소 Cage<Tiger>나 그 상위 타입
+  
+  Cage<Tiger> ct2 = new Cage<>();
+  //Cage<? super Tiger> 타입에 Cage<Tiger> 할당 가능
+  Cage<? super Tiger> ctt2 = ct2;
+  ctt2.push(new Tiger()); //OK, ctt는 최소 Cage<Tiger>나 그 상위 타입
+```
+
++ PECS
+```
+  producer - extends
+  consumer - super
+  => 값을 제공하면 (getAll()) extends, 
+  => 값을 사용하면 (push()) super
+```
