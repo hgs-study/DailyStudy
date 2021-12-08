@@ -60,6 +60,8 @@
 
  + [Java](https://github.com/hgs-study/DailyStudy/blob/main/Java/Java/Java.md)
 
+ + [Java#2](https://github.com/hgs-study/DailyStudy/blob/main/Java/Java/Java%232.md)
+
  + [OOP](https://github.com/hgs-study/DailyStudy/blob/main/Java/Java/OOP.md)
 
  + [JPA](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA.md)
