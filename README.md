@@ -76,6 +76,8 @@
 
  + [JPA-Link](https://github.com/hgs-study/DailyStudy/blob/main/Java/JPA/JPA-Link.md)
 
+ + [이펙티브 자바](https://github.com/hgs-study/DailyStudy/tree/main/Java/Effective-Java)
+
 
 ### 모던 자바
 ------
