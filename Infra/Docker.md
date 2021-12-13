@@ -75,3 +75,10 @@ https://www.notion.so/05486768ef7e41f698b6760519eb8a34
  2. sudo apt-get install openjdk-8-jdk (자바 다운로드) 
  3. sudo docker pull hgstudy/spring-boot-cpu-bound (도커 허브에 있는 spring-boot-cpu-bound 이미지 가져옴)
  4. sudo docker run -p 80:80 hgstudy/spring-boot-cpu-bound (외부 80번 포트를 내부 80번 포트로 실행)
+
+
+#### docker-compose
+---
+```
+ https://velog.io/@devsh/Reach-Spring-boot-MySQL%EC%9D%84-docker-compose-%EB%A1%9C-%EB%AC%B6%EC%96%B4%EC%84%9C-%EB%B0%B0%ED%8F%AC-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1%ED%95%B4%EB%B3%B4%EA%B8%B0
+```
