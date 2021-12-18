@@ -44,3 +44,12 @@
   ㅇ https://sjh836.tistory.com/97
   ㅇ https://sabarada.tistory.com/91
  ```
+ 
+ ### 설계 순서
+ ---
+ + step 1: erd 설계
+ + step 2: access patten 정의
+ + step 3: dynamodb table 설계
+ + step 4: pk 설계
+ + step 5: 인덱스 설계
+ + step 6: dynamodb 정의서 작성
