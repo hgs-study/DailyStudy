@@ -9,3 +9,9 @@
 ```
   https://jojoldu.tistory.com/412
 ```
+
+#### InputStream
+---
+```
+  https://lannstark.tistory.com/34
+```
