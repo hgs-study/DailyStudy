@@ -1,5 +1,5 @@
 ## Effective-Java
-+ [chapter2](https://github.com/hgs-study/DailyStudy/tree/main/Java/Effective-Java/chapter2)
++ chapter2 : 객체 생성과 파괴
   + 생성자 대신 정적 팩터리 메서드를 고려하라 
   + 생성자에 매개변수가 많다면 빌더를 고려하라
   + private 생성자나 열거 타입으로 싱글턴임을 보증하라
@@ -10,3 +10,5 @@
   + finalizer와 cleaner 사용을 피하라
   + try-finally보다는 try-with-resources를 사용하라
 
++ chapter3 : 모든 객체의 공통 메서드
+  + equals는 일반 규약을 지켜 재정의하라 
