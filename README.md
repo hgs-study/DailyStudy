@@ -140,6 +140,8 @@
 
  + [Mysql](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/Mysql/Mysql.md)
 
+ + [Mysql#2](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/Mysql/Mysql%232.md)
+
  + [Mysql 최적화](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/Mysql/Mysql%20%EC%B5%9C%EC%A0%81%ED%99%94.md)
 
  + [Mysql-SQL](https://github.com/hgs-study/DailyStudy/blob/main/DB/RDBMS/Mysql/Mysql-SQL.md)
