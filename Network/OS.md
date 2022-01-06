@@ -56,3 +56,8 @@
   ㅇ https://junghyun100.github.io/Semaphore&Mutex/
   ㅇ https://worthpreading.tistory.com/90
 ```
+
+#### System Call
+```
+  https://mamu2830.blogspot.com/2021/01/whatIsSystemCall.html
+```
