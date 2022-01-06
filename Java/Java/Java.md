@@ -245,3 +245,8 @@
 ```
   https://sightstudio.tistory.com/15
 ```
+
++ Thread Safe, Multi Thread
+```
+  https://alwayspr.tistory.com/11
+```
