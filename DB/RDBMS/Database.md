@@ -79,3 +79,8 @@
 ```
   https://blog.naver.com/hgstudy_/222523205918
 ```
+
+### DB Connection Pool 개수 산정
+```
+  https://hyuntaeknote.tistory.com/12
+```
