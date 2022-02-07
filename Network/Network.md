@@ -58,7 +58,13 @@
         - URI : "무엇을" / 메서드 : "어떻게 해서"
       ```
     + 
-  5. ㅇ
+
+#### HTTP 헤더
+---
+![image](https://user-images.githubusercontent.com/76584547/152807387-be3c427f-a032-47ca-b9a7-efae55b5fcd9.png)
+
+![image](https://user-images.githubusercontent.com/76584547/152807423-9dbd199b-e894-4f8b-a2c2-131222b84239.png)
+
 
 
 #### 기타 
