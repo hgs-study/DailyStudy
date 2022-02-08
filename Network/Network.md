@@ -110,7 +110,9 @@
 ```
 
 + 리졸버 동작
+
 ![image](https://user-images.githubusercontent.com/76584547/153016024-4700b34a-07f7-4631-b17c-4f39e068aa61.png)
+
   1. [애플리케이션(브라우저)] gethostbyname(URL) 메서드 호출
   2. [Socket] 조회 메세지(URL)을 OS 내부의 프로토콜 스택에 보낸다
   3. [프로토콜 스택] UDP메시지 송신
