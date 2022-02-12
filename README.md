@@ -208,6 +208,12 @@
 
 + [OSI 7 Layer#2](https://github.com/hgs-study/DailyStudy/blob/main/Network/OSI7Layer%232.md)
 
+
+### 리팩토링
+-----
++ [Refactoring](https://github.com/hgs-study/DailyStudy/tree/main/Refectorting)
+ 
+
 ### API
 ---------
 
@@ -236,17 +242,3 @@
 ### 협업툴
 ------
  + [Jira & Confluence](https://github.com/hgs-study/DailyStudy/blob/main/Collaboration/Jira.md)
-
-
-
-
-
- 
-
-
-
-
-
- 
-
-
