@@ -52,6 +52,9 @@
 
  + [SpringSecurity](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/SpringSecurity.md)
 
+ + [기타]((https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/ETC)
+   + [트랜잭션](https://github.com/hgs-study/DailyStudy/blob/main/SpringFramework/ETC/Transaction.md)
+
 
 ### 자바
 ------
