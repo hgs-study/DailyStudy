@@ -1,2 +1,17 @@
 세마포어
 ---
+- N개 제어
+- atomic operation인 `wait()` -P() 과 `signal() (자바에서는 notify()라고도함)` - S() 존재
+- 순서 (**Atomic** 기반으로 구현)
+    - S (락 갯수)를 파라미터로 받아서
+    - P() (wait()) 이 실행될 경우 S를 S—
+    - S() (signal()) 이 실행될 경우 S를 S++
+- 바이너리 세마포어
+    - S가 1이면, 0 or 1 (뮤텍스 락과 같음)
+- 카운팅 세마포어
+    - S가 n이면, 무한대로 늘어날 수 있음
+    - 여러개의 자원들에 사용할 수 있음
+- `busy waiting` 문제 생김
+    - 해결
+    - 어떤 프로세스가 wait()를 할 경우, CPU 반납하고 wating queue에 대기
+    - 어떤 프로세스가 signal()후에 wating queue에 대기하는 process에 restarted (wakeup)시키면 busy waiting 문제 해결할 수 있다
