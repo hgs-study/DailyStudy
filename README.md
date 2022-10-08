@@ -217,6 +217,8 @@
 
 + [뮤텍스](https://github.com/hgs-study/DailyStudy/blob/main/OS/Mutex.md)
 
++ [세마포어](https://github.com/hgs-study/DailyStudy/blob/main/OS/Semaphore.md)
+
 
 ### 리팩토링
 -----
