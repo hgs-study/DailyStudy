@@ -1,0 +1,17 @@
+뮤텍스
+---
+- 가장 간단한 동기화 툴
+- 2개만 제어
+- mutail exclustion (상호배제)
+- 순서
+    - critical section(임계영역)에 들어올 때 lock 을 acquire (획득)
+    - 다 사용하고 나면 lock을 release
+    - acquire() : available이 false 면 `busy wait`  / true 락 획득
+    - release() : available을 true 변경
+- acquire() 와release()를 아토믹하게 만들어야함 `compare_and_swap`을 주로 이용함
+- 문제점
+    - busy waiting 문제가 생김 (가장 큰 문제점)
+- spinlock
+    - `busy waiting` 하면서 락을 사용하는 뮤텍스 락을 스핀락이라고 부름
+    - 놀고있는 코어가 여러개 있을 때, busy waiting할 경우 아래 와 같은 이점을 취할 수 있다.
+    - 세마포어를 사용할 경우 wait queue로 컨텍스트 스위치 했다가, ready queue로 컨텍스트 스위치해야하고, 다시 작업하면서 컨텍스트 스위치를 해야하는데,  스핀락은 바로 컨텍스트 스위치 일어나서 작업을 실행하기  때문에 컨텍스트 스위치하는 시간을 줄일 수 있다.
