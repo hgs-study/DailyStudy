@@ -46,3 +46,25 @@
     9. P0 실행
      
  ![image](https://user-images.githubusercontent.com/76584547/196720225-4da89f9d-6782-4f7a-a93a-82ec5b51f40d.png)
+
+### CPU 스케줄링
+- 스케줄링
+    - **Ready 큐**에 있는 프로세스에 Cpu를 할당해줄 수 있는 프로세스를 선택하는 것
+        - FIFO
+        - Priority Queue
+    - 멀티 프로세스 환경에서 메모리에 여러 프로세스를 띄우고 Cpu를 시분할해서 사용
+![image](https://user-images.githubusercontent.com/76584547/201706368-89742077-b1ba-4b21-9379-ce086a599f42.png)
+
+- Preemptive vs Non-preemptive
+    - Preemptive
+        - 어떤 사유로 인해 다른 프로세스가 CPU를 선점 가능
+    - Non-preemptive
+        - 해당 프로세스가 CPU를 점유하고 나오기 전까지는 계속 해당 프로세스가 CPU를 점유
+- Dispatcher
+    - 현재 선점하고 있는 프로세스에 인터럽트 or 시스템콜이 들어올 경우 해당 프로세스를 Ready 큐나 Wating 큐로 넘기는 것을 Context Switch 라고 하며, 이 컨텍스트 스위치를 해주는 모듈을 **Dispatcher** 라고한다
+    - 역할
+        - 컨텍스트 스위치
+        - 프로세스를 유저모드로 변경해준다.
+        - 새로운 프로세스를 적당한 위치에 resume 시키는 것
+        - 어떤 프로세스를 변경하는지 선택하는 것은 **Scheduler**
+        - 실제로 컨텍스트 스위치를 해주는 것은 **Dispathcher**
