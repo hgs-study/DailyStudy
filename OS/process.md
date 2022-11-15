@@ -50,9 +50,21 @@
 ### CPU 스케줄링
 - 스케줄링
     - **Ready 큐**에 있는 프로세스에 Cpu를 할당해줄 수 있는 프로세스를 선택하는 것
-        - FIFO
-        - Priority Queue
     - 멀티 프로세스 환경에서 메모리에 여러 프로세스를 띄우고 Cpu를 시분할해서 사용
+- 스케줄링 알고리즘
+    - FCFS (First-Come, First-Served)
+        - 먼저 온 프로세스부터 처리
+    - SJF(Shortest Job First)
+        - 남은 시간이 가장 짧은 프로세스부터 처리
+        - CPU burst time을 미리 알 수 없다 
+        - CPU 사용시간을 미리 알 수 없지만 추정은 가능하다. 과거의 CPU사용한 흔적을 통해 해당 프로세스의 CPU burst time을 예측한다.
+    - RR(Round-Robin) : **시분할**을해서 정해진 시간만큼만 사용 **(현대적 컴퓨터 운영체제에서 사용)**
+    - Priority-based : 우선순위
+    - MLQ : Multi-Level Queue
+    - MLQ (Multi-Level Feedback Queue) : 멀티 레벨 큐에 피드백을 더함 **(현대적인 스케줄러)**
+    - FIFO
+    - Priority Queue
+    
 ![image](https://user-images.githubusercontent.com/76584547/201706368-89742077-b1ba-4b21-9379-ce086a599f42.png)
 
 - Preemptive vs Non-preemptive
