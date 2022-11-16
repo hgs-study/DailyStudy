@@ -1,19 +1,21 @@
 # 프로세스
 
 ### 생명주기
-    - New
-        - 프로세스가 생성된 상태
-    - Running
-        - Cpu를 점유해서 프로세스의 명령어를 실행시키는 상태
-    - Waiting
-        - 한 프로세스가 점유하고 있으면 두번째 프로세스는 waiting 상태
-        - i/o를 했으면 i/o가 끝날때까지 대기하는 상태 등
-    - Ready
-        - i/o를 대기하다가 cpu를 바로 점유하는 것이 아니라 ready 큐에 있는 대기상태
-    - Terminated
-        - 프로세스를 종료하는 상태
-        
-    ![image](https://user-images.githubusercontent.com/76584547/196720347-7201f7c2-fddc-4c70-aa2c-1a4c002afc75.png)
+```
+- New
+    - 프로세스가 생성된 상태
+- Running
+    - Cpu를 점유해서 프로세스의 명령어를 실행시키는 상태
+- Waiting
+    - 한 프로세스가 점유하고 있으면 두번째 프로세스는 waiting 상태
+    - i/o를 했으면 i/o가 끝날때까지 대기하는 상태 등
+- Ready
+    - i/o를 대기하다가 cpu를 바로 점유하는 것이 아니라 ready 큐에 있는 대기상태
+- Terminated
+    - 프로세스를 종료하는 상태
+```
+
+![image](https://user-images.githubusercontent.com/76584547/196720347-7201f7c2-fddc-4c70-aa2c-1a4c002afc75.png)
    
 ---
 
