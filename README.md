@@ -161,6 +161,13 @@
 
  + [DynamoDB#link](https://github.com/hgs-study/DailyStudy/blob/main/DB/NOSQL/DynamoDB/DynamoDB%23link.md)
  
+ 
+### Redis
+------
+ + [Redis 특징](https://github.com/hgs-study/DailyStudy/blob/main/Redis/Redis_%ED%8A%B9%EC%A7%95.md)
+ 
+ + [Redis 장애](https://github.com/hgs-study/DailyStudy/blob/main/Redis/Redis_%EC%9E%A5%EC%95%A0.md)
+ 
 ### 자바스크립트
 ----------
  + [JavaScript](https://github.com/hgs-study/DailyStudy/blob/main/Front/JavaScript/JavaScript.md)
