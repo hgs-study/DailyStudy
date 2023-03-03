@@ -169,6 +169,8 @@
  + [Redis 장애](https://github.com/hgs-study/DailyStudy/blob/main/Redis/Redis_%EC%9E%A5%EC%95%A0.md)
  
  + [Redis 복제](https://github.com/hgs-study/DailyStudy/blob/main/Redis/Redis_%EB%B3%B5%EC%A0%9C.md)
+
+ + [Redis HA/Sentinel](https://github.com/hgs-study/DailyStudy/blob/main/Redis/Redis_HA_Sentinel.md)
  
 ### 자바스크립트
 ----------
